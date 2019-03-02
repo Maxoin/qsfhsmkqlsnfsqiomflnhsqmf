@@ -1,4 +1,5 @@
-{ "name" : "Maxoin",
+{
+  "name" : "Maxoin",
   "description": "Testeuh du botte",
   "version": "0.0.1",
   "main": "index.js",
