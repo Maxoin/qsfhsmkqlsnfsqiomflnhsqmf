@@ -5,7 +5,4 @@
   "script": {
     "start": "node.index.js"
   },
-  "dependencies": {
-    "discord.js": "11.1.0",
-  }
 }
