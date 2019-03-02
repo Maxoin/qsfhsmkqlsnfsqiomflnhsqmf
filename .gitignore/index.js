@@ -150,6 +150,12 @@ var gifs = {
       gif: "https://j.gifs.com/oY7Q3B.gif",
       annonce: "Subit la puissance de Starlight Unicorn !",
       effet: ""
+    },
+    w: {
+      nom: "Mochetée",
+      gif: "https://j.gifs.com/oY7Q3B.gif",
+      annonce: "https://66.media.tumblr.com/bd3c64511033f1a1ffa9ff47d95eb4dc/tumblr_nsu1h0Z2fl1uuck0ko8_400.gif",
+      effet: ""
     }
 }
 
@@ -199,7 +205,7 @@ bot.on('message', message => { //Appartion MOwOnster
   if(db.has("stats." + message.author.id).value()){
     var spawn = Math.floor(Math.random() * Math.floor(100))
     if(spawn <= 10){
-      kispawn = Math.floor(Math.random() * Math.floor(22))
+      kispawn = Math.floor(Math.random() * Math.floor(23))
       console.log(kispawn)
       var ideydb = dbp.get("mowo").filter({idey: kispawn}).find("nom").value()
       console.log(ideydb)
