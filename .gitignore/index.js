@@ -202,42 +202,28 @@ bot.on('message', message => { //OwOLogin
 }})
 
 bot.on('message', message => { //Appartion MOwOnster
-  if(db.has("stats." + message.author.id).value()){
-    var spawn = Math.floor(Math.random() * Math.floor(100))
-    if(spawn <= 10){
-      kispawn = Math.floor(Math.random() * Math.floor(23))
-      console.log(kispawn)
-      var ideydb = dbp.get("mowo").filter({idey: kispawn}).find("nom").value()
-      console.log(ideydb)
-      var idey = Object.values(ideydb)
-      var embedp = new Discord.RichEmbed()
-        .setTitle("Un MOwOnster est apparut !")
-        .addField(`C'est un ${idey[1]} !`, 'Attrape le avec un "!!cat" !')
-        .setImage(idey[2])
-        .setColor("#351cc0")
-        bot.channels.get(message.channel.id).send(embedp)
-        catnum = kispawn
-        salon = message.channel.id
-    }
+ if(message.content.includes("!!")){
+  
+ }else{
+   if(db.has("stats." + message.author.id).value()){
+     var spawn = Math.floor(Math.random() * Math.floor(100))
+     if(spawn <= 10){
+       kispawn = Math.floor(Math.random() * Math.floor(23))
+       console.log(kispawn)
+       var ideydb = dbp.get("mowo").filter({idey: kispawn}).find("nom").value()
+       console.log(ideydb)
+       var idey = Object.values(ideydb)
+       var embedp = new Discord.RichEmbed()
+         .setTitle("Un MOwOnster est apparut !")
+         .addField(`C'est un ${idey[1]} !`, 'Attrape le avec un "!!cat" !')
+         .setImage(idey[2])
+         .setColor("#351cc0")
+         bot.channels.get("551531569060511774").send(embedp)
+         catnum = kispawn
+         salon = message.channel.id
+     }
+   }
 }})
-
-bot.on('message', message => { 
-  if(message.author.id === "258571960987025408" && message.content === "!!appearforc"){
-      kispawn = 2
-      console.log(kispawn)
-      ideydb = dbp.get("mowo").filter({idey: kispawn}).find("nom").value()
-      console.log(ideydb)
-      idey = Object.values(ideydb)
-      var embedp = new Discord.RichEmbed()
-        .setTitle("Un MOwOnster est apparut !")
-        .addField(`C'est un ${idey[1]} !`, 'Attrape le avec un "!!cat" !')
-        .setImage(idey[2])
-        .setColor("#351cc0")
-        bot.channels.get(message.channel.id).send(embedp)
-      catnum = kispawn
-      salon = message.channel.id
-    }
-})
 
 bot.on('message', message => { //Capture
   if(db.has("stats." + message.author.id).value() && message.content === "!!cat" && salon === message.channel.id){
