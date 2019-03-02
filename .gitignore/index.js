@@ -483,3 +483,77 @@ bot.on('message', message => { //Gifs
       .setColor("#b426c1")
     message.channel.send(embed);
 }})
+
+
+bot.on('message', message => { //Dispo Emotes
+ if(message.content === "!!dispo"){
+   if(db.has("stats." + message.author.id + ".a").value()){
+    message.channel.send(gifs.a.nom)
+   }
+   if(db.has("stats." + message.author.id + ".b").value()){
+    message.channel.send(gifs.b.nom)
+   }
+   if(db.has("stats." + message.author.id + ".c").value()){
+    message.channel.send(gifs.c.nom)
+   }
+   if(db.has("stats." + message.author.id + ".d").value()){
+    message.channel.send(gifs.d.nom)
+   }
+   if(db.has("stats." + message.author.id + ".e").value()){
+    message.channel.send(gifs.e.nom)
+   }
+   if(db.has("stats." + message.author.id + ".f").value()){
+    message.channel.send(gifs.f.nom)
+   }
+   if(db.has("stats." + message.author.id + ".g").value()){
+    message.channel.send(gifs.g.nom)
+   }
+   if(db.has("stats." + message.author.id + ".h").value()){
+    message.channel.send(gifs.h.nom)
+   }
+   if(db.has("stats." + message.author.id + ".i").value()){
+    message.channel.send(gifs.i.nom)
+   }
+   if(db.has("stats." + message.author.id + ".j").value()){
+    message.channel.send(gifs.j.nom)
+   }
+   if(db.has("stats." + message.author.id + ".k").value()){
+    message.channel.send(gifs.k.nom)
+   }
+   if(db.has("stats." + message.author.id + ".l").value()){
+    message.channel.send(gifs.l.nom)
+   }
+   if(db.has("stats." + message.author.id + ".m").value()){
+    message.channel.send(gifs.m.nom)
+   }
+   if(db.has("stats." + message.author.id + ".n").value()){
+    message.channel.send(gifs.n.nom)
+   }
+   if(db.has("stats." + message.author.id + ".o").value()){
+    message.channel.send(gifs.o.nom)
+   }
+   if(db.has("stats." + message.author.id + ".p").value()){
+    message.channel.send(gifs.p.nom)
+   }
+   if(db.has("stats." + message.author.id + ".q").value()){
+    message.channel.send(gifs.q.nom)
+   }
+   if(db.has("stats." + message.author.id + ".r").value()){
+    message.channel.send(gifs.r.nom)
+   }
+   if(db.has("stats." + message.author.id + ".s").value()){
+    message.channel.send(gifs.s.nom)
+   }
+   if(db.has("stats." + message.author.id + ".t").value()){
+    message.channel.send(gifs.t.nom)
+   }
+   if(db.has("stats." + message.author.id + ".u").value()){
+    message.channel.send(gifs.u.nom)
+   }
+   if(db.has("stats." + message.author.id + ".v").value()){
+    message.channel.send(gifs.v.nom)
+   }
+   if(db.has("stats." + message.author.id + ".w").value(){
+    message.channel.send(gifs.w.nom)
+   }
+}})
