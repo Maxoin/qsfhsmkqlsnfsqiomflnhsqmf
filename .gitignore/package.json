@@ -9,6 +9,7 @@
   "author": "Maxoin",
   "dependencies": {
     "discord.js": "^11.3.2",
-    "lowdb": "1.0.0"
+    "lowdb": "1.0.0",
+    "filesync": "2.2.0"
   }
 }
