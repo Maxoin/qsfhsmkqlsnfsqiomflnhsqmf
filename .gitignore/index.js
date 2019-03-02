@@ -539,7 +539,7 @@ bot.on('message', message => { //Dispo Emotes
    if(db.has("stats." + message.author.id + ".v").value()){
     message.channel.send(gifs.v.nom)
    }
-   if(db.has("stats." + message.author.id + ".w").value(){
+   if(db.has("stats." + message.author.id + ".w").value()){
     message.channel.send(gifs.w.nom)
    }
 }})
