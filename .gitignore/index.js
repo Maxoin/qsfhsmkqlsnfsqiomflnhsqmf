@@ -153,8 +153,8 @@ var gifs = {
     },
     w: {
       nom: "Mochetée",
-      gif: "https://j.gifs.com/oY7Q3B.gif",
-      annonce: "https://66.media.tumblr.com/bd3c64511033f1a1ffa9ff47d95eb4dc/tumblr_nsu1h0Z2fl1uuck0ko8_400.gif",
+      gif: "https://66.media.tumblr.com/bd3c64511033f1a1ffa9ff47d95eb4dc/tumblr_nsu1h0Z2fl1uuck0ko8_400.gif",
+      annonce: "Je ne suis pas moche ! Je suis un Scientifique fou ! Nyahahahahaidhqusofgbdhsqijvgsdkhfnis...",
       effet: ""
     }
 }
