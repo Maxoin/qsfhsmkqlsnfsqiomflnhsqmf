@@ -1,15 +1,20 @@
 {
   "name": "Pokecolo",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {
-    "start": "node index.js"
-},
-  "author": "Maxoin",
   "dependencies": {
     "discord.js": "^11.3.2",
-    "lowdb": "1.0.0",
-    "filesync": "2.2.0"
-  }
+    "lowdb": "^1.0.0",
+    "mysql": "^2.16.0",
+    "mongodb": "^3.1.12",
+    "murmurhash-native": "^3.3.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }
