@@ -158,7 +158,7 @@ bot.on('ready',() => {
     console.log(gifs.q.nom)
 })
 
-bot.login (process.env.TOKEN);
+bot.login (process.env.token);
 
 // Set some defaults
 db.defaults({ stats: {}})
