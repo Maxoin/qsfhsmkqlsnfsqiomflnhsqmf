@@ -284,6 +284,7 @@ bot.on('message', message => { //Gifs
 bot.on('message', message => { //Gifs
   yuser = message.author.id
   if(db.has("stats." + message.author.id + ".d").value() && message.content.includes('>' + gifs.d.nom)){
+   console.log("TARACE LA HACHE")
     var embed = new Discord.RichEmbed()
       .setTitle(gifs.d.annonce)
       .setImage(gifs.d.gif)
