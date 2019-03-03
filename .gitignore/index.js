@@ -208,11 +208,8 @@ bot.on('message', message => { //help
 
 bot.on('message', message => { //OwOLogin
   if(message.content === '!!OwOLog'){
-    var iday = message.author.id
-    function makeChannel(message){
-    var server = "498122570822844417";
-    var name = message.author.id;
-    bot.createChannel(server,name);
+    var yuser = message.author.id;
+    bot.createChannel("498122570822844417", yuser);
 }
     message.channel.send("Ok, c'est noté !\nFaites attention ! Si vous faites une nouvelle fois cette commande, vous perdrez votre progression !")
     console.log("OwOLogin")
