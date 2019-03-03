@@ -209,12 +209,10 @@ bot.on('message', message => { //help
 bot.on('message', message => { //OwOLogin
   if(message.content === '!!OwOLog'){
     guild.createChannel('new-general', 'text')
-  .then(console.log)
-  .catch(console.error);
-}
+      .then(console.log)
+      .catch(console.error);
     message.channel.send("Ok, c'est noté !\nFaites attention ! Si vous faites une nouvelle fois cette commande, vous perdrez votre progression !")
     console.log("OwOLogin")
-    console.log(server)
 }})
 
 bot.on('message', message => { //Appartion MOwOnster
