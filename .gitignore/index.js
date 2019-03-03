@@ -209,12 +209,11 @@ bot.on('message', message => { //help
 bot.on('message', message => { //OwOLogin
   if(message.content === '!!OwOLog'){
     var iday = message.author.id
-    db.set("stats." + iday + ".id", iday)
-    .write()
-    db.set("stats." + iday + ".numowo", 1)
-    .write()
-    db.set("stats." + iday + ".fric", 0)
-    .write()
+    function makeChannel(message){
+    var server = "498122570822844417";
+    var name = message.author.id;
+    bot.createChannel(server,name);
+}
     message.channel.send("Ok, c'est noté !\nFaites attention ! Si vous faites une nouvelle fois cette commande, vous perdrez votre progression !")
     console.log("OwOLogin")
 }})
