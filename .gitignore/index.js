@@ -215,7 +215,7 @@ bot.on('message', message => { //Appartion MOwOnster
    if(db.has("stats." + message.author.id).value()){
      var spawn = Math.floor(Math.random() * Math.floor(100))
      if(spawn <= 10){
-       kispawn = Math.floor(Math.random() * Math.floor(23))
+       kispawn = Math.floor(Math.random() * Math.floor(24))
        console.log(kispawn)
        var ideydb = dbp.get("mowo").filter({idey: kispawn}).find("nom").value()
        console.log(ideydb)
