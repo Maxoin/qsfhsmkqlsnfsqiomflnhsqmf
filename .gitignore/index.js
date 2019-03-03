@@ -156,6 +156,12 @@ var gifs = {
       gif: "https://66.media.tumblr.com/bd3c64511033f1a1ffa9ff47d95eb4dc/tumblr_nsu1h0Z2fl1uuck0ko8_400.gif",
       annonce: "Je ne suis pas moche ! Je suis un Scientifique fou ! Nyahahahahaidhqusofgbdhsqijvgsdkhfnis...",
       effet: ""
+    },
+    y: {
+      nom: "Lance-Flamme",
+      gif: "https://media1.tenor.com/images/a92907da589b73ac05677929a980b77e/tenor.gif?itemid=5634757",
+      annonce: "LE FEUUUUUUUUUUUUW",
+      effet: ""
     }
 }
 
@@ -479,7 +485,18 @@ bot.on('message', message => { //Gifs
     var embed = new Discord.RichEmbed()
       .setTitle(gifs.w.annonce)
       .setImage(gifs.w.gif)
-      .setColor("#b426c1")
+      .setColor("#392bfe")
+    message.channel.send(embed);
+}})
+
+
+bot.on('message', message => { //Gifs
+  yuser = message.author.id
+  if(db.has("stats." + message.author.id + ".y").value() && message.content.includes('>' + gifs.y.nom)){
+    var embed = new Discord.RichEmbed()
+      .setTitle(gifs.y.annonce)
+      .setImage(gifs.y.gif)
+      .setColor("#ff6900")
     message.channel.send(embed);
 }})
 
