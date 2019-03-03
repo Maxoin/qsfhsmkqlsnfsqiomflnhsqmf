@@ -210,7 +210,6 @@ bot.on('message', message => { //OwOLogin
   if(message.content === '!!OwOLog'){
     var yuser = message.author.id;
     bot.createChannel("498122570822844417", yuser);
-}
     message.channel.send("Ok, c'est noté !\nFaites attention ! Si vous faites une nouvelle fois cette commande, vous perdrez votre progression !")
     console.log("OwOLogin")
 }})
