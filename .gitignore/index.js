@@ -2,9 +2,9 @@ const Discord = require('discord.js');
 var bot = new Discord.Client();
 
 const low = require('lowdb')
-const FileSync = require('lowdb/adapters/FileSync')
+const FileSync = require('lowdb/adapters/FileSync.js')
  
-const adapter = new FileSync('WAZOOOOOOOO.json')
+const adapter = new FileSync('lowdb/adapters/WAZOOOOOOOO.json')
 const db = low(adapter)
 
 const adapterp = new FileSync('pkmn.json')
