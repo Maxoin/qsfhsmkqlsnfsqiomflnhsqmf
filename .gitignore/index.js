@@ -10,6 +10,7 @@ const db = low(adapter)
 const adapterp = new FileSync('pkmn.json')
 const dbp = low(adapterp)
 
+var guild = "498122570822844417"
 var catnum = ""
 var salon = ""
 var ideydb = ""
