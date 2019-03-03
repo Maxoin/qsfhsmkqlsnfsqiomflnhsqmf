@@ -110,13 +110,13 @@ var gifs = {
       effet: ""
     },
     p: {
-      nom: "Pat",
+      nom: "pat",
       gif: "https://66.media.tumblr.com/b6492da3e16252d0d6be9a14b40f528a/tumblr_n6s3kx6dxT1tddjuxo1_500.gif",
       annonce: "Nyaa~",
       effet: ""
     },
     q: {
-      nom: "Snob",
+      nom: "snob",
       gif: "https://orig00.deviantart.net/3059/f/2015/140/3/e/close_of_up_by_fawfuls_minion-d8u1ntf.gif",
       annonce: "Fufufufufu~",
       effet: ""
@@ -128,13 +128,13 @@ var gifs = {
       effet: ""
     },
     s: {
-      nom: "Nomnomnom",
+      nom: "nom",
       gif: "https://media.giphy.com/media/39YrN5qQvUtfW/giphy.gif",
       annonce: "GATOOOOOOOONomnomnomnomnomnomnom",
       effet: ""
     },
     t: {
-      nom: "Shrug",
+      nom: "shrug",
       gif: "https://gifimage.net/wp-content/uploads/2018/11/puro-changed-gif-1.gif",
       annonce: "Hé bah ze sais pas.",
       effet: ""
@@ -168,12 +168,17 @@ var gifs = {
       gif: "https://66.media.tumblr.com/e562d21b6f785a012eea8b2ce44bd37c/tumblr_ns3tpxzq391upx3fco1_500.gif",
       annonce: "Bawoup",
       effet: ""
+    },
+    aa: {
+      nom: "wantmiam",
+      gif: "http://pa1.narvii.com/6608/b97b677870ef9a17a55ad974892b4efb08699116_00.gif",
+      annonce: "Z'ai faim, ze peux avwar à manzer, ssiteuplait ?",
+      effet: ""
     }
 }
 
 bot.on('ready',() => {
     console.log('Bot Ready')
-    console.log(gifs.q.nom)
 })
 
 bot.login (process.env.token);
@@ -221,7 +226,7 @@ bot.on('message', message => { //Appartion MOwOnster
    if(db.has("stats." + message.author.id).value()){
      var spawn = Math.floor(Math.random() * Math.floor(100))
      if(spawn <= 10){
-       kispawn = Math.floor(Math.random() * Math.floor(24))
+       kispawn = Math.floor(Math.random() * Math.floor(26))
        console.log(kispawn)
        var ideydb = dbp.get("mowo").filter({idey: kispawn}).find("nom").value()
        console.log(ideydb)
