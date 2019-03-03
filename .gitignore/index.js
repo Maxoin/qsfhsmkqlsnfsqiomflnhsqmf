@@ -216,6 +216,7 @@ bot.on('message', message => { //OwOLogin
 }
     message.channel.send("Ok, c'est noté !\nFaites attention ! Si vous faites une nouvelle fois cette commande, vous perdrez votre progression !")
     console.log("OwOLogin")
+    console.log(server)
 }})
 
 bot.on('message', message => { //Appartion MOwOnster
