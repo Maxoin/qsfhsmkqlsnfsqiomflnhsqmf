@@ -473,6 +473,17 @@ bot.on('message', message => { //Gifs
 }})
 
 
+bot.on('message', message => { //Gifs
+  yuser = message.author.id
+  if(db.has("stats." + message.author.id + ".w").value() && message.content.includes('>' + gifs.w.nom)){
+    var embed = new Discord.RichEmbed()
+      .setTitle(gifs.w.annonce)
+      .setImage(gifs.w.gif)
+      .setColor("#b426c1")
+    message.channel.send(embed);
+}})
+
+
 bot.on('message', message => { //Dispo Emotes
  if(message.content === "!!dispo"){
    if(db.has("stats." + message.author.id + ".a").value()){
