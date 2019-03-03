@@ -4,7 +4,7 @@ var bot = new Discord.Client();
 const low = require('lowdb')
 const FileSync = require('lowdb/adapters/FileSync')
  
-const adapter = new FileSync('master/.gitignore/db.js')
+const adapter = new FileSync('.gitignore/db.js')
 const db = low(adapter)
 
 const adapterp = new FileSync('pkmn.json')
