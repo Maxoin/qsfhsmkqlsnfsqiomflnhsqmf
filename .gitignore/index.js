@@ -162,6 +162,12 @@ var gifs = {
       gif: "https://media1.tenor.com/images/a92907da589b73ac05677929a980b77e/tenor.gif?itemid=5634757",
       annonce: "LE FEUUUUUUUUUUUUW",
       effet: ""
+    },
+    z: {
+      nom: "/tp",
+      gif: "https://66.media.tumblr.com/e562d21b6f785a012eea8b2ce44bd37c/tumblr_ns3tpxzq391upx3fco1_500.gif",
+      annonce: "Bawoup",
+      effet: ""
     }
 }
 
@@ -501,6 +507,16 @@ bot.on('message', message => { //Gifs
 }})
 
 
+bot.on('message', message => { //Gifs
+  yuser = message.author.id
+  if(db.has("stats." + message.author.id + ".z").value() && message.content.includes('>' + gifs.z.nom)){
+    var embed = new Discord.RichEmbed()
+      .setTitle(gifs.z.annonce)
+      .setImage(gifs.z.gif)
+      .setColor("#ff6900")
+    message.channel.send(embed);
+}})
+
 bot.on('message', message => { //Dispo Emotes
  if(message.content === "!!dispo"){
    if(db.has("stats." + message.author.id + ".a").value()){
@@ -571,5 +587,11 @@ bot.on('message', message => { //Dispo Emotes
    }
    if(db.has("stats." + message.author.id + ".w").value()){
     message.channel.send(gifs.w.nom)
+   }
+   if(db.has("stats." + message.author.id + ".y").value()){
+    message.channel.send(gifs.y.nom)
+   }
+   if(db.has("stats." + message.author.id + ".z").value()){
+    message.channel.send(gifs.z.nom)
    }
 }})
