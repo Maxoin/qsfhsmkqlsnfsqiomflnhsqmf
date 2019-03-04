@@ -495,7 +495,7 @@ bot.on('message', message => { //Appartion MOwOnster
      if(spawn <= 10){
        kispawn = Math.floor(Math.random() * Math.floor(26))
        console.log(kispawn)
-       console.log(mowo.kispawn.nom)
+       console.log(mowo + kispawn + nom)
        var embedp = new Discord.RichEmbed()
          .setTitle("Un MOwOnster est apparut !")
          .addField(`C'est un ${mowo.kispawn.nom} !`, 'Attrape le avec un "!!cat" !')
