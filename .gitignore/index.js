@@ -331,11 +331,7 @@ bot.on('message', message => { //Log
 
 bot.on('message', message => {// same ^^^^ fait "check " + "quelque chose" pour vérifier si tu l'as dans ton message dans le stockage discord. (le bot return un boolean)
     if(message.content === "!!check") {
-        if(gotOwO(message.author.id, message.content.split(' ')[1] )) {
-            message.reply("true");
-        }else {
-            message.reply("false");
-        }
+      console.log(dataBank)
     }
 });
 
