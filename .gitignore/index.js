@@ -1,20 +1,9 @@
 const Discord = require('discord.js');
 var bot = new Discord.Client();
 
-const low = require('lowdb')
-const FileSync = require('lowdb/adapters/FileSync')
- 
-const adapter = new FileSync('db.js')
-const db = low(adapter)
-
-const adapterp = new FileSync('pkmn.json')
-const dbp = low(adapterp)
-
 var guild = "498122570822844417"
 var catnum = ""
 var salon = ""
-var ideydb = ""
-var idey = ""
 var kispawn = 0
 var NumberOwOFin = 0
 var NumberOwO = 0
@@ -178,6 +167,165 @@ var gifs = {
     }
 }
 
+var mowo = {
+  0: {
+    idey: 0,
+    nom: "Birdo",
+    image: "https://vignette.wikia.nocookie.net/mario/images/a/a2/Birdo_MP9.png/revision/latest?cb=20130718081823&path-prefix=fr",
+    gifattrib: "b"
+  },
+  1: {
+    idey: 1,
+    nom: "Powtaytow",
+    image: "https://i.imgur.com/7duC8bA.jpg",
+    gifattrib: "i"
+  },
+  2: {
+    idey: 2,
+    nom: "Resetti",
+    image: "https://vignette.wikia.nocookie.net/slg/images/2/2b/Mr._Resetti_Animal_crossing.png/revision/latest?cb=20160621155518&path-prefix=fr",
+    gifattrib: "a"
+  },
+  3: {
+    idey: 3,
+    nom: "Puro",
+    image: "https://i.pinimg.com/originals/84/56/97/8456972aa1ba1efa39454490e4a944fd.jpg",
+    gifattrib: "t"
+  },
+  4: {
+    idey: 4,
+    nom: "Dabweegi",
+    image: "https://ih0.redbubble.net/image.416146853.3061/ap,550x550,12x16,1,transparent,t.u2.png",
+    gifattrib: "f"
+  },
+  5: {
+    idey: 5,
+    nom: "Leeroy Jenkins",
+    image: "https://www.hearthnews.fr/images/Leeroy_jenkins.jpg",
+    gifattrib: "g"
+  },
+  6: {
+    idey: 6,
+    nom: "Mockey",
+    image: "https://t3.rbxcdn.com/d8c22f991ee4410a29ca1ace30a932ed",
+    gifattrib: "u"
+  },
+  7: {
+    idey: 7,
+    nom: "Cyber-Pépito",
+    image: "https://i.servimg.com/u/f58/19/58/55/75/granol10.png",
+    gifattrib: "v"
+  },
+  8: {
+    idey: 8,
+    nom: "Hippo",
+    image: "https://www.nautiljon.com/images/perso/00/83/hippo_10338.jpg",
+    gifattrib: "j"
+  },
+  9: {
+    idey: 9,
+    nom: "Oeil de Chtulu",
+    image: "http://images6.fanpop.com/image/photos/35200000/Eye-Of-Cthulhu-terraria-35278349-894-894.jpg",
+    gifattrib: "k"
+  },
+  10: {
+    idey: 10,
+    nom: "Chi Chi",
+    image: "https://vignette.wikia.nocookie.net/gumball/images/9/9e/Chi_Chi_vector.png/revision/latest?cb=20170816000524&path-prefix=fr",
+    gifattrib: "l"
+  },
+  11: {
+    idey: 11,
+    nom: "Pyroli",
+    image: "https://i.imgur.com/qhjpDlu.jpg",
+    gifattrib: "r"
+  },
+  12: {
+    idey: 12,
+    nom: "Ombrage",
+    image: "https://i.skyrock.net/7195/83917195/pics/3130998830_1_2_pWX0b1o8.png",
+    gifattrib: "m"
+  },
+  13: {
+    idey: 13,
+    nom: "Fouinar",
+    image: "https://4.bp.blogspot.com/-2pU-thJnlsg/VynJDvvpgOI/AAAAAAAACsg/mG9bvwvCL9sJU9JJQkfy-U3GpJiR9vIUACLcB/s1600/1317341303036.png",
+    gifattrib: "c"
+  },
+  14: {
+    idey: 14,
+    nom: "Bulle",
+    image: "https://vignette.wikia.nocookie.net/powerpuff/images/f/f9/Bulle_Profile.png/revision/latest/scale-to-width-down/260?cb=20180905192732&path-prefix=fr",
+    gifattrib: "d"
+  },
+  15: {
+    idey: 15,
+    nom: "Blueberry",
+    image: "https://ih1.redbubble.net/image.213382678.7353/poster%2C210x230%2Cf8f8f8-pad%2C210x230%2Cf8f8f8.lite-1u5.jpg",
+    gifattrib: "e"
+  },
+  16: {
+    idey: 16,
+    nom: "Ben Drowned",
+    image: "https://i.pinimg.com/originals/89/54/6f/89546f402cca3c85bf74a080407a684e.jpg",
+    gifattrib: "h"
+  },
+  17: {
+    idey: 17,
+    nom: "Gaben",
+    image: "https://www.pcgamesn.com/wp-content/uploads/2018/10/gabe_newell_meme-580x334.jpg",
+    gifattrib: "n"
+  },
+  18: {
+    idey: 18,
+    nom: "Gracowitz",
+    image: "https://vignette.wikia.nocookie.net/mario/images/5/59/M%26LSS%2BLSDB-Gracowitz.png/revision/latest/scale-to-width-down/160?cb=20171015093832&path-prefix=fr",
+    gifattrib: "q"
+  },
+  19: {
+    idey: 19,
+    nom: "Biscuit Monster",
+    image: "https://m.media-amazon.com/images/S/aplus-media/vc/388cedc4-283c-45bb-bcdd-d8efaf79bfa0.png",
+    gifattrib: "s"
+  },
+  20: {
+    idey: 20,
+    nom: "Shiro",
+    image: "https://vignette.wikia.nocookie.net/no-game-no-life/images/0/09/Shiro.png/revision/latest?cb=20170323163115",
+    gifattrib: "p"
+  },
+  21: {
+    idey: 21,
+    nom: "Petit chat de type Aly",
+    image: "https://i.pinimg.com/736x/3d/17/f4/3d17f442926202143cde9b0c2e3b3891.jpg",
+    gifattrib: "o"
+  },
+  22: {
+    idey: 22,
+    nom: "Ludwig",
+    image: "https://vignette.wikia.nocookie.net/mario/images/0/0c/Ludwig_Von_Koopa%2C_New_Super_Mario_Bros._U.png/revision/latest?cb=20121119172345&path-prefix=fr",
+    gifattrib: "w"
+  },
+  23: {
+    idey: 23,
+    nom: "Entei",
+    image: "https://i.pinimg.com/originals/38/bf/0f/38bf0f2efb67a870bae1b9aa8b6f0e72.png",
+    gifattrib: "x"
+  },
+  24: {
+    idey: 24,
+    nom: "Nox",
+    image: "http://image.noelshack.com/fichiers/2014/10/1393976452-p-104-a.jpg",
+    gifattrib: "y"
+  },
+  25: {
+    idey: 25,
+    nom: "Nanachi",
+    image: "https://myanimelist.cdn-dena.com/images/characters/7/303689.jpg",
+    gifattrib: "z"
+  }
+}
+
 //Declaration Variables~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 var channelStockId = "552143842309046272";  //Max, met ici l'id du channel !
@@ -281,10 +429,6 @@ bot.on('ready',() => {
 
 bot.login (process.env.token);
 
-// Set some defaults
-dbp.defaults({ mowo: {}})
-  .write()
-
 bot.on('message', message => { //help
   if(message.content === "!!help"){
     var embed = new Discord.RichEmbed()
@@ -331,7 +475,11 @@ bot.on('message', message => { //Log
 
 bot.on('message', message => {// same ^^^^ fait "check " + "quelque chose" pour vérifier si tu l'as dans ton message dans le stockage discord. (le bot return un boolean)
     if(message.content === "!!check") {
-      console.log(dataBank)
+        if(gotOwO(message.author.id, message.content.split(' ')[1] )) {
+            message.reply("true");
+        }else {
+            message.reply("false");
+        }
     }
 });
 
@@ -343,17 +491,15 @@ bot.on('message', message => { //Appartion MOwOnster
     
    }else{
      var spawn = Math.floor(Math.random() * Math.floor(100))
-     console.log(spawn)
+     console.log("wala")
      if(spawn <= 10){
        kispawn = Math.floor(Math.random() * Math.floor(26))
        console.log(kispawn)
-       var ideydb = dbp.get("mowo").filter({idey: kispawn}).find("nom").value()
-       console.log(ideydb)
-       var idey = Object.values(ideydb)
+       console.log(mowo.kispawn.nom)
        var embedp = new Discord.RichEmbed()
          .setTitle("Un MOwOnster est apparut !")
-         .addField(`C'est un ${idey[1]} !`, 'Attrape le avec un "!!cat" !')
-         .setImage(idey[2])
+         .addField(`C'est un ${mowo.kispawn.nom} !`, 'Attrape le avec un "!!cat" !')
+         .setImage(mowo.kispawn.image)
          .setColor("#351cc0")
          bot.channels.get("552143793789599755").send(embedp)
          catnum = kispawn
@@ -371,11 +517,9 @@ bot.on('message', message => { //Capture
     if(catnum === ""){
       console.log("'^'")
     }else{
-      ideydb = dbp.get("mowo").filter({idey: kispawn}).find("nom").value()
-      idey = Object.values(ideydb)
-      add(yuser, idey[3])
+      add(yuser, mowo.catnum.gifattrib)
+      message.channel.send(`Bien jouer ! Tu viens de capturer un ${mowo.catnum.nom}, COwOmbatant !`)
       catnum = "" 
-      message.channel.send(`Bien jouer ! Tu viens de capturer un ${idey[1]}, COwOmbatant !`)
     }
   }
 }})
