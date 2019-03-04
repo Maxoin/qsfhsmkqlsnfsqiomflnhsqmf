@@ -2,9 +2,7 @@ const Discord = require('discord.js');
 var bot = new Discord.Client();
 
 var guild = "498122570822844417"
-var catnum = ""
 var salon = ""
-var kispawn = 0
 var NumberOwOFin = 0
 var NumberOwO = 0
 var yuser = ""
@@ -323,7 +321,9 @@ var mowo = {
     nom: "Nanachi",
     image: "https://myanimelist.cdn-dena.com/images/characters/7/303689.jpg",
     gifattrib: "z"
-  }
+  },
+  kispawn = Math.floor(Math.random() * Math.floor(26)),
+  catnum = ""
 }
 
 //Declaration Variables~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -493,16 +493,15 @@ bot.on('message', message => { //Appartion MOwOnster
      var spawn = Math.floor(Math.random() * Math.floor(100))
      console.log("wala")
      if(spawn <= 10){
-       kispawn = Math.floor(Math.random() * Math.floor(26))
        console.log(kispawn)
-       console.log(mowo + kispawn + nom)
+       console.log(mowo.kispawn.nom)
        var embedp = new Discord.RichEmbed()
          .setTitle("Un MOwOnster est apparut !")
          .addField(`C'est un ${mowo.kispawn.nom} !`, 'Attrape le avec un "!!cat" !')
          .setImage(mowo.kispawn.image)
          .setColor("#351cc0")
          bot.channels.get("552143793789599755").send(embedp)
-         catnum = kispawn
+         mowo.catnum = mowo.kispawn
          salon = message.channel.id
      }
    }
@@ -519,7 +518,7 @@ bot.on('message', message => { //Capture
     }else{
       add(yuser, mowo.catnum.gifattrib)
       message.channel.send(`Bien jouer ! Tu viens de capturer un ${mowo.catnum.nom}, COwOmbatant !`)
-      catnum = "" 
+      mowo.catnum = "" 
     }
   }
 }})
