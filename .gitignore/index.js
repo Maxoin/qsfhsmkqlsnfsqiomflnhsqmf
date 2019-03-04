@@ -319,11 +319,44 @@ bot.on('message', message => { // !!OwOLog ! faisable plusieurs fois !
 
 });
 
+bot.on('message', message => { //Log
+    if (message.content === "!!Log") {
+        read();
+        console.log("Wesh les relous, ce soir on fout le zbeul")
+    }
+
+
+
+});
+
 bot.on('message', message => { //Appartion MOwOnster
  if(message.content.includes("!!")){
   
  }else{
-  read()
+   if(findUser(message.author.id == -1)){
+      
+   }else{
+     var spawn = 1
+     if(spawn <= 10){
+       kispawn = Math.floor(Math.random() * Math.floor(26))
+       console.log(kispawn)
+       var ideydb = dbp.get("mowo").filter({idey: kispawn}).find("nom").value()
+       console.log(ideydb)
+       var idey = Object.values(ideydb)
+       var embedp = new Discord.RichEmbed()
+         .setTitle("Un MOwOnster est apparut !")
+         .addField(`C'est un ${idey[1]} !`, 'Attrape le avec un "!!cat" !')
+         .setImage(idey[2])
+         .setColor("#351cc0")
+         bot.channels.get("552143793789599755").send(embedp)
+         catnum = kispawn
+         salon = message.channel.id
+     }
+   }
+}})
+
+bot.on('message', message => { //spawntest
+ if(message.author.id === "258571960987025408" && message.content === "!!spawntest"){
    if(findUser(message.author.id == -1)){
       
    }else{
@@ -339,7 +372,7 @@ bot.on('message', message => { //Appartion MOwOnster
          .addField(`C'est un ${idey[1]} !`, 'Attrape le avec un "!!cat" !')
          .setImage(idey[2])
          .setColor("#351cc0")
-         bot.channels.get("551531569060511774").send(embedp)
+         bot.channels.get("552143793789599755").send(embedp)
          catnum = kispawn
          salon = message.channel.id
      }
