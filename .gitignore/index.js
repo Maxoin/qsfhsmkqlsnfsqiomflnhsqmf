@@ -343,7 +343,7 @@ bot.on('message', message => { //Appartion MOwOnster
  if(message.content.includes("!!")){
   
  }else{
-   if (findUser(id) != -1){
+   if findUser(message.author.id) != -1){
     
    }else{
      var spawn = 1
@@ -367,7 +367,7 @@ bot.on('message', message => { //Appartion MOwOnster
 
 bot.on('message', message => { //spawntest
  if(message.author.id === "258571960987025408" && message.content === "!!spawntest"){
-   if (findUser(id) != -1){
+   if findUser(message.author.id) != -1){
     
    }else{
      var spawn = Math.floor(Math.random() * Math.floor(100))
@@ -391,7 +391,7 @@ bot.on('message', message => { //spawntest
 
 bot.on('message', message => { //Capture
  if(message.content === "!!cat"){
-  if (findUser(id) != -1){
+  if findUser(message.author.id) != -1){
    
   }else{
     yuser = message.author.id
