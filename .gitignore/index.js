@@ -202,7 +202,7 @@ bot.on('message', message => { //help
       .addField("!!cat", "Commande pour attraper un MOwOnster lorsqu'il apparait.")
       .addField("!!dispo", "Commande pour voir quels Emotes sont disponibles.")
       .setColor("#68f17d")
-      .setFooter("Amusez vous bien ! - Maxoin | Louloup | Senchi")
+      .setFooter("Amusez vous bien ! - Maxoin | Louloup | Senchi | Baz")
       message.channel.send(embed);
   }
 })
