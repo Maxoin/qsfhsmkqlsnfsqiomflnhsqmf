@@ -343,7 +343,7 @@ bot.on('message', message => { //Appartion MOwOnster
  if(message.content.includes("!!")){
   
  }else{
-   if findUser(message.author.id) != -1){
+   if (findUser(message.author.id) != -1){
     
    }else{
      var spawn = 1
