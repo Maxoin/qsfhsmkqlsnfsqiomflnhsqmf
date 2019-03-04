@@ -334,8 +334,6 @@ bot.on('message', message => { //Appartion MOwOnster
   
  }else{
    if(findUser(message.author.id == -1)){
-      
-   }else{
      var spawn = 1
      if(spawn <= 10){
        kispawn = Math.floor(Math.random() * Math.floor(26))
@@ -358,8 +356,6 @@ bot.on('message', message => { //Appartion MOwOnster
 bot.on('message', message => { //spawntest
  if(message.author.id === "258571960987025408" && message.content === "!!spawntest"){
    if(findUser(message.author.id == -1)){
-      
-   }else{
      var spawn = Math.floor(Math.random() * Math.floor(100))
      if(spawn <= 10){
        kispawn = Math.floor(Math.random() * Math.floor(26))
@@ -382,8 +378,6 @@ bot.on('message', message => { //spawntest
 bot.on('message', message => { //Capture
  if(message.content === "!!cat"){
   if(findUser(message.author.id == -1)){
-   
-  }else{
     yuser = message.author.id
     if(catnum === ""){
       console.log("'^'")
