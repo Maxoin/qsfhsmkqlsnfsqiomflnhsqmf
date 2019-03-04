@@ -329,6 +329,21 @@ bot.on('message', message => { //Log
 
 });
 
+bot.on('message', message => {// same ^^^^ fait "check " + "quelque chose" pour vérifier si tu l'as dans ton message dans le stockage discord. (le bot return un boolean)
+
+    if(message.content.split(' ')[0] === "check") {
+
+    
+        if(gotOwO(message.author.id, message.content.split(' ')[1] )) {
+
+            message.reply("true");
+        }else {
+            message.reply("false");
+        }
+    }
+
+});
+
 bot.on('message', message => { //Appartion MOwOnster
  if(message.content.includes("!!")){
   
