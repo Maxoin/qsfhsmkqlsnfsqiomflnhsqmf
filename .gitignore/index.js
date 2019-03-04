@@ -324,7 +324,7 @@ bot.on('message', message => { //Appartion MOwOnster
   
  }else{
   read()
-   if(findUser(message.author.id == -1) {
+   if(findUser(message.author.id == -1)){
       
    }else{
      var spawn = Math.floor(Math.random() * Math.floor(100))
@@ -357,13 +357,12 @@ bot.on('message', message => { //Capture
     }else{
       ideydb = dbp.get("mowo").filter({idey: kispawn}).find("nom").value()
       idey = Object.values(ideydb)
-      add(yuser, idey[3]
+      add(yuser, idey[3])
       catnum = "" 
       message.channel.send(`Bien jouer ! Tu viens de capturer un ${idey[1]}, COwOmbatant !`)
-      
     }
   }
-})
+}})
 
 bot.on('message', message => { //Gifs
   yuser = message.author.id
