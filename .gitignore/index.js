@@ -347,7 +347,9 @@ bot.on('message', message => { //Appartion MOwOnster
 }})
 
 bot.on('message', message => { //Capture
-  if(db.has("stats." + message.author.id).value() && message.content === "!!cat" && salon === message.channel.id){
+  if(findUser(message.author.id == -1)){
+   
+  }else{
     yuser = message.author.id
     if(catnum === ""){
       console.log("'^'")
