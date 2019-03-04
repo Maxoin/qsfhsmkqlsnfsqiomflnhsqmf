@@ -347,7 +347,7 @@ bot.on('message', message => { //Appartion MOwOnster
     
    }else{
      var spawn = Math.floor(Math.random() * Math.floor(100))
-     console.log("wala")
+     console.log(spawn)
      if(spawn <= 10){
        kispawn = Math.floor(Math.random() * Math.floor(26))
        console.log(kispawn)
