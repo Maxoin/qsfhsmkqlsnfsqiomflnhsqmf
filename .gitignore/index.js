@@ -347,6 +347,7 @@ bot.on('message', message => { //Appartion MOwOnster
 }})
 
 bot.on('message', message => { //Capture
+ if(message.content === "!!cat"){
   if(findUser(message.author.id == -1)){
    
   }else{
@@ -356,16 +357,7 @@ bot.on('message', message => { //Capture
     }else{
       ideydb = dbp.get("mowo").filter({idey: kispawn}).find("nom").value()
       idey = Object.values(ideydb)
-      NumberOwO = db.get("stats").filter({id: yuser}).find("id").value()
-      NumberOwOFin = Object.values(NumberOwO)
-      db.set("stats." + message.author.id + "." + idey[3] + ".nom", idey[1])
-      .write()
-      db.set("stats." + message.author.id + "." + idey[3] + ".image", idey[2])
-      .write()
-      db.set("stats." + message.author.id + "." + idey[3] + ".gif", idey[3])
-      .write()
-      db.set("stats." + message.author.id + ".numowo", NumberOwOFin[1] + 1)
-      .write()
+      add(yuser, idey[3]
       catnum = "" 
       message.channel.send(`Bien jouer ! Tu viens de capturer un ${idey[1]}, COwOmbatant !`)
       
