@@ -323,7 +323,10 @@ bot.on('message', message => { //Appartion MOwOnster
  if(message.content.includes("!!")){
   
  }else{
-   if(db.has("stats." + message.author.id).value()){
+  read()
+   if(findUser(message.author.id == -1) {
+      
+   }else{
      var spawn = Math.floor(Math.random() * Math.floor(100))
      if(spawn <= 10){
        kispawn = Math.floor(Math.random() * Math.floor(26))
