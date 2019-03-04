@@ -322,7 +322,7 @@ var mowo = {
     image: "https://myanimelist.cdn-dena.com/images/characters/7/303689.jpg",
     gifattrib: "z"
   },
-  kispawn = Math.floor(Math.random() * Math.floor(26)),
+  kispawn = "",
   catnum = ""
 }
 
@@ -493,7 +493,7 @@ bot.on('message', message => { //Appartion MOwOnster
      var spawn = Math.floor(Math.random() * Math.floor(100))
      console.log("wala")
      if(spawn <= 10){
-       console.log(kispawn)
+       mowo.kispawn = Math.floor(Math.random() * Math.floor(26))
        console.log(mowo.kispawn.nom)
        var embedp = new Discord.RichEmbed()
          .setTitle("Un MOwOnster est apparut !")
