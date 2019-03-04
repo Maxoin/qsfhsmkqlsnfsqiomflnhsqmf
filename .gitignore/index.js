@@ -322,8 +322,8 @@ var mowo = {
     image: "https://myanimelist.cdn-dena.com/images/characters/7/303689.jpg",
     gifattrib: "z"
   },
-  kispawn = "",
-  catnum = ""
+  kispawn = 0,
+  catnum = 0
 }
 
 //Declaration Variables~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
