@@ -302,14 +302,22 @@ bot.on('message', message => { //help
   }
 })
 
-bot.on('message', message => { //OwOLogin
-  if(message.content === '!!OwOLog'){
-    guild.createChannel('new-general', 'text')
-      .then(console.log)
-      .catch(console.error);
-    message.channel.send("Ok, c'est noté !\nFaites attention ! Si vous faites une nouvelle fois cette commande, vous perdrez votre progression !")
-    console.log("OwOLogin")
-}})
+bot.on('message', message => { // !!OwOLog ! faisable plusieurs fois !
+
+    if (message.content === "!!OwOLog") {
+        read();
+        if (findUser(message.author.id) == -1) {
+            postReserve(message.author.id); //stockage discord
+            dataBank.push([message.author.id]); //stockage variable
+            message.channel.send("Ok, c'est noté !")
+        } else {
+            message.channel.send("Tu es déjà enregistré ! Tu n'as pas à refaire cette commande.")
+        }
+    }
+
+
+
+});
 
 bot.on('message', message => { //Appartion MOwOnster
  if(message.content.includes("!!")){
