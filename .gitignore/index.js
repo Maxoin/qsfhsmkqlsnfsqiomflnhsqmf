@@ -173,7 +173,9 @@ var channelStockId = "552143842309046272";  //Max, met ici l'id du channel !
 
 var dataBank = []; //Contient des tableaux : C'est la base de données quand le bot est actif !
 
+var StockMon = "552222695652327434"
 
+var bankmowon = []
 
 //Declaration Fonction~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -190,6 +192,24 @@ function read () { //lit le stockage discord et le met dans le stockage variable
                 })
             )
             .catch(console.error)
+        )
+    
+        (bot.channels.get(StockMon).fetchMessages({ limit: 100 }) 
+
+            .then(messages => 
+
+               
+
+                messages.forEach(function(valeur , clé) {
+
+                    StockMon.push(valeur.content.split(" * "));
+
+                })
+
+            )
+
+            .catch(console.error)
+
         );
     
 };
@@ -278,6 +298,12 @@ bot.on('message', message => { //help
       .setColor("#68f17d")
       .setFooter("Amusez vous bien ! - Maxoin | Louloup | Senchi | Baz")
       message.channel.send(embed);
+  }
+})
+
+bot.on('message', message => { //help
+  if(message.content === "!!walaye"){
+    console.log(StockMon)
   }
 })
 
