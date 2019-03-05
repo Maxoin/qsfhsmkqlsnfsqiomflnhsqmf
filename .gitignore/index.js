@@ -348,7 +348,7 @@ bot.on('message', message => {// commande de test à supprimer ! fait "add " + "
 });
 
 bot.on('message', message => {// same ^^^^ fait "check " + "quelque chose" pour vérifier si tu l'as dans ton message dans le stockage discord. (le bot return un boolean)
-    if(message.content.split(' ')[0] === "check") {
+    if(message.content.split(' ')[0] === "!!check") {
         if(gotOwO(message.author.id, message.content.split(' ')[1] )) {
             message.reply("true");
         }else {
@@ -367,11 +367,11 @@ bot.on('message', message => { //Appartion MOwOnster
      var spawn = Math.floor(Math.random() * Math.floor(100))
      console.log("wala")
      if(spawn <= 10){
+       var kispawn =  Math.floor(Math.random() * Math.floor(100))
        console.log(kispawn)
-       console.log(mowo.kispawn.nom)
        var embedp = new Discord.RichEmbed()
          .setTitle("Un MOwOnster est apparut !")
-         .addField(`C'est un ${mowo.kispawn.nom} !`, 'Attrape le avec un "!!cat" !')
+         .addField(`C'est un ${kispawn} !`, 'Attrape le avec un "!!cat" !')
          .setImage(mowo. kispawn .image)
          .setColor("#351cc0")
          bot.channels.get("552143793789599755").send(embedp)
