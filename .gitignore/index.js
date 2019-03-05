@@ -214,15 +214,10 @@ function findUser (id) { //à partir de l'id d'un user, trouve l'indice de sa "f
 }
 
 function add (id, numOwO) { //Ajoute un OwO à un user
-    if (findUser(id) === -1) {    
-
-        
-
+    if (findUser(id) != -1) {    
         bot.channels.get(channelStockId).fetchMessages({ limit: 100 }) //Trouve le message de stockage discord de l'user puis l'edit pour ajouter le owo
-
             .then(messages => 
-                messages.forEach(function(msg, idMsg) {
-                    
+                messages.forEach(function(msg, idMsg) 
                     if (msg.content.split(' * ')[0] === id) {
                         bot.channels.get(channelStockId).fetchMessage(idMsg)
                             .then(message => 
