@@ -307,7 +307,7 @@ bot.on('message', message => { //help
 
 bot.on('message', message => { //help
   if(message.content === "!!walaye"){
-    console.log(StockMon)
+    console.log(bankmowon)
   }
 })
 
