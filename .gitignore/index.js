@@ -165,7 +165,7 @@ var gifs = {
       annonce: "Z'ai faim, ze peux avwar à manzer, ssiteuplait ?",
       effet: ""
     }
-)
+}
 
 //Declaration Variables~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
