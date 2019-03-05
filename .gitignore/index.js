@@ -179,7 +179,28 @@ var bankmowon = []
 
 //Declaration Fonction~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+function readpkmn () { //lit le stockage discord et le met dans le stockage variable
 
+    (bot.channels.get(StockMon).fetchMessages({ limit: 100 }) 
+
+            .then(messages => 
+
+               
+
+                messages.forEach(function(valeur , clé) {
+
+                    bankmowon.push(valeur.content.split(" * "));
+
+                })
+
+            )
+
+            .catch(console.error)
+
+        );
+        
+    
+};
 
 function read () { //lit le stockage discord et le met dans le stockage variable
 
@@ -193,24 +214,7 @@ function read () { //lit le stockage discord et le met dans le stockage variable
             )
             .catch(console.error)
         )
-    
-        (bot.channels.get(StockMon).fetchMessages({ limit: 100 }) 
-
-            .then(messages => 
-
-               
-
-                messages.forEach(function(valeur , clé) {
-
-                    StockMon.push(valeur.content.split(" * "));
-
-                })
-
-            )
-
-            .catch(console.error)
-
-        );
+        
     
 };
 
@@ -326,7 +330,8 @@ bot.on('message', message => { // !!OwOLog ! faisable plusieurs fois !
 
 bot.on('message', message => { //Log
     if (message.content === "!!Log") {
-        read();
+        read()
+        readpkmn()
         console.log("Wesh les relous, ce soir on fout le zbeul")
     }
 
