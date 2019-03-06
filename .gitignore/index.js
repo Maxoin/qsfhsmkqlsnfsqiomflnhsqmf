@@ -1,18 +1,10 @@
 const Discord = require('discord.js');
 var bot = new Discord.Client();
 
-const low = require('lowdb')
-const FileSync = require('lowdb/adapters/FileSync')
-
-const adapter = new FileSync('pkmn.json')
-const db = low(adapter)
-
 var guild = "498122570822844417"
 var catnum = ""
 var salon = ""
 var kispawn = 0
-var ideydb =""
-var ideye = ""
 var NumberOwOFin = 0
 var NumberOwO = 0
 var yuser = ""
@@ -175,13 +167,177 @@ var gifs = {
     }
 }
 
+var mowo = {
+  0: {
+    idey: 0,
+    nom: "Birdo",
+    image: "https://vignette.wikia.nocookie.net/mario/images/a/a2/Birdo_MP9.png/revision/latest?cb=20130718081823&path-prefix=fr",
+    gifattrib: "b"
+  },
+  1: {
+    idey: 1,
+    nom: "Powtaytow",
+    image: "https://i.imgur.com/7duC8bA.jpg",
+    gifattrib: "i"
+  },
+  2: {
+    idey: 2,
+    nom: "Resetti",
+    image: "https://vignette.wikia.nocookie.net/slg/images/2/2b/Mr._Resetti_Animal_crossing.png/revision/latest?cb=20160621155518&path-prefix=fr",
+    gifattrib: "a"
+  },
+  3: {
+    idey: 3,
+    nom: "Puro",
+    image: "https://i.pinimg.com/originals/84/56/97/8456972aa1ba1efa39454490e4a944fd.jpg",
+    gifattrib: "t"
+  },
+  4: {
+    idey: 4,
+    nom: "Dabweegi",
+    image: "https://ih0.redbubble.net/image.416146853.3061/ap,550x550,12x16,1,transparent,t.u2.png",
+    gifattrib: "f"
+  },
+  5: {
+    idey: 5,
+    nom: "Leeroy Jenkins",
+    image: "https://www.hearthnews.fr/images/Leeroy_jenkins.jpg",
+    gifattrib: "g"
+  },
+  6: {
+    idey: 6,
+    nom: "Mockey",
+    image: "https://t3.rbxcdn.com/d8c22f991ee4410a29ca1ace30a932ed",
+    gifattrib: "u"
+  },
+  7: {
+    idey: 7,
+    nom: "Cyber-Pépito",
+    image: "https://i.servimg.com/u/f58/19/58/55/75/granol10.png",
+    gifattrib: "v"
+  },
+  8: {
+    idey: 8,
+    nom: "Hippo",
+    image: "https://www.nautiljon.com/images/perso/00/83/hippo_10338.jpg",
+    gifattrib: "j"
+  },
+  9: {
+    idey: 9,
+    nom: "Oeil de Chtulu",
+    image: "http://images6.fanpop.com/image/photos/35200000/Eye-Of-Cthulhu-terraria-35278349-894-894.jpg",
+    gifattrib: "k"
+  },
+  10: {
+    idey: 10,
+    nom: "Chi Chi",
+    image: "https://vignette.wikia.nocookie.net/gumball/images/9/9e/Chi_Chi_vector.png/revision/latest?cb=20170816000524&path-prefix=fr",
+    gifattrib: "l"
+  },
+  11: {
+    idey: 11,
+    nom: "Pyroli",
+    image: "https://i.imgur.com/qhjpDlu.jpg",
+    gifattrib: "r"
+  },
+  12: {
+    idey: 12,
+    nom: "Ombrage",
+    image: "https://i.skyrock.net/7195/83917195/pics/3130998830_1_2_pWX0b1o8.png",
+    gifattrib: "m"
+  },
+  13: {
+    idey: 13,
+    nom: "Fouinar",
+    image: "https://4.bp.blogspot.com/-2pU-thJnlsg/VynJDvvpgOI/AAAAAAAACsg/mG9bvwvCL9sJU9JJQkfy-U3GpJiR9vIUACLcB/s1600/1317341303036.png",
+    gifattrib: "c"
+  },
+  14: {
+    idey: 14,
+    nom: "Bulle",
+    image: "https://vignette.wikia.nocookie.net/powerpuff/images/f/f9/Bulle_Profile.png/revision/latest/scale-to-width-down/260?cb=20180905192732&path-prefix=fr",
+    gifattrib: "d"
+  },
+  15: {
+    idey: 15,
+    nom: "Blueberry",
+    image: "https://ih1.redbubble.net/image.213382678.7353/poster%2C210x230%2Cf8f8f8-pad%2C210x230%2Cf8f8f8.lite-1u5.jpg",
+    gifattrib: "e"
+  },
+  16: {
+    idey: 16,
+    nom: "Ben Drowned",
+    image: "https://i.pinimg.com/originals/89/54/6f/89546f402cca3c85bf74a080407a684e.jpg",
+    gifattrib: "h"
+  },
+  17: {
+    idey: 17,
+    nom: "Gaben",
+    image: "https://www.pcgamesn.com/wp-content/uploads/2018/10/gabe_newell_meme-580x334.jpg",
+    gifattrib: "n"
+  },
+  18: {
+    idey: 18,
+    nom: "Gracowitz",
+    image: "https://vignette.wikia.nocookie.net/mario/images/5/59/M%26LSS%2BLSDB-Gracowitz.png/revision/latest/scale-to-width-down/160?cb=20171015093832&path-prefix=fr",
+    gifattrib: "q"
+  },
+  19: {
+    idey: 19,
+    nom: "Biscuit Monster",
+    image: "https://m.media-amazon.com/images/S/aplus-media/vc/388cedc4-283c-45bb-bcdd-d8efaf79bfa0.png",
+    gifattrib: "s"
+  },
+  20: {
+    idey: 20,
+    nom: "Shiro",
+    image: "https://vignette.wikia.nocookie.net/no-game-no-life/images/0/09/Shiro.png/revision/latest?cb=20170323163115",
+    gifattrib: "p"
+  },
+  21: {
+    idey: 21,
+    nom: "Petit chat de type Aly",
+    image: "https://i.pinimg.com/736x/3d/17/f4/3d17f442926202143cde9b0c2e3b3891.jpg",
+    gifattrib: "o"
+  },
+  22: {
+    idey: 22,
+    nom: "Ludwig",
+    image: "https://vignette.wikia.nocookie.net/mario/images/0/0c/Ludwig_Von_Koopa%2C_New_Super_Mario_Bros._U.png/revision/latest?cb=20121119172345&path-prefix=fr",
+    gifattrib: "w"
+  },
+  23: {
+    idey: 23,
+    nom: "Entei",
+    image: "https://i.pinimg.com/originals/38/bf/0f/38bf0f2efb67a870bae1b9aa8b6f0e72.png",
+    gifattrib: "x"
+  },
+  24: {
+    idey: 24,
+    nom: "Nox",
+    image: "http://image.noelshack.com/fichiers/2014/10/1393976452-p-104-a.jpg",
+    gifattrib: "y"
+  },
+  25: {
+    idey: 25,
+    nom: "Nanachi",
+    image: "https://myanimelist.cdn-dena.com/images/characters/7/303689.jpg",
+    gifattrib: "z"
+  },
+  kispawn = Math.floor(Math.random() * Math.floor(26))
+}
+
 //Declaration Variables~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 var channelStockId = "552143842309046272";  //Max, met ici l'id du channel !
 
 var dataBank = []; //Contient des tableaux : C'est la base de données quand le bot est actif !
 
+
+
 //Declaration Fonction~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
 
 function read () { //lit le stockage discord et le met dans le stockage variable
 
@@ -194,8 +350,7 @@ function read () { //lit le stockage discord et le met dans le stockage variable
                 })
             )
             .catch(console.error)
-        )
-        
+        );
     
 };
 
@@ -219,14 +374,16 @@ function findUser (id) { //à partir de l'id d'un user, trouve l'indice de sa "f
 }
 
 function add (id, numOwO) { //Ajoute un OwO à un user
-    if (findUser(id) != -1) {    
+    if (findUser(id) === -1) {    
+
+        
 
         bot.channels.get(channelStockId).fetchMessages({ limit: 100 }) //Trouve le message de stockage discord de l'user puis l'edit pour ajouter le owo
 
             .then(messages => 
                 messages.forEach(function(msg, idMsg) {
                     
-                    if (msg.content.split(' * ')[0] == id) {
+                    if (msg.content.split(' * ')[0] === id) {
                         bot.channels.get(channelStockId).fetchMessage(idMsg)
                             .then(message => 
                                 message.edit(msg.content + " * " + numOwO)
@@ -237,10 +394,14 @@ function add (id, numOwO) { //Ajoute un OwO à un user
                 })
             )
             .catch(console.error)
+
         dataBank[findUser(id)].push(numOwO); //Ajoute le owo dans le stockage variable
+    
+
     }
+
 }
- 
+
 function gotOwO (id, numOwO) { //Verifie si un user a un OwO ! return true si il l'a, return false sinon
 
 
@@ -305,10 +466,23 @@ bot.on('message', message => { // !!OwOLog ! faisable plusieurs fois !
 
 bot.on('message', message => { //Log
     if (message.content === "!!Log") {
-        read()
+        read();
         console.log("Wesh les relous, ce soir on fout le zbeul")
     }
-  })
+
+
+
+});
+
+bot.on('message', message => {// same ^^^^ fait "check " + "quelque chose" pour vérifier si tu l'as dans ton message dans le stockage discord. (le bot return un boolean)
+    if(message.content === "!!check") {
+        if(gotOwO(message.author.id, message.content.split(' ')[1] )) {
+            message.reply("true");
+        }else {
+            message.reply("false");
+        }
+    }
+});
 
 bot.on('message', message => { //Appartion MOwOnster
  if(message.content.includes("!!")){
@@ -320,16 +494,14 @@ bot.on('message', message => { //Appartion MOwOnster
      var spawn = Math.floor(Math.random() * Math.floor(100))
      console.log("wala")
      if(spawn <= 10){
-       var kispawn =  Math.floor(Math.random() * Math.floor(26))
        console.log(kispawn)
-         ideydb = db.get('mowo').filter({idey: kispawn}).find('idey').value()
-         ideye = Object.values(ideydb)
+       console.log(mowo.kispawn.nom)
        var embedp = new Discord.RichEmbed()
          .setTitle("Un MOwOnster est apparut !")
-         .addField(`C'est un ${ideye[1]} !`, 'Attrape le avec un "!!cat" !')
-         .setImage(ideye[2])
+         .addField(`C'est un ${mowo.kispawn.nom} !`, 'Attrape le avec un "!!cat" !')
+         .setImage(mowo. kispawn .image)
          .setColor("#351cc0")
-         bot.channels.get("551531569060511774").send(embedp)
+         bot.channels.get("552143793789599755").send(embedp)
          catnum = kispawn
          salon = message.channel.id
      }
@@ -345,8 +517,8 @@ bot.on('message', message => { //Capture
     if(catnum === ""){
       console.log("'^'")
     }else{
-      add(yuser, ideye[3])
-      message.channel.send(`Bien jouer ! Tu viens de capturer un ${ideye[1]}, COwOmbatant !`)
+      add(yuser, mowo.catnum.gifattrib)
+      message.channel.send(`Bien jouer ! Tu viens de capturer un ${mowo.catnum.nom}, COwOmbatant !`)
       catnum = "" 
     }
   }
@@ -354,7 +526,7 @@ bot.on('message', message => { //Capture
 
 bot.on('message', message => { //Gifs
   yuser = message.author.id
-  if("machin MACHIN".toLowerCase() === gifs.a.nom.toLowerCase() && gotOwO(yuser, "a") && message.content.includes('>' + gifs.a.nom)){
+  if(gotOwO(yuser, "a") && message.content.includes('>' + gifs.a.nom)){
     var embed = new Discord.RichEmbed()
       .setTitle(gifs.a.annonce)
       .setImage(gifs.a.gif)
@@ -364,7 +536,7 @@ bot.on('message', message => { //Gifs
 
 bot.on('message', message => { //Gifs
   yuser = message.author.id
-  if("machin MACHIN".toLowerCase() === gifs.b.nom.toLowerCase() && gotOwO(yuser, "b") && message.content.includes('>' + gifs.b.nom)){
+  if(gotOwO(yuser, "b") && message.content.includes('>' + gifs.b.nom)){
     var embed = new Discord.RichEmbed()
       .setTitle(gifs.b.annonce)
       .setImage(gifs.b.gif)
@@ -374,7 +546,7 @@ bot.on('message', message => { //Gifs
 
 bot.on('message', message => { //Gifs
   yuser = message.author.id
-  if("machin MACHIN".toLowerCase() === gifs.c.nom.toLowerCase() && gotOwO(yuser, "c") && message.content.includes('>' + gifs.c.nom)){
+  if(gotOwO(yuser, "c") && message.content.includes('>' + gifs.c.nom)){
     var embed = new Discord.RichEmbed()
       .setTitle(gifs.c.annonce)
       .setImage(gifs.c.gif)
@@ -384,7 +556,7 @@ bot.on('message', message => { //Gifs
 
 bot.on('message', message => { //Gifs
   yuser = message.author.id
-  if("machin MACHIN".toLowerCase() === gifs.d.nom.toLowerCase() && gotOwO(yuser, "d") && message.content.includes('>' + gifs.d.nom)){
+  if(gotOwO(yuser, "d") && message.content.includes('>' + gifs.d.nom)){
    console.log("TARACE LA HACHE")
     var embed = new Discord.RichEmbed()
       .setTitle(gifs.d.annonce)
@@ -395,7 +567,7 @@ bot.on('message', message => { //Gifs
 
 bot.on('message', message => { //Gifs
   yuser = message.author.id
-  if("machin MACHIN".toLowerCase() === gifs.e.nom.toLowerCase() && gotOwO(yuser, "e") && message.content.includes('>' + gifs.e.nom)){
+  if(gotOwO(yuser, "e") && message.content.includes('>' + gifs.e.nom)){
     var embed = new Discord.RichEmbed()
       .setTitle(gifs.e.annonce)
       .setImage(gifs.e.gif)
@@ -405,7 +577,7 @@ bot.on('message', message => { //Gifs
 
 bot.on('message', message => { //Gifs
   yuser = message.author.id
-  if("machin MACHIN".toLowerCase() === gifs.f.nom.toLowerCase() && gotOwO(yuser, "f") && message.content.includes('>' + gifs.f.nom)){
+  if(gotOwO(yuser, "f") && message.content.includes('>' + gifs.f.nom)){
     var embed = new Discord.RichEmbed()
       .setTitle(gifs.f.annonce)
       .setImage(gifs.f.gif)
@@ -415,7 +587,7 @@ bot.on('message', message => { //Gifs
 
 bot.on('message', message => { //Gifs
   yuser = message.author.id
-  if("machin MACHIN".toLowerCase() === gifs.g.nom.toLowerCase() && gotOwO(yuser, "g") && message.content.includes('>' + gifs.g.nom)){
+  if(gotOwO(yuser, "g") && message.content.includes('>' + gifs.g.nom)){
     var embed = new Discord.RichEmbed()
       .setTitle(gifs.g.annonce)
       .setImage(gifs.g.gif)
@@ -425,7 +597,7 @@ bot.on('message', message => { //Gifs
 
 bot.on('message', message => { //Gifs
   yuser = message.author.id
-  if("machin MACHIN".toLowerCase() === gifs.h.nom.toLowerCase() && gotOwO(yuser, "h") && message.content.includes('>' + gifs.h.nom)){
+  if(gotOwO(yuser, "h") && message.content.includes('>' + gifs.h.nom)){
     var embed = new Discord.RichEmbed()
       .setTitle(gifs.h.annonce)
       .setImage(gifs.h.gif)
@@ -435,7 +607,7 @@ bot.on('message', message => { //Gifs
 
 bot.on('message', message => { //Gifs
   yuser = message.author.id
-  if("machin MACHIN".toLowerCase() === gifs.i.nom.toLowerCase() && gotOwO(yuser, "i") && message.content.includes('>' + gifs.i.nom)){
+  if(gotOwO(yuser, "i") && message.content.includes('>' + gifs.i.nom)){
     var embed = new Discord.RichEmbed()
       .setTitle(gifs.i.annonce)
       .setImage(gifs.i.gif)
@@ -445,7 +617,7 @@ bot.on('message', message => { //Gifs
 
 bot.on('message', message => { //Gifs
   yuser = message.author.id
-  if("machin MACHIN".toLowerCase() === gifs.j.nom.toLowerCase() && gotOwO(yuser, "j") && message.content.includes('>' + gifs.j.nom)){
+  if(gotOwO(yuser, "j") && message.content.includes('>' + gifs.j.nom)){
     var embed = new Discord.RichEmbed()
       .setTitle(gifs.j.annonce)
       .setImage(gifs.j.gif)
@@ -455,7 +627,7 @@ bot.on('message', message => { //Gifs
 
 bot.on('message', message => { //Gifs
   yuser = message.author.id
-  if("machin MACHIN".toLowerCase() === gifs.k.nom.toLowerCase() && gotOwO(yuser, "k") && message.content.includes('>' + gifs.k.nom)){
+  if(gotOwO(yuser, "k") && message.content.includes('>' + gifs.k.nom)){
     var embed = new Discord.RichEmbed()
       .setTitle(gifs.k.annonce)
       .setImage(gifs.k.gif)
@@ -465,7 +637,7 @@ bot.on('message', message => { //Gifs
 
 bot.on('message', message => { //Gifs
   yuser = message.author.id
-  if("machin MACHIN".toLowerCase() === gifs.l.nom.toLowerCase() && gotOwO(yuser, "l") && message.content.includes('>' + gifs.l.nom)){
+  if(gotOwO(yuser, "l") && message.content.includes('>' + gifs.l.nom)){
     var embed = new Discord.RichEmbed()
       .setTitle(gifs.l.annonce)
       .setImage(gifs.l.gif)
@@ -475,7 +647,7 @@ bot.on('message', message => { //Gifs
 
 bot.on('message', message => { //Gifs
   yuser = message.author.id
-  if("machin MACHIN".toLowerCase() === gifs.m.nom.toLowerCase() && gotOwO(yuser, "m") && message.content.includes('>' + gifs.m.nom)){
+  if(gotOwO(yuser, "m") && message.content.includes('>' + gifs.m.nom)){
     var embed = new Discord.RichEmbed()
       .setTitle(gifs.m.annonce)
       .setImage(gifs.m.gif)
@@ -485,7 +657,7 @@ bot.on('message', message => { //Gifs
 
 bot.on('message', message => { //Gifs
   yuser = message.author.id
-  if("machin MACHIN".toLowerCase() === gifs.n.nom.toLowerCase() && gotOwO(yuser, "n") && message.content.includes('>' + gifs.n.nom)){
+  if(gotOwO(yuser, "n") && message.content.includes('>' + gifs.n.nom)){
     var embed = new Discord.RichEmbed()
       .setTitle(gifs.n.annonce)
       .setImage(gifs.n.gif)
@@ -495,7 +667,7 @@ bot.on('message', message => { //Gifs
 
 bot.on('message', message => { //Gifs
   yuser = message.author.id
-  if("machin MACHIN".toLowerCase() === gifs.o.nom.toLowerCase() && gotOwO(yuser, "o") && message.content.includes('>' + gifs.o.nom)){
+  if(gotOwO(yuser, "o") && message.content.includes('>' + gifs.o.nom)){
     var embed = new Discord.RichEmbed()
       .setTitle(gifs.o.annonce)
       .setImage(gifs.o.gif)
@@ -505,7 +677,7 @@ bot.on('message', message => { //Gifs
 
 bot.on('message', message => { //Gifs
   yuser = message.author.id
-  if("machin MACHIN".toLowerCase() === gifs.p.nom.toLowerCase() && gotOwO(yuser, "p") && message.content.includes('>' + gifs.p.nom)){
+  if(gotOwO(yuser, "p") && message.content.includes('>' + gifs.p.nom)){
     var embed = new Discord.RichEmbed()
       .setTitle(gifs.p.annonce)
       .setImage(gifs.p.gif)
@@ -515,7 +687,7 @@ bot.on('message', message => { //Gifs
 
 bot.on('message', message => { //Gifs
   yuser = message.author.id
-  if("machin MACHIN".toLowerCase() === gifs.q.nom.toLowerCase() && gotOwO(yuser, "q") && message.content.includes('>' + gifs.q.nom)){
+  if(gotOwO(yuser, "q") && message.content.includes('>' + gifs.q.nom)){
     var embed = new Discord.RichEmbed()
       .setTitle(gifs.q.annonce)
       .setImage(gifs.q.gif)
@@ -525,7 +697,7 @@ bot.on('message', message => { //Gifs
 
 bot.on('message', message => { //Gifs
   yuser = message.author.id
-  if("machin MACHIN".toLowerCase() === gifs.r.nom.toLowerCase() && gotOwO(yuser, "r") && message.content.includes('>' + gifs.r.nom)){
+  if(gotOwO(yuser, "r") && message.content.includes('>' + gifs.r.nom)){
     var embed = new Discord.RichEmbed()
       .setTitle(gifs.r.annonce)
       .setImage(gifs.r.gif)
@@ -535,7 +707,7 @@ bot.on('message', message => { //Gifs
 
 bot.on('message', message => { //Gifs
   yuser = message.author.id
-  if("machin MACHIN".toLowerCase() === gifs.s.nom.toLowerCase() && gotOwO(yuser, "s") && message.content.includes('>' + gifs.s.nom)){
+  if(gotOwO(yuser, "s") && message.content.includes('>' + gifs.s.nom)){
     var embed = new Discord.RichEmbed()
       .setTitle(gifs.s.annonce)
       .setImage(gifs.s.gif)
@@ -545,7 +717,7 @@ bot.on('message', message => { //Gifs
 
 bot.on('message', message => { //Gifs
   yuser = message.author.id
-  if("machin MACHIN".toLowerCase() === gifs.t.nom.toLowerCase() && gotOwO(yuser, "t") && message.content.includes('>' + gifs.t.nom)){
+  if(gotOwO(yuser, "t") && message.content.includes('>' + gifs.t.nom)){
     var embed = new Discord.RichEmbed()
       .setTitle(gifs.t.annonce)
       .setImage(gifs.t.gif)
@@ -555,7 +727,7 @@ bot.on('message', message => { //Gifs
 
 bot.on('message', message => { //Gifs
   yuser = message.author.id
-  if("machin MACHIN".toLowerCase() === gifs.u.nom.toLowerCase() && gotOwO(yuser, "u") && message.content.includes('>' + gifs.u.nom)){
+  if(gotOwO(yuser, "u") && message.content.includes('>' + gifs.u.nom)){
     var embed = new Discord.RichEmbed()
       .setTitle(gifs.u.annonce)
       .setImage(gifs.u.gif)
@@ -565,7 +737,7 @@ bot.on('message', message => { //Gifs
 
 bot.on('message', message => { //Gifs
   yuser = message.author.id
-  if("machin MACHIN".toLowerCase() === gifs.v.nom.toLowerCase() && gotOwO(yuser, "v") && message.content.includes('>' + gifs.v.nom)){
+  if(gotOwO(yuser, "v") && message.content.includes('>' + gifs.v.nom)){
     var embed = new Discord.RichEmbed()
       .setTitle(gifs.v.annonce)
       .setImage(gifs.v.gif)
@@ -576,7 +748,7 @@ bot.on('message', message => { //Gifs
 
 bot.on('message', message => { //Gifs
   yuser = message.author.id
-  if("machin MACHIN".toLowerCase() === gifs.w.nom.toLowerCase() && gotOwO(yuser, "w") && message.content.includes('>' + gifs.w.nom)){
+  if(gotOwO(yuser, "w") && message.content.includes('>' + gifs.w.nom)){
     var embed = new Discord.RichEmbed()
       .setTitle(gifs.w.annonce)
       .setImage(gifs.w.gif)
@@ -587,7 +759,7 @@ bot.on('message', message => { //Gifs
 
 bot.on('message', message => { //Gifs
   yuser = message.author.id
-  if("machin MACHIN".toLowerCase() === gifs.x.nom.toLowerCase() && gotOwO(yuser, "x") && message.content.includes('>' + gifs.x.nom)){
+  if(gotOwO(yuser, "x") && message.content.includes('>' + gifs.x.nom)){
     var embed = new Discord.RichEmbed()
       .setTitle(gifs.x.annonce)
       .setImage(gifs.x.gif)
@@ -598,7 +770,7 @@ bot.on('message', message => { //Gifs
 
 bot.on('message', message => { //Gifs
   yuser = message.author.id
-  if("machin MACHIN".toLowerCase() === gifs.y.nom.toLowerCase() && gotOwO(yuser, "y") && message.content.includes('>' + gifs.y.nom)){
+  if(gotOwO(yuser, "y") && message.content.includes('>' + gifs.y.nom)){
     var embed = new Discord.RichEmbed()
       .setTitle(gifs.y.annonce)
       .setImage(gifs.y.gif)
@@ -608,7 +780,7 @@ bot.on('message', message => { //Gifs
 
 bot.on('message', message => { //Gifs
   yuser = message.author.id
-  if("machin MACHIN".toLowerCase() === gifs.z.nom.toLowerCase() && gotOwO(yuser, "z") && message.content.includes('>' + gifs.y.nom)){
+  if(gotOwO(yuser, "z") && message.content.includes('>' + gifs.y.nom)){
     var embed = new Discord.RichEmbed()
       .setTitle(gifs.y.annonce)
       .setImage(gifs.y.gif)
