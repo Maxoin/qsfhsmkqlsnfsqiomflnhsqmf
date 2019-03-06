@@ -1,5 +1,5 @@
-const Discord = require('discord.js');
-var bot = new Discord.Client();
+const Discord = require('discord.js')
+var bot = new Discord.Client()
 
 const low = require('lowdb')
 const FileSync = require('lowdb/adapters/FileSync')
@@ -177,9 +177,9 @@ var gifs = {
 
 //Declaration Variables~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-var channelStockId = "552143842309046272";  //Max, met ici l'id du channel !
+var channelStockId = "552143842309046272"  //Max, met ici l'id du channel !
 
-var dataBank = []; //Contient des tableaux : C'est la base de données quand le bot est actif !
+var dataBank = [] //Contient des tableaux : C'est la base de données quand le bot est actif !
 
 //Declaration Fonction~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -190,31 +190,31 @@ function read () { //lit le stockage discord et le met dans le stockage variable
             .then(messages => 
                
                 messages.forEach(function(valeur , clé) {
-                    dataBank.push(valeur.content.split(" * "));
+                    dataBank.push(valeur.content.split(" * "))
                 })
             )
             .catch(console.error)
         )
         
     
-};
+}
 
 function postReserve (id) { //poste un message dans l'espace de stockage discord ( en théorie, l'id des utilisateurs ayant fait !!OwOLog)
-    bot.channels.get(channelStockId).send(id);
+    bot.channels.get(channelStockId).send(id)
     
 }
 
 function findUser (id) { //à partir de l'id d'un user, trouve l'indice de sa "fiche" dans le stockage => -1 si pas de fiche
-    var userIndice;
+    var userIndice
     dataBank.forEach(function(valeur, clé) {
         if (id ===  valeur[0]) {
-            userIndice = clé;
+            userIndice = clé
         }
     })
     if (userIndice === undefined) {
-        return -1;
+        return -1
     } else { 
-        return userIndice;
+        return userIndice
     }
 }
 
@@ -237,26 +237,26 @@ function add (id, numOwO) { //Ajoute un OwO à un user
                 })
             )
             .catch(console.error)
-        dataBank[findUser(id)].push(numOwO); //Ajoute le owo dans le stockage variable
+        dataBank[findUser(id)].push(numOwO) //Ajoute le owo dans le stockage variable
     }
 }
  
 function gotOwO (id, numOwO) { //Verifie si un user a un OwO ! return true si il l'a, return false sinon
 
 
-    var got = false;
+    var got = false
     if (findUser(id) != -1 ) {
 
         dataBank[findUser(id)].forEach(function (valeur) {
 
 
             if (valeur === numOwO) {
-                got = true;
+                got = true
             } 
             
-        });
+        })
     
-    return got;
+    return got
 
     }
 
@@ -267,7 +267,7 @@ bot.on('ready',() => {
     console.log('Bot Ready')
 })
 
-bot.login (process.env.token);
+bot.login (process.env.token)
 
 bot.on('message', message => { //help
   if(message.content === "!!help"){
@@ -282,17 +282,17 @@ bot.on('message', message => { //help
       .addField("!!dispo", "Commande pour voir quels Emotes sont disponibles.")
       .setColor("#68f17d")
       .setFooter("Amusez vous bien ! - Maxoin | Louloup | Senchi | Baz")
-      message.channel.send(embed);
+      message.channel.send(embed)
   }
 })
 
 bot.on('message', message => { // !!OwOLog ! faisable plusieurs fois !
 
     if (message.content === "!!OwOLog") {
-        read();
+        read()
         if (findUser(message.author.id) === -1) {
-            postReserve(message.author.id); //stockage discord
-            dataBank.push([message.author.id]); //stockage variable
+            postReserve(message.author.id) //stockage discord
+            dataBank.push([message.author.id]) //stockage variable
             message.channel.send("Ok, c'est noté !")
         } else {
             message.channel.send("Tu es déjà enregistré ! Tu n'as pas à refaire cette commande.")
@@ -301,7 +301,7 @@ bot.on('message', message => { // !!OwOLog ! faisable plusieurs fois !
 
 
 
-});
+})
 
 bot.on('message', message => { //Log
     if (message.content === "!!Log") {
@@ -358,7 +358,7 @@ bot.on('message', message => { //Gifs
       .setTitle(gifs.a.annonce)
       .setImage(gifs.a.gif)
       .setColor("#d28f49")
-    message.channel.send(embed);
+    message.channel.send(embed)
 }})
 
 bot.on('message', message => { //Gifs
@@ -368,7 +368,7 @@ bot.on('message', message => { //Gifs
       .setTitle(gifs.b.annonce)
       .setImage(gifs.b.gif)
       .setColor("#dc2d96")
-    message.channel.send(embed);
+    message.channel.send(embed)
 }})
 
 bot.on('message', message => { //Gifs
@@ -378,7 +378,7 @@ bot.on('message', message => { //Gifs
       .setTitle(gifs.c.annonce)
       .setImage(gifs.c.gif)
       .setColor("#e3b072")
-    message.channel.send(embed);
+    message.channel.send(embed)
 }})
 
 bot.on('message', message => { //Gifs
@@ -389,7 +389,7 @@ bot.on('message', message => { //Gifs
       .setTitle(gifs.d.annonce)
       .setImage(gifs.d.gif)
       .setColor("#72d7e3")
-    message.channel.send(embed);
+    message.channel.send(embed)
 }})
 
 bot.on('message', message => { //Gifs
@@ -399,7 +399,7 @@ bot.on('message', message => { //Gifs
       .setTitle(gifs.e.annonce)
       .setImage(gifs.e.gif)
       .setColor("#8bf3f0")
-    message.channel.send(embed);
+    message.channel.send(embed)
 }})
 
 bot.on('message', message => { //Gifs
@@ -409,7 +409,7 @@ bot.on('message', message => { //Gifs
       .setTitle(gifs.f.annonce)
       .setImage(gifs.f.gif)
       .setColor("#8a00ef")
-    message.channel.send(embed);
+    message.channel.send(embed)
 }})
 
 bot.on('message', message => { //Gifs
@@ -419,7 +419,7 @@ bot.on('message', message => { //Gifs
       .setTitle(gifs.g.annonce)
       .setImage(gifs.g.gif)
       .setColor("#ff853c")
-    message.channel.send(embed);
+    message.channel.send(embed)
 }})
 
 bot.on('message', message => { //Gifs
@@ -429,7 +429,7 @@ bot.on('message', message => { //Gifs
       .setTitle(gifs.h.annonce)
       .setImage(gifs.h.gif)
       .setColor("#002a5e")
-    message.channel.send(embed);
+    message.channel.send(embed)
 }})
 
 bot.on('message', message => { //Gifs
@@ -439,7 +439,7 @@ bot.on('message', message => { //Gifs
       .setTitle(gifs.i.annonce)
       .setImage(gifs.i.gif)
       .setColor("#e2ba40")
-    message.channel.send(embed);
+    message.channel.send(embed)
 }})
 
 bot.on('message', message => { //Gifs
@@ -449,7 +449,7 @@ bot.on('message', message => { //Gifs
       .setTitle(gifs.j.annonce)
       .setImage(gifs.j.gif)
       .setColor("#7caeec")
-    message.channel.send(embed);
+    message.channel.send(embed)
 }})
 
 bot.on('message', message => { //Gifs
@@ -459,7 +459,7 @@ bot.on('message', message => { //Gifs
       .setTitle(gifs.k.annonce)
       .setImage(gifs.k.gif)
       .setColor("#ff0000")
-    message.channel.send(embed);
+    message.channel.send(embed)
 }})
 
 bot.on('message', message => { //Gifs
@@ -469,7 +469,7 @@ bot.on('message', message => { //Gifs
       .setTitle(gifs.l.annonce)
       .setImage(gifs.l.gif)
       .setColor("#ffd3d3")
-    message.channel.send(embed);
+    message.channel.send(embed)
 }})
 
 bot.on('message', message => { //Gifs
@@ -479,7 +479,7 @@ bot.on('message', message => { //Gifs
       .setTitle(gifs.m.annonce)
       .setImage(gifs.m.gif)
       .setColor("#5b28a6")
-    message.channel.send(embed);
+    message.channel.send(embed)
 }})
 
 bot.on('message', message => { //Gifs
@@ -489,7 +489,7 @@ bot.on('message', message => { //Gifs
       .setTitle(gifs.n.annonce)
       .setImage(gifs.n.gif)
       .setColor("#ecea00")
-    message.channel.send(embed);
+    message.channel.send(embed)
 }})
 
 bot.on('message', message => { //Gifs
@@ -499,7 +499,7 @@ bot.on('message', message => { //Gifs
       .setTitle(gifs.o.annonce)
       .setImage(gifs.o.gif)
       .setColor("#ffffff")
-    message.channel.send(embed);
+    message.channel.send(embed)
 }})
 
 bot.on('message', message => { //Gifs
@@ -509,7 +509,7 @@ bot.on('message', message => { //Gifs
       .setTitle(gifs.p.annonce)
       .setImage(gifs.p.gif)
       .setColor("#edb7ff")
-    message.channel.send(embed);
+    message.channel.send(embed)
 }})
 
 bot.on('message', message => { //Gifs
@@ -519,7 +519,7 @@ bot.on('message', message => { //Gifs
       .setTitle(gifs.q.annonce)
       .setImage(gifs.q.gif)
       .setColor("#41fc44")
-    message.channel.send(embed);
+    message.channel.send(embed)
 }})
 
 bot.on('message', message => { //Gifs
@@ -529,7 +529,7 @@ bot.on('message', message => { //Gifs
       .setTitle(gifs.r.annonce)
       .setImage(gifs.r.gif)
       .setColor("#ff881c")
-    message.channel.send(embed);
+    message.channel.send(embed)
 }})
 
 bot.on('message', message => { //Gifs
@@ -539,7 +539,7 @@ bot.on('message', message => { //Gifs
       .setTitle(gifs.s.annonce)
       .setImage(gifs.s.gif)
       .setColor("#3b82db")
-    message.channel.send(embed);
+    message.channel.send(embed)
 }})
 
 bot.on('message', message => { //Gifs
@@ -549,7 +549,7 @@ bot.on('message', message => { //Gifs
       .setTitle(gifs.t.annonce)
       .setImage(gifs.t.gif)
       .setColor("#595959")
-    message.channel.send(embed);
+    message.channel.send(embed)
 }})
 
 bot.on('message', message => { //Gifs
@@ -559,7 +559,7 @@ bot.on('message', message => { //Gifs
       .setTitle(gifs.u.annonce)
       .setImage(gifs.u.gif)
       .setColor("#000000")
-    message.channel.send(embed);
+    message.channel.send(embed)
 }})
 
 bot.on('message', message => { //Gifs
@@ -569,7 +569,7 @@ bot.on('message', message => { //Gifs
       .setTitle(gifs.v.annonce)
       .setImage(gifs.v.gif)
       .setColor("#b426c1")
-    message.channel.send(embed);
+    message.channel.send(embed)
 }})
 
 
@@ -580,7 +580,7 @@ bot.on('message', message => { //Gifs
       .setTitle(gifs.w.annonce)
       .setImage(gifs.w.gif)
       .setColor("#392bfe")
-    message.channel.send(embed);
+    message.channel.send(embed)
 }})
 
 
@@ -591,7 +591,7 @@ bot.on('message', message => { //Gifs
       .setTitle(gifs.x.annonce)
       .setImage(gifs.x.gif)
       .setColor("#ff6900")
-    message.channel.send(embed);
+    message.channel.send(embed)
 }})
 
 
@@ -602,7 +602,7 @@ bot.on('message', message => { //Gifs
       .setTitle(gifs.y.annonce)
       .setImage(gifs.y.gif)
       .setColor("#ff6900")
-    message.channel.send(embed);
+    message.channel.send(embed)
 }})
 
 bot.on('message', message => { //Gifs
@@ -612,7 +612,7 @@ bot.on('message', message => { //Gifs
       .setTitle(gifs.y.annonce)
       .setImage(gifs.y.gif)
       .setColor("#ff6900")
-    message.channel.send(embed);
+    message.channel.send(embed)
 }})
 
 bot.on('message', message => { //Dispo Emotes
