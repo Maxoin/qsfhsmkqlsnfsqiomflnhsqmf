@@ -1,343 +1,187 @@
 const Discord = require('discord.js');
 var bot = new Discord.Client();
 
-var guild = "498122570822844417"
+const low = require('lowdb')
+const FileSync = require('lowdb/adapters/FileSync')
+
+const adapter = new FileSync('pkmn.json')
+const db = low(adapter)
+
 var catnum = ""
 var salon = ""
 var kispawn = 0
+var ideydb =""
+var ideye = ""
 var NumberOwOFin = 0
 var NumberOwO = 0
 var yuser = ""
 var gifs = {
     a: {
-      nom: "à Reset",
-      gif: "https://media.tenor.com/images/afdf9f5a7139daadbab681b46e9060f1/tenor.gif",
-      annonce: "KUUWA ?! SALO ! TUVAMOURIR !!",
-      effet: ""
-    },
-    b: {
-      nom: "POM",
-      gif: "https://i.pinimg.com/originals/b2/98/3a/b2983aa96a2c2078efd700f363c2a41c.gif",
-      annonce: "Une pomme ?! OU ÇA ??!",
-      effet: ""
-    },
-    c: {
-      nom: "Kawaiiance",
-      gif: "https://thumbs.gfycat.com/WellinformedDirectBorderterrier-size_restricted.gif",
-      annonce: "On m'a appelé ? Jariv.",
-      effet: ""
-    },
-    d: {
-      nom: "Hachwar",
-      gif: "https://i.makeagif.com/media/3-07-2016/kDRsOC.gif",
-      annonce: "...",
-      effet: ""
-    },
-    e: {
-      nom: "Gaster Bluester",
-      gif: "https://media1.tenor.com/images/d4e922f6079875c6627f95311c3b4cfc/tenor.gif?itemid=5879725",
-      annonce: "FUYONS, BLUESTER !",
-      effet: ""
-    },
-    f: {
-      nom: "Dab",
-      gif: "https://img.fireden.net/v/image/1540/37/1540371782616.gif",
-      annonce: "Attaque de type poison !",
-      effet: ""
-    },
-    g: {
-      nom: "FONCEAITÊTEBAISSAIE",
-      gif: "http://media.tumblr.com/359458eec13d42e28d005c7446bbfe40/tumblr_inline_nclb9rRuHl1sm1eq0.gif  ",
-      annonce: "LEROOOOOOOOOOOOOOOOOOOOOOOOOOOOY...",
-      effet: ""
-    },
-    h: {
-      nom: "Viol D'âme",
-      gif: "https://thumbs.gfycat.com/ForsakenComplexAmurratsnake-size_restricted.gif",
-      annonce: "***9666966696669666966696666669***",
-      effet: ""
-    },
-    i: {
-      nom: "Lance-Patate",
-      gif: "https://localtvwqad.files.wordpress.com/2014/10/rocket-explosion.gif?w=400&h=225&crop=1",
-      annonce: "Poussez vous. Voila le Lance-Patate.",
-      effet: ""
-    },
-    j: {
-      nom: "Bulle d'Eau",
-      gif: "https://data.whicdn.com/images/53032229/original.gif",
-      annonce: "BLBLBLBLBLBLLBLBLBLBLBLBLBLBLLBBLLBBLLBLB",
-      effet: ""
-    },
-    k: {
-      nom: "Nonoeil d'Urgence",
-      gif: "https://steamuserimages-a.akamaihd.net/ugc/394421071039533013/751406B81ABF25095895D17E4E781F7E1F011599/",
-      annonce: "Je vais porté ton message ! J'y vole !",
-      effet: ""
-    },
-    l: {
-      nom: "Coup d'Corn",
-      gif: "https://media1.tenor.com/images/f74ea1b96c0291c15c0939364e79bc76/tenor.gif?itemid=12592212",
-      annonce: "Ça tombe bien, j'en ai pleins !",
-      effet: ""
-    },
-    m: {
-      nom: "Machouille",
-      gif: "http://img3.wikia.nocookie.net/__cb20140826061016/freddy-fazbears-pizza/images/3/31/Bonnie_blarg.gif",
-      annonce: "ANYAMNYAMNYAMNYAMNYAMNYAMNYAMNYAM",
-      effet: ""
-    },
-    n: {
-      nom: "Steam Sales",
-      gif: "https://i.imgur.com/VsKmvT9.gif",
-      annonce: "Tu as tout dépensé avant, patate !",
-      effet: ""
-    },
-    o: {
-      nom: "Regard Cute",
-      gif: "https://2.bp.blogspot.com/-G_hxgx8N1J4/WKmuDdtP42I/AAAAAAAGByg/XBAjW6J139EbLAZACLwsOeix5qnJRquNgCLcB/s1600/AW379865_12.gif",
-      annonce: "Ze veux que l'on me pat.",
-      effet: ""
-    },
-    p: {
-      nom: "pat",
-      gif: "https://66.media.tumblr.com/b6492da3e16252d0d6be9a14b40f528a/tumblr_n6s3kx6dxT1tddjuxo1_500.gif",
-      annonce: "Nyaa~",
-      effet: ""
-    },
-    q: {
-      nom: "snob",
-      gif: "https://orig00.deviantart.net/3059/f/2015/140/3/e/close_of_up_by_fawfuls_minion-d8u1ntf.gif",
-      annonce: "Fufufufufu~",
-      effet: ""
-    },
-    r: {
-      nom: "Sasukoeil",
-      gif: "https://media2.giphy.com/media/mzYQ4fp5jn9SM/source.gif",
-      annonce: "あなたはまだそれを知りませんが、あなたはすでに死んでいます。",
-      effet: ""
-    },
-    s: {
-      nom: "nom",
-      gif: "https://media.giphy.com/media/39YrN5qQvUtfW/giphy.gif",
-      annonce: "GATOOOOOOOONomnomnomnomnomnomnom",
-      effet: ""
-    },
-    t: {
-      nom: "shrug",
-      gif: "https://gifimage.net/wp-content/uploads/2018/11/puro-changed-gif-1.gif",
-      annonce: "Hé bah ze sais pas.",
-      effet: ""
-    },
-    u: {
-      nom: "Niklavi",
-      gif: "https://lh3.googleusercontent.com/-TC6LitvVzMc/WPKH_Ro4nqI/AAAAAAAAB4I/jEnC7uoJF6EnyFz6PQyOhtgmaoPG7lWoQCJoC/w290-h300-n-rw/tumblr_inline_nuls3cVXSa1si73t5_500.gif",
-      annonce: "NIKAIVOU",
-      effet: ""
-    },
-    v: {
       nom: "Starlight Unicorn MoonDance",
       gif: "https://j.gifs.com/oY7Q3B.gif",
       annonce: "Subit la puissance de Starlight Unicorn !",
-      effet: ""
+      type: "Lumière"
     },
-    w: {
-      nom: "Mochetée",
-      gif: "https://66.media.tumblr.com/bd3c64511033f1a1ffa9ff47d95eb4dc/tumblr_nsu1h0Z2fl1uuck0ko8_400.gif",
-      annonce: "Je ne suis pas moche ! Je suis un Scientifique fou ! Nyahahahahaidhqusofgbdhsqijvgsdkhfnis...",
-      effet: ""
+    b: {
+      nom: "Bulle d'eau",
+      gif: "https://data.whicdn.com/images/53032229/original.gif",
+      annonce: "BLBLBLBLBLBLLBLBLBLBLBLBLBLBLLBBLLBBLLBLB",
+      type: "Eau"
     },
-    x: {
-      nom: "Lance-Flamme",
-      gif: "https://media1.tenor.com/images/a92907da589b73ac05677929a980b77e/tenor.gif?itemid=5634757",
-      annonce: "LE FEUUUUUUUUUUUUW",
-      effet: ""
+    c: {
+      nom: "Demon Blast",
+      gif: "https://lh3.googleusercontent.com/-dYRaIl6vww0/Vy6GmxzKYrI/AAAAAAAAADo/WUG33ZYZCXkyENqy2XI_w2Dg90d0joNsw/w500-h259/47fe28ea49779279fdde824d6cba111a63752846_hq.gif",
+      annonce: "Que les Ténèbres s'abattent sur ceux qui crachent vers les cieux !",
+      type: "Ténèbre"
     },
-    y: {
-      nom: "/tp",
+    d: {
+      nom: "Heal",
+      gif: "https://j.gifs.com/oY7Q3B.gif",
+      annonce: "http://vignette4.wikia.nocookie.net/fairytailfanon/images/d/d1/Wendy_Marvell_Magical_Power.gif/revision/latest?cb=20150807070001",
+      type: "Neutre"
+    },
+    e: {
+      nom: "Demonic Shield",
+      gif: "http://img2.wikia.nocookie.net/__cb20140806052317/powerlisting/images/6/64/Dark_Shield.gif",
+      annonce: "Le voile des Ténèbres et de la morts est de mon coté !",
+      type: "Ténèbre"
+    },
+    f: {
+      nom: "Surchauffe",
+      gif: "https://j.gifs.com/oY7Q3B.gif",
+      annonce: "Subit la puissance de Starlight Unicorn !",
+      type: "Feu"
+    },
+    g: {
+      nom: "Téléportation",
       gif: "https://66.media.tumblr.com/e562d21b6f785a012eea8b2ce44bd37c/tumblr_ns3tpxzq391upx3fco1_500.gif",
       annonce: "Bawoup",
-      effet: ""
+      type: "Lumière"
+    },
+
+    h: {
+      nom: "Lame Pourpre",
+      gif: "https://em.wattpad.com/fc6144d7941b80707b110c84df410298512eefce/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f776174747061642d6d656469612d736572766963652f53746f7279496d6167652f6e6c75446873565064544c5157673d3d2d3436313439313130322e313464656162643062363731623561393334323335323632383333342e676966?s=fit&w=720&h=720",
+      annonce: "Invocation : Lame Pourpre !",
+      type: "Ténèbre"
+    },
+    i: {
+      nom: "Griffe Ombres",
+      gif: "https://em.wattpad.com/fd1d0b850c241d4cdb363eecba4ed041d123e698/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f776174747061642d6d656469612d736572766963652f53746f7279496d6167652f725a684b476268575152455859513d3d2d3638343635303538362e313537626365353835393631393432653834333337323631383635352e676966?s=fit&w=720&h=720",
+      annonce: "Fufufufufufu~",
+      type: "Ténèbre"
+    },
+    j: { 
+      nom: "Card Shot",
+      gif: "https://steamuserimages-a.akamaihd.net/ugc/831329494968935938/71C941570ECA9EF3B3F93C4F5DDFE0EAA042D673/",
+      annonce: "100% Topdeck",
+      type: "Lumière"
+    },
+    k: { 
+      nom: "Band Throw",
+      gif: "https://vignette.wikia.nocookie.net/fairy-tail/images/8/8e/Bandages_de_Momie.gif/revision/latest?cb=20130729172858&path-prefix=fr",
+      annonce: "Immobilisation !",
+      type: "Lumière"
+    },
+    l: { 
+      nom: "Tempête Noir",
+      gif: "https://media1.tenor.com/images/1a6ccc93427b6a66cfe38fa09c2ceff9/tenor.gif?itemid=9235472",
+      annonce: "Ominous Wind !",
+      type: "Ténèbres"
+    },
+    m: { 
+      nom: "Boost Wakfu",
+      gif: "https://66.media.tumblr.com/f9fe3fa9bd76681b9dd1663afdc32cca/tumblr_ne6kerep4s1rilod0o1_500.gif",
+      annonce: "Sent le Wakfu t'envahir !",
+      type: "Lumière"
+    },
+    n: {
+      nom: "SmokeBomb",
+      gif: "https://vignette.wikia.nocookie.net/swordartonline/images/8/80/Smokescreen.gif/revision/latest?cb=20140304144205",
+      annonce: "Voila le Brouillard de Guerre !",
+      type: "Feu"
+    },
+    o: {
+      nom: "SpiderCall",
+      gif: "http://pa1.narvii.com/6372/7a144ef302f1c842da28490b18c5ab9d92e6f190_00.gif",
+      annonce: "Les renforts arrivent !",
+      type: "Ténèbres"
+    },
+    p: {
+      nom: "SmokeBomb",
+      gif: "https://vignette.wikia.nocookie.net/swordartonline/images/8/80/Smokescreen.gif/revision/latest?cb=20140304144205",
+      annonce: "Voila le Brouillard de Guerre !",
+      type: "Feu"
+    },
+    q: {
+      nom: "Balrog",
+      gif: "https://thumbs.gfycat.com/ReflectingEagerBelugawhale-size_restricted.gif",
+      annonce: "Toi qui voulais du renfort, te voila servis !",
+      type: "Feu"
+    },
+    r: {
+      nom: "Rosario",
+      gif: "https://img3.wikia.nocookie.net/__cb20130722143011/swordartonline/images/f/fc/Vertical_Square.gif",
+      annonce: "Meurt par le fer !",
+      type: "Vent"
+    },
+    s: {
+      nom: "SmokeBomb",
+      gif: "https://vignette.wikia.nocookie.net/swordartonline/images/8/80/Smokescreen.gif/revision/latest?cb=20140304144205",
+      annonce: "Voila le Brouillard de Guerre !",
+      type: "Feu"
+    },
+    t: {
+      nom: "SmokeBomb",
+      gif: "https://vignette.wikia.nocookie.net/swordartonline/images/8/80/Smokescreen.gif/revision/latest?cb=20140304144205",
+      annonce: "Voila le Brouillard de Guerre !",
+      type: "Feu"
+    },
+    u: {
+      nom: "SmokeBomb",
+      gif: "https://vignette.wikia.nocookie.net/swordartonline/images/8/80/Smokescreen.gif/revision/latest?cb=20140304144205",
+      annonce: "Voila le Brouillard de Guerre !",
+      type: "Feu"
+    },
+    v: {
+      nom: "SmokeBomb",
+      gif: "https://vignette.wikia.nocookie.net/swordartonline/images/8/80/Smokescreen.gif/revision/latest?cb=20140304144205",
+      annonce: "Voila le Brouillard de Guerre !",
+      type: "Feu"
+    },
+    w: {
+      nom: "SmokeBomb",
+      gif: "https://vignette.wikia.nocookie.net/swordartonline/images/8/80/Smokescreen.gif/revision/latest?cb=20140304144205",
+      annonce: "Voila le Brouillard de Guerre !",
+      type: "Feu"
+    },
+    x: {
+      nom: "SmokeBomb",
+      gif: "https://vignette.wikia.nocookie.net/swordartonline/images/8/80/Smokescreen.gif/revision/latest?cb=20140304144205",
+      annonce: "Voila le Brouillard de Guerre !",
+      type: "Feu"
+    },
+    y: {
+      nom: "SmokeBomb",
+      gif: "https://vignette.wikia.nocookie.net/swordartonline/images/8/80/Smokescreen.gif/revision/latest?cb=20140304144205",
+      annonce: "Voila le Brouillard de Guerre !",
+      type: "Feu"
     },
     z: {
-      nom: "wantmiam",
-      gif: "http://pa1.narvii.com/6608/b97b677870ef9a17a55ad974892b4efb08699116_00.gif",
-      annonce: "Z'ai faim, ze peux avwar à manzer, ssiteuplait ?",
-      effet: ""
+      nom: "SmokeBomb",
+      gif: "https://vignette.wikia.nocookie.net/swordartonline/images/8/80/Smokescreen.gif/revision/latest?cb=20140304144205",
+      annonce: "Voila le Brouillard de Guerre !",
+      type: "Feu"
     }
-}
-
-var mowo = {
-  0: {
-    idey: 0,
-    nom: "Birdo",
-    image: "https://vignette.wikia.nocookie.net/mario/images/a/a2/Birdo_MP9.png/revision/latest?cb=20130718081823&path-prefix=fr",
-    gifattrib: "b"
-  },
-  1: {
-    idey: 1,
-    nom: "Powtaytow",
-    image: "https://i.imgur.com/7duC8bA.jpg",
-    gifattrib: "i"
-  },
-  2: {
-    idey: 2,
-    nom: "Resetti",
-    image: "https://vignette.wikia.nocookie.net/slg/images/2/2b/Mr._Resetti_Animal_crossing.png/revision/latest?cb=20160621155518&path-prefix=fr",
-    gifattrib: "a"
-  },
-  3: {
-    idey: 3,
-    nom: "Puro",
-    image: "https://i.pinimg.com/originals/84/56/97/8456972aa1ba1efa39454490e4a944fd.jpg",
-    gifattrib: "t"
-  },
-  4: {
-    idey: 4,
-    nom: "Dabweegi",
-    image: "https://ih0.redbubble.net/image.416146853.3061/ap,550x550,12x16,1,transparent,t.u2.png",
-    gifattrib: "f"
-  },
-  5: {
-    idey: 5,
-    nom: "Leeroy Jenkins",
-    image: "https://www.hearthnews.fr/images/Leeroy_jenkins.jpg",
-    gifattrib: "g"
-  },
-  6: {
-    idey: 6,
-    nom: "Mockey",
-    image: "https://t3.rbxcdn.com/d8c22f991ee4410a29ca1ace30a932ed",
-    gifattrib: "u"
-  },
-  7: {
-    idey: 7,
-    nom: "Cyber-Pépito",
-    image: "https://i.servimg.com/u/f58/19/58/55/75/granol10.png",
-    gifattrib: "v"
-  },
-  8: {
-    idey: 8,
-    nom: "Hippo",
-    image: "https://www.nautiljon.com/images/perso/00/83/hippo_10338.jpg",
-    gifattrib: "j"
-  },
-  9: {
-    idey: 9,
-    nom: "Oeil de Chtulu",
-    image: "http://images6.fanpop.com/image/photos/35200000/Eye-Of-Cthulhu-terraria-35278349-894-894.jpg",
-    gifattrib: "k"
-  },
-  10: {
-    idey: 10,
-    nom: "Chi Chi",
-    image: "https://vignette.wikia.nocookie.net/gumball/images/9/9e/Chi_Chi_vector.png/revision/latest?cb=20170816000524&path-prefix=fr",
-    gifattrib: "l"
-  },
-  11: {
-    idey: 11,
-    nom: "Pyroli",
-    image: "https://i.imgur.com/qhjpDlu.jpg",
-    gifattrib: "r"
-  },
-  12: {
-    idey: 12,
-    nom: "Ombrage",
-    image: "https://i.skyrock.net/7195/83917195/pics/3130998830_1_2_pWX0b1o8.png",
-    gifattrib: "m"
-  },
-  13: {
-    idey: 13,
-    nom: "Fouinar",
-    image: "https://4.bp.blogspot.com/-2pU-thJnlsg/VynJDvvpgOI/AAAAAAAACsg/mG9bvwvCL9sJU9JJQkfy-U3GpJiR9vIUACLcB/s1600/1317341303036.png",
-    gifattrib: "c"
-  },
-  14: {
-    idey: 14,
-    nom: "Bulle",
-    image: "https://vignette.wikia.nocookie.net/powerpuff/images/f/f9/Bulle_Profile.png/revision/latest/scale-to-width-down/260?cb=20180905192732&path-prefix=fr",
-    gifattrib: "d"
-  },
-  15: {
-    idey: 15,
-    nom: "Blueberry",
-    image: "https://ih1.redbubble.net/image.213382678.7353/poster%2C210x230%2Cf8f8f8-pad%2C210x230%2Cf8f8f8.lite-1u5.jpg",
-    gifattrib: "e"
-  },
-  16: {
-    idey: 16,
-    nom: "Ben Drowned",
-    image: "https://i.pinimg.com/originals/89/54/6f/89546f402cca3c85bf74a080407a684e.jpg",
-    gifattrib: "h"
-  },
-  17: {
-    idey: 17,
-    nom: "Gaben",
-    image: "https://www.pcgamesn.com/wp-content/uploads/2018/10/gabe_newell_meme-580x334.jpg",
-    gifattrib: "n"
-  },
-  18: {
-    idey: 18,
-    nom: "Gracowitz",
-    image: "https://vignette.wikia.nocookie.net/mario/images/5/59/M%26LSS%2BLSDB-Gracowitz.png/revision/latest/scale-to-width-down/160?cb=20171015093832&path-prefix=fr",
-    gifattrib: "q"
-  },
-  19: {
-    idey: 19,
-    nom: "Biscuit Monster",
-    image: "https://m.media-amazon.com/images/S/aplus-media/vc/388cedc4-283c-45bb-bcdd-d8efaf79bfa0.png",
-    gifattrib: "s"
-  },
-  20: {
-    idey: 20,
-    nom: "Shiro",
-    image: "https://vignette.wikia.nocookie.net/no-game-no-life/images/0/09/Shiro.png/revision/latest?cb=20170323163115",
-    gifattrib: "p"
-  },
-  21: {
-    idey: 21,
-    nom: "Petit chat de type Aly",
-    image: "https://i.pinimg.com/736x/3d/17/f4/3d17f442926202143cde9b0c2e3b3891.jpg",
-    gifattrib: "o"
-  },
-  22: {
-    idey: 22,
-    nom: "Ludwig",
-    image: "https://vignette.wikia.nocookie.net/mario/images/0/0c/Ludwig_Von_Koopa%2C_New_Super_Mario_Bros._U.png/revision/latest?cb=20121119172345&path-prefix=fr",
-    gifattrib: "w"
-  },
-  23: {
-    idey: 23,
-    nom: "Entei",
-    image: "https://i.pinimg.com/originals/38/bf/0f/38bf0f2efb67a870bae1b9aa8b6f0e72.png",
-    gifattrib: "x"
-  },
-  24: {
-    idey: 24,
-    nom: "Nox",
-    image: "http://image.noelshack.com/fichiers/2014/10/1393976452-p-104-a.jpg",
-    gifattrib: "y"
-  },
-  25: {
-    idey: 25,
-    nom: "Nanachi",
-    image: "https://myanimelist.cdn-dena.com/images/characters/7/303689.jpg",
-    gifattrib: "z"
-  },
-  kispawn = Math.floor(Math.random() * Math.floor(26))
 }
 
 //Declaration Variables~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-var channelStockId = "552143842309046272";  //Max, met ici l'id du channel !
+var channelStockId = "552801442088484884";  //Max, met ici l'id du channel !
 
 var dataBank = []; //Contient des tableaux : C'est la base de données quand le bot est actif !
 
-
-
 //Declaration Fonction~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-
 
 function read () { //lit le stockage discord et le met dans le stockage variable
 
@@ -350,7 +194,8 @@ function read () { //lit le stockage discord et le met dans le stockage variable
                 })
             )
             .catch(console.error)
-        );
+        )
+        
     
 };
 
@@ -374,16 +219,14 @@ function findUser (id) { //à partir de l'id d'un user, trouve l'indice de sa "f
 }
 
 function add (id, numOwO) { //Ajoute un OwO à un user
-    if (findUser(id) === -1) {    
-
-        
+    if (findUser(id) != -1) {    
 
         bot.channels.get(channelStockId).fetchMessages({ limit: 100 }) //Trouve le message de stockage discord de l'user puis l'edit pour ajouter le owo
 
             .then(messages => 
                 messages.forEach(function(msg, idMsg) {
                     
-                    if (msg.content.split(' * ')[0] === id) {
+                    if (msg.content.split(' * ')[0] == id) {
                         bot.channels.get(channelStockId).fetchMessage(idMsg)
                             .then(message => 
                                 message.edit(msg.content + " * " + numOwO)
@@ -394,14 +237,10 @@ function add (id, numOwO) { //Ajoute un OwO à un user
                 })
             )
             .catch(console.error)
-
         dataBank[findUser(id)].push(numOwO); //Ajoute le owo dans le stockage variable
-    
-
     }
-
 }
-
+ 
 function gotOwO (id, numOwO) { //Verifie si un user a un OwO ! return true si il l'a, return false sinon
 
 
@@ -466,23 +305,10 @@ bot.on('message', message => { // !!OwOLog ! faisable plusieurs fois !
 
 bot.on('message', message => { //Log
     if (message.content === "!!Log") {
-        read();
+        read()
         console.log("Wesh les relous, ce soir on fout le zbeul")
     }
-
-
-
-});
-
-bot.on('message', message => {// same ^^^^ fait "check " + "quelque chose" pour vérifier si tu l'as dans ton message dans le stockage discord. (le bot return un boolean)
-    if(message.content === "!!check") {
-        if(gotOwO(message.author.id, message.content.split(' ')[1] )) {
-            message.reply("true");
-        }else {
-            message.reply("false");
-        }
-    }
-});
+  })
 
 bot.on('message', message => { //Appartion MOwOnster
  if(message.content.includes("!!")){
@@ -491,17 +317,19 @@ bot.on('message', message => { //Appartion MOwOnster
    if (findUser(message.author.id) === -1){
     
    }else{
-     var spawn = Math.floor(Math.random() * Math.floor(100))
+     var spawn = ""
      console.log("wala")
      if(spawn <= 10){
+       var kispawn =  Math.floor(Math.random() * Math.floor(26))
        console.log(kispawn)
-       console.log(mowo.kispawn.nom)
+         ideydb = db.get('mowo').filter({idey: kispawn}).find('idey').value()
+         ideye = Object.values(ideydb)
        var embedp = new Discord.RichEmbed()
          .setTitle("Un MOwOnster est apparut !")
-         .addField(`C'est un ${mowo.kispawn.nom} !`, 'Attrape le avec un "!!cat" !')
-         .setImage(mowo. kispawn .image)
+         .addField(`C'est un ${ideye[1]} !`, 'Attrape le avec un "!!cat" !')
+         .setImage(ideye[2])
          .setColor("#351cc0")
-         bot.channels.get("552143793789599755").send(embedp)
+         bot.channels.get("551531569060511774").send(embedp)
          catnum = kispawn
          salon = message.channel.id
      }
@@ -517,8 +345,8 @@ bot.on('message', message => { //Capture
     if(catnum === ""){
       console.log("'^'")
     }else{
-      add(yuser, mowo.catnum.gifattrib)
-      message.channel.send(`Bien jouer ! Tu viens de capturer un ${mowo.catnum.nom}, COwOmbatant !`)
+      add(yuser, ideye[3])
+      message.channel.send(`Bien jouer ! Tu viens de capturer un ${ideye[1]}, COwOmbatant !`)
       catnum = "" 
     }
   }
@@ -526,7 +354,7 @@ bot.on('message', message => { //Capture
 
 bot.on('message', message => { //Gifs
   yuser = message.author.id
-  if(gotOwO(yuser, "a") && message.content.includes('>' + gifs.a.nom)){
+  if("machin MACHIN".toLowerCase() === "le message d'EmOJi".toLowerCase() && gotOwO(yuser, "a") && message.content.includes('>' + gifs.a.nom)){
     var embed = new Discord.RichEmbed()
       .setTitle(gifs.a.annonce)
       .setImage(gifs.a.gif)
