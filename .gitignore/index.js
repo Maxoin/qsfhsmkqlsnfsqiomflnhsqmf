@@ -343,12 +343,12 @@ bot.on('message', message => { //Appartion MOwOnster
      if(spawn <= 10){
        var kispawn =  Math.floor(Math.random() * Math.floor(100))
        console.log(kispawn)
-         ideydb = db.get('mowo').filter({idey: kispawn}).find('nom').value()
+         ideydb = db.get('mowo').filter({idey: kispawn}).find('idey').value()
          ideye = Object.values(ideydb)
        var embedp = new Discord.RichEmbed()
          .setTitle("Un MOwOnster est apparut !")
-         .addField(`C'est un ${idey[1]} !`, 'Attrape le avec un "!!cat" !')
-         .setImage(idey[2])
+         .addField(`C'est un ${ideye[1]} !`, 'Attrape le avec un "!!cat" !')
+         .setImage(ideye[2])
          .setColor("#351cc0")
          bot.channels.get("552143793789599755").send(embedp)
          catnum = kispawn
@@ -366,8 +366,8 @@ bot.on('message', message => { //Capture
     if(catnum === ""){
       console.log("'^'")
     }else{
-      add(yuser, idey[3])
-      message.channel.send(`Bien jouer ! Tu viens de capturer un ${mowo.catnum.nom}, COwOmbatant !`)
+      add(yuser, ideye[3])
+      message.channel.send(`Bien jouer ! Tu viens de capturer un ${ideye[1]}, COwOmbatant !`)
       catnum = "" 
     }
   }
