@@ -309,28 +309,6 @@ bot.on('message', message => { //Log
         console.log("Wesh les relous, ce soir on fout le zbeul")
     }
 
-bot.on('message', message => {// commande de test à supprimer ! fait "add " + "quelque chose" pour edit ton message dans le stockage discord.
-
-    if (message.content.split(' ')[0] === "add") {
-
-        add(message.author.id, message.content.split(' ')[1] );
-
-    }
-
-});
-
-});
-
-bot.on('message', message => {// same ^^^^ fait "check " + "quelque chose" pour vérifier si tu l'as dans ton message dans le stockage discord. (le bot return un boolean)
-    if(message.content.split(' ')[0] === "!!check") {
-        if(gotOwO(message.author.id, message.content.split(' ')[1] )) {
-            message.reply("true");
-        }else {
-            message.reply("false");
-        }
-    }
-});
-
 bot.on('message', message => { //Appartion MOwOnster
  if(message.content.includes("!!")){
   
@@ -350,7 +328,7 @@ bot.on('message', message => { //Appartion MOwOnster
          .addField(`C'est un ${ideye[1]} !`, 'Attrape le avec un "!!cat" !')
          .setImage(ideye[2])
          .setColor("#351cc0")
-         bot.channels.get("552143793789599755").send(embedp)
+         bot.channels.get("551531569060511774").send(embedp)
          catnum = kispawn
          salon = message.channel.id
      }
