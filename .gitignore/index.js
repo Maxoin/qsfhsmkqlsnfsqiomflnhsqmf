@@ -1,10 +1,15 @@
 const Discord = require('discord.js');
 var bot = new Discord.Client();
 
+const adapter = new FileSync('pkmn.json')
+const db = low(adapter)
+
 var guild = "498122570822844417"
 var catnum = ""
 var salon = ""
 var kispawn = 0
+var ideydb =""
+var ideye = ""
 var NumberOwOFin = 0
 var NumberOwO = 0
 var yuser = ""
@@ -173,34 +178,7 @@ var channelStockId = "552143842309046272";  //Max, met ici l'id du channel !
 
 var dataBank = []; //Contient des tableaux : C'est la base de données quand le bot est actif !
 
-var StockMon = "552222695652327434"
-
-var bankmowon = []
-
 //Declaration Fonction~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-function readpkmn () { //lit le stockage discord et le met dans le stockage variable
-
-    (bot.channels.get(StockMon).fetchMessages({ limit: 100 }) 
-
-            .then(messages => 
-
-               
-
-                messages.forEach(function(valeur , clé) {
-
-                    bankmowon.push(valeur.content.split(" * "));
-
-                })
-
-            )
-
-            .catch(console.error)
-
-        );
-        
-    
-};
 
 function read () { //lit le stockage discord et le met dans le stockage variable
 
@@ -305,12 +283,6 @@ bot.on('message', message => { //help
   }
 })
 
-bot.on('message', message => { //help
-  if(message.content === "!!walaye"){
-    console.log(bankmowon)
-  }
-})
-
 bot.on('message', message => { // !!OwOLog ! faisable plusieurs fois !
 
     if (message.content === "!!OwOLog") {
@@ -331,7 +303,6 @@ bot.on('message', message => { // !!OwOLog ! faisable plusieurs fois !
 bot.on('message', message => { //Log
     if (message.content === "!!Log") {
         read()
-        readpkmn()
         console.log("Wesh les relous, ce soir on fout le zbeul")
     }
 
@@ -369,6 +340,8 @@ bot.on('message', message => { //Appartion MOwOnster
      if(spawn <= 10){
        var kispawn =  Math.floor(Math.random() * Math.floor(100))
        console.log(kispawn)
+         ideydb = db.get('mowo').filter({idey: kispawn}).find('nom').value()
+         ideye = Object.values(ideydb)
        var embedp = new Discord.RichEmbed()
          .setTitle("Un MOwOnster est apparut !")
          .addField(`C'est un ${kispawn} !`, 'Attrape le avec un "!!cat" !')
