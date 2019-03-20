@@ -172,7 +172,7 @@ bot.on('message', message => { //help
 
 bot.on('message', message => {
   if(message.content === "665-82"){
-    var wazo = dataBankK[0][1]
+    var wazo = dataBank[findUser(message.author.id)][1]
     console.log(wazo)
   }
 })
@@ -195,7 +195,7 @@ bot.on('message', message => { //Log
     read()
     readK()
     findUser(message.author.id)
-    console.log("Wesh les relous, ce soir on fout le zbeul " + dataBank[findUser(message.author.id)][1])
+    console.log("Wesh les relous, ce soir on fout le zbeul")
   })
 
 bot.on('message', message => { //Achat Pack
