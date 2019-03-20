@@ -113,7 +113,7 @@ function add (id, numOwO) { //Ajoute un OwO à un user
     }
 }
  
-function FricChange (numOwO) { //Ajoute un OwO à un user
+function FricChange (id, numOwO) { //Ajoute un OwO à un user
     if (findUser(id) != -1) {    
         bot.channels.get(channelStockIdF).fetchMessages({ limit: 100 }) //Trouve le message de stockage discord de l'user puis l'edit pour ajouter le owo
             .then(messages => 
@@ -121,7 +121,7 @@ function FricChange (numOwO) { //Ajoute un OwO à un user
                     if (msg.content.split(' * ')[0] == id) {
                         bot.channels.get(channelStockIdF).fetchMessage(idMsg)
                             .then(message => 
-                                message.edit(id + " * " + numOwO)
+                                message.edit(yuser + " * " + numOwO)
                             )
                             .catch(console.error)
                     }
@@ -263,7 +263,7 @@ bot.on('message', message => { //Achat Pack
     kispawn =  Math.floor(Math.random() * Math.floor(7))
     var p8 = kispawn
     add(message.author.id, dataBankK[p8][0])
-    FricChange(message.author.id, dataBankF[message.author.id][1] - 100)
+    yuser = message.author.id
     var embedpak = new Discord.RichEmbed()
         .setTitle("Ouverture de Pakei\nVous remportez :")
         .setDescription("Il vous restes " + dataBank[findUser(message.author.id)][1])
