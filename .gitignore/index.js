@@ -256,17 +256,14 @@ bot.on('message', message => { //Achat Pack
     add(message.author.id, dataBankK[p5][0])
     kispawn =  Math.floor(Math.random() * Math.floor(7))
     var p6 = kispawn
-    add(message.author.id, dataBankK[p6][0])
     kispawn =  Math.floor(Math.random() * Math.floor(7))
     var p7 = kispawn
-    add(message.author.id, dataBankK[p7][0])
     kispawn =  Math.floor(Math.random() * Math.floor(7))
     var p8 = kispawn
-    add(message.author.id, dataBankK[p8][0])
     yuser = message.author.id
     var embedpak = new Discord.RichEmbed()
         .setTitle("Ouverture de Pakei\nVous remportez :")
-        .setDescription("Il vous restes " + dataBank[findUser(message.author.id)][1])
+        .setDescription("Il vous restes " + dataBankF[findUser(message.author.id)][1])
         .addField(":arrow_forward: " + dataBankK[p1][1], ". . . . .")
         .addField(":arrow_forward: " + dataBankK[p2][1], ". . . . .")
         .addField(":arrow_forward: " + dataBankK[p3][1], ". . . . .")
@@ -276,6 +273,9 @@ bot.on('message', message => { //Achat Pack
         .addField(":arrow_forward: " + dataBankK[p7][1], ". . . . .")
         .addField(":arrow_forward: " + dataBankK[p8][1], ". . . . .")
         .setFooter("Regardez votre collection avec un &card (WIP)")
+    add(message.author.id, dataBankK[p6][0])
+    add(message.author.id, dataBankK[p7][0])
+    add(message.author.id, dataBankK[p8][0])
     message.channel.send(embedpak)
 
 }})
