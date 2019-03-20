@@ -76,17 +76,13 @@ function findUser (id) { //à partir de l'id d'un user, trouve l'indice de sa "f
 
 function add (id, numOwO) { //Ajoute un OwO à un user
     if (findUser(id) != -1) {    
-
         bot.channels.get(channelStockId).fetchMessages({ limit: 100 }) //Trouve le message de stockage discord de l'user puis l'edit pour ajouter le owo
-
             .then(messages => 
                 messages.forEach(function(msg, idMsg) {
-                    
                     if (msg.content.split(' * ')[0] == id) {
                         bot.channels.get(channelStockId).fetchMessage(idMsg)
                             .then(message => 
                                 message.edit(msg.content + " * " + numOwO)
-                            
                             )
                             .catch(console.error)
                     }
@@ -156,17 +152,18 @@ bot.on('ready',() => {
     console.log('Bot Ready')
 })
 
-bot.login (process.env.token);
+bot.login ("process.env.token");
 
 bot.on('message', message => { //help
     if(message.content === "&help"){
       var embedhelp = new Discord.RichEmbed()
         .setTitle("Infos sur le bot")
-        .setDescription("Ce bot vous donnes la possibilitée de possédé des Kyard, des cartes vous donnant leurs pouvoir afin de vous en servir dans des duels de monstres !.")
+        .setDescription("Ce bot vous donnes la possibilitée de possédé des Kyard, des cartes vous donnant leurs pouvoir afin de vous en servir dans des duels de monstres !")
         .addField("Prefix :", "&", true)
         .addBlankField() 
         .addField("&help", "Affiche les commandes du bot.")
         .addField("&OwOLog", "Commande pour se connecter au Bot. Nécéssaire qu'une seule fois.")
+        .addField("&pack", "Voici la commande à réaliser pour l'achat d'un Pakei.")
         .setColor("#68f17d")
         .setFooter("Amusez vous bien ! - Maxoin | Baz")
         message.channel.send(embedhelp);
@@ -186,6 +183,7 @@ bot.on('message', message => { // &OwOLog ! faisable plusieurs fois !
         if (findUser(message.author.id) === -1) {
             postReserve(message.author.id); //stockage discord
             dataBank.push([message.author.id]); //stockage variable
+            add(message.author.id, 600 + " PO")
             message.channel.send("Ok, c'est noté !")
         } else {
             message.channel.send("Tu es déjà enregistré ! Tu n'as pas à refaire cette commande.")
@@ -196,27 +194,72 @@ bot.on('message', message => { // &OwOLog ! faisable plusieurs fois !
 bot.on('message', message => { //Log
     read()
     readK()
-    console.log("Wesh les relous, ce soir on fout le zbeul")
+    findUser(message.author.id)
+    console.log("Wesh les relous, ce soir on fout le zbeul " + findUser(message.author.id))
   })
 
-bot.on('message', message => { //Give de 3 cartes randoms
-  if(message.content === "&give5" && message.author.id === "258571960987025408"){
-    kispawn1 =  Math.floor(Math.random() * Math.floor(7))
-    message.channel.send("Ouverture de Pakei\nVous remportez :")
-    varlvl = dataBankK[kispawn1][4]
-    var embedpak1 = new Discord.RichEmbed()
-        .setTitle(dataBankK[kispawn1][1])
-        .addField(dataBankK[kispawn1][2], "................................................................")
-        .setImage(dataBankK[kispawn1][7])
-        .addField(varlvl + ":star:", dataBankK[kispawn1][3])
-        .setFooter("ATK : " + dataBankK[kispawn1][5] + " | DEF : " + dataBankK[kispawn1][6])
-        .setColor("#641900") 
-    add(message.author.id, dataBankK[kispawn1][0])
-    read()
-    message.channel.send(embedpak1)
-}})
+bot.on('message', message => { //Achat Pack
+  if(message.content === "&pack"){
+    var kispawn =  Math.floor(Math.random() * Math.floor(7))
+    var p1 = kispawn
+    add(message.author.id, dataBankK[p1][0])
+    kispawn =  Math.floor(Math.random() * Math.floor(7))
+    var p2 = kispawn
+    add(message.author.id, dataBankK[p2][0])
+    kispawn =  Math.floor(Math.random() * Math.floor(7))
+    var p3 = kispawn
+    add(message.author.id, dataBankK[p3][0])
+    kispawn =  Math.floor(Math.random() * Math.floor(7))
+    var p4 = kispawn
+    add(message.author.id, dataBankK[p4][0])
+    kispawn =  Math.floor(Math.random() * Math.floor(7))
+    var p5 = kispawn
+    add(message.author.id, dataBankK[p5][0])
+    kispawn =  Math.floor(Math.random() * Math.floor(7))
+    var p6 = kispawn
+    add(message.author.id, dataBankK[p6][0])
+    kispawn =  Math.floor(Math.random() * Math.floor(7))
+    var p7 = kispawn
+    add(message.author.id, dataBankK[p7][0])
+    kispawn =  Math.floor(Math.random() * Math.floor(7))
+    var p8 = kispawn
+    add(message.author.id, dataBankK[p8][0])
+    var embedpak = new Discord.RichEmbed()
+        .setTitle("Ouverture de Pakei\nVous remportez :")
+        .setDescription("Il vous restes " + dataBank)
+        .addField(":arrow_forward: " + dataBankK[p1][1], ". . . . .")
+        .addField(":arrow_forward: " + dataBankK[p2][1], ". . . . .")
+        .addField(":arrow_forward: " + dataBankK[p3][1], ". . . . .")
+        .addField(":arrow_forward: " + dataBankK[p4][1], ". . . . .")
+        .addField(":arrow_forward: " + dataBankK[p5][1], ". . . . .")
+        .addField(":arrow_forward: " + dataBankK[p6][1], ". . . . .")
+        .addField(":arrow_forward: " + dataBankK[p7][1], ". . . . .")
+        .addField(":arrow_forward: " + dataBankK[p8][1], ". . . . .")
+        .setFooter("Regardez votre collection avec un &card (WIP)")
+    message.channel.send(embedpak)
 
-/////UN/////
+}})
+////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////
+/////UN/////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////
 bot.on('message', message => { //Duel1
     if(message.content === "&duel" && initDuelUn === 0){
         if(findUser(message.author.id) === -1){
@@ -331,4 +374,3 @@ bot.on('message', message => { //Duel1
         duel.Deux.Idj1 = ""
         duel.Deux.Idj2 = ""
     }})
-  
