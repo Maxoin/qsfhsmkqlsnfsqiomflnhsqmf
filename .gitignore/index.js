@@ -233,7 +233,7 @@ bot.on('message', message => { // &OwOLog ! faisable plusieurs fois !
 bot.on('message', message => { //Log
     read()
     readK()
-    findUser(message.author.id)
+    readF()
     console.log("Wesh les relous, ce soir on fout le zbeul")
   })
 
