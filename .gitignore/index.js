@@ -113,7 +113,7 @@ function add (id, numOwO) { //Ajoute un OwO à un user
     }
 }
  
-function FricChange (id, numOwO) { //Ajoute un OwO à un user
+function FricChange (numOwO) { //Ajoute un OwO à un user
     if (findUser(id) != -1) {    
         bot.channels.get(channelStockIdF).fetchMessages({ limit: 100 }) //Trouve le message de stockage discord de l'user puis l'edit pour ajouter le owo
             .then(messages => 
