@@ -195,7 +195,7 @@ bot.on('message', message => { //Log
     read()
     readK()
     findUser(message.author.id)
-    console.log("Wesh les relous, ce soir on fout le zbeul " + findUser(message.author.id))
+    console.log("Wesh les relous, ce soir on fout le zbeul " + dataBank[findUser(message.author.id)][1])
   })
 
 bot.on('message', message => { //Achat Pack
