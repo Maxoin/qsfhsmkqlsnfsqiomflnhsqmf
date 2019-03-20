@@ -21,6 +21,10 @@ var dataBank = []; //Contient des tableaux : C'est la base de données quand le 
 
 var dataBankK = [];
 
+var channelStockIdF = "558001965972455454"; 
+
+var dataBankF = []; 
+
 //Declaration Fonction~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 function read () { //lit le stockage discord et le met dans le stockage variable
@@ -31,6 +35,22 @@ function read () { //lit le stockage discord et le met dans le stockage variable
                
                 messages.forEach(function(valeur , clé) {
                     dataBank.push(valeur.content.split(" * "));
+                })
+            )
+            .catch(console.error)
+        )
+        
+    
+};
+
+function readF () { //lit le stockage discord et le met dans le stockage variable
+
+    // met le contenu des messages dans dataBank
+        (bot.channels.get(channelStockIdF).fetchMessages({ limit: 100 }) 
+            .then(messages => 
+               
+                messages.forEach(function(valeur , clé) {
+                    dataBankF.push(valeur.content.split(" * "));
                 })
             )
             .catch(console.error)
@@ -57,7 +77,7 @@ function readK () { //lit le stockage discord et le met dans le stockage variabl
 
 function postReserve (id) { //poste un message dans l'espace de stockage discord ( en théorie, l'id des utilisateurs ayant fait !!OwOLog)
     bot.channels.get(channelStockId).send(id);
-    
+    bot.channels.get(channelStockIdF).send(id);
 }
 
 function findUser (id) { //à partir de l'id d'un user, trouve l'indice de sa "fiche" dans le stockage => -1 si pas de fiche
@@ -93,6 +113,25 @@ function add (id, numOwO) { //Ajoute un OwO à un user
     }
 }
  
+function FricChange (id, numOwO) { //Ajoute un OwO à un user
+    if (findUser(id) != -1) {    
+        bot.channels.get(channelStockIdF).fetchMessages({ limit: 100 }) //Trouve le message de stockage discord de l'user puis l'edit pour ajouter le owo
+            .then(messages => 
+                messages.forEach(function(msg, idMsg) {
+                    if (msg.content.split(' * ')[0] == id) {
+                        bot.channels.get(channelStockIdF).fetchMessage(idMsg)
+                            .then(message => 
+                                message.edit(id + " * " + numOwO)
+                            )
+                            .catch(console.error)
+                    }
+                })
+            )
+            .catch(console.error)
+        dataBank[findUser(id)].push(numOwO); //Ajoute le owo dans le stockage variable
+    }
+}
+
 function gotOwO (id, numOwO) { //Verifie si un user a un OwO ! return true si il l'a, return false sinon
 
 
@@ -183,7 +222,7 @@ bot.on('message', message => { // &OwOLog ! faisable plusieurs fois !
         if (findUser(message.author.id) === -1) {
             postReserve(message.author.id); //stockage discord
             dataBank.push([message.author.id]); //stockage variable
-            add(message.author.id, 600 + " PO")
+            FricChange(message.author.id, 600)
             message.channel.send("Ok, c'est noté !")
         } else {
             message.channel.send("Tu es déjà enregistré ! Tu n'as pas à refaire cette commande.")
@@ -224,9 +263,10 @@ bot.on('message', message => { //Achat Pack
     kispawn =  Math.floor(Math.random() * Math.floor(7))
     var p8 = kispawn
     add(message.author.id, dataBankK[p8][0])
+    FricChange(message.author.id, dataBankF[message.author.id][1] - 100)
     var embedpak = new Discord.RichEmbed()
         .setTitle("Ouverture de Pakei\nVous remportez :")
-        .setDescription("Il vous restes " + dataBank)
+        .setDescription("Il vous restes " + dataBank[findUser(message.author.id)][1])
         .addField(":arrow_forward: " + dataBankK[p1][1], ". . . . .")
         .addField(":arrow_forward: " + dataBankK[p2][1], ". . . . .")
         .addField(":arrow_forward: " + dataBankK[p3][1], ". . . . .")
