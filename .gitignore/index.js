@@ -263,7 +263,7 @@ bot.on('message', message => { //Achat Pack
     FricChange(yuser, 100)
     var embedpak = new Discord.RichEmbed()
         .setTitle("Ouverture de Pakei\nVous remportez :")
-        .setDescription("Il vous restes " + dataBankF[findUser(message.author.id)][1])
+        .setDescription("Il vous restes " + dataBankF[][1])
         .addField(":arrow_forward: " + dataBankK[p1][1], ". . . . .")
         .addField(":arrow_forward: " + dataBankK[p2][1], ". . . . .")
         .addField(":arrow_forward: " + dataBankK[p3][1], ". . . . .")
