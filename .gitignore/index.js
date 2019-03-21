@@ -121,7 +121,7 @@ function FricChange (id, numOwO) { //Ajoute un OwO à un user
                     if (msg.content.split(' * ')[0] == id) {
                         bot.channels.get(channelStockIdF).fetchMessage(idMsg)
                             .then(message => 
-                                message.edit(yuser + " * " + numOwO)
+                                (message.content.split(" * ")[0] + " * " + (message.content[1]- numOwO))
                             )
                             .catch(console.error)
                     }
