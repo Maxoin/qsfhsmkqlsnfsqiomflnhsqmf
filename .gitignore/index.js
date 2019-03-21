@@ -261,6 +261,7 @@ bot.on('message', message => { //Achat Pack
     kispawn =  Math.floor(Math.random() * Math.floor(7))
     var p8 = kispawn
     yuser = message.author.id
+    FricChange(yuser, 100)
     var embedpak = new Discord.RichEmbed()
         .setTitle("Ouverture de Pakei\nVous remportez :")
         .setDescription("Il vous restes " + dataBankF[findUser(message.author.id)][1])
