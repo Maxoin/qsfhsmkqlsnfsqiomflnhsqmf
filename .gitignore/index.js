@@ -94,6 +94,32 @@ function findUser (id) { //à partir de l'id d'un user, trouve l'indice de sa "f
     }
 }
 
+function findUserF (id) { //à partir de l'id d'un user, trouve l'indice de sa "fiche" dans le stockage => -1 si pas de fiche
+
+    var userIndice;
+
+    dataBankF.forEach(function(valeur, clé) {
+
+        if (id ===  valeur[0]) {
+
+            userIndice = clé;
+
+        }
+
+    })
+
+    if (userIndice === undefined) {
+
+        return -1;
+
+    } else { 
+
+        return userIndice;
+
+    }
+
+}
+
 function add (id, numOwO) { //Ajoute un OwO à un user
     if (findUser(id) != -1) {    
         bot.channels.get(channelStockId).fetchMessages({ limit: 100 }) //Trouve le message de stockage discord de l'user puis l'edit pour ajouter le owo
@@ -133,25 +159,15 @@ function FricChange (id, numOwO) { //Ajoute un OwO à un user
 }
 
 function gotOwO (id, numOwO) { //Verifie si un user a un OwO ! return true si il l'a, return false sinon
-
-
     var got = false;
     if (findUser(id) != -1 ) {
-
         dataBank[findUser(id)].forEach(function (valeur) {
-
-
             if (valeur === numOwO) {
                 got = true;
             } 
-            
         });
-    
     return got;
-
     }
-
-
 }
 
 function Jojcalc(pv){ //transforme les point de vie en var de texte (la jauge)
@@ -261,9 +277,10 @@ bot.on('message', message => { //Achat Pack
     var p8 = kispawn
     yuser = message.author.id
     FricChange(yuser, 100)
+    var fricres = dataBankF[findUserF(message.author.id)][1]
     var embedpak = new Discord.RichEmbed()
         .setTitle("Ouverture de Pakei\nVous remportez :")
-        .setDescription("Il vous restes " + dataBankF[][1])
+        .setDescription("Il vous restes " + fricres)
         .addField(":arrow_forward: " + dataBankK[p1][1], ". . . . .")
         .addField(":arrow_forward: " + dataBankK[p2][1], ". . . . .")
         .addField(":arrow_forward: " + dataBankK[p3][1], ". . . . .")
