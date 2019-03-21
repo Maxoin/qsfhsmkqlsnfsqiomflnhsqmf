@@ -77,7 +77,7 @@ function readK () { //lit le stockage discord et le met dans le stockage variabl
 
 function postReserve (id) { //poste un message dans l'espace de stockage discord ( en théorie, l'id des utilisateurs ayant fait !!OwOLog)
     bot.channels.get(channelStockId).send(id);
-    bot.channels.get(channelStockIdF).send(id);
+    bot.channels.get(channelStockIdF).send(id + " * " + 600);
 }
 
 function findUser (id) { //à partir de l'id d'un user, trouve l'indice de sa "fiche" dans le stockage => -1 si pas de fiche
@@ -222,7 +222,6 @@ bot.on('message', message => { // &OwOLog ! faisable plusieurs fois !
         if (findUser(message.author.id) === -1) {
             postReserve(message.author.id); //stockage discord
             dataBank.push([message.author.id]); //stockage variable
-            FricChange(message.author.id, 600)
             message.channel.send("Ok, c'est noté !")
         } else {
             message.channel.send("Tu es déjà enregistré ! Tu n'as pas à refaire cette commande.")
