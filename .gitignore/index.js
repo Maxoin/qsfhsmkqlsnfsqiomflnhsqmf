@@ -7,7 +7,7 @@ var piafchan = ""
 
 //Declaration Variables~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-var channelStockId = "562901708217253888";  //Max, met ici l'id du channel !
+var channelStockId = "562906465455702017";  //Max, met ici l'id du channel !
  
 var dataBank = []; //Contient des tableaux : C'est la base de données quand le bot est actif !
 
