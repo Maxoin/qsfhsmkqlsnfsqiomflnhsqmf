@@ -171,9 +171,7 @@ bot.on('message', message => { //Création d'un Fluffer Gam
 }}})
 
 bot.on('message', message => { //Nom1
- if(message.author.id === "383166600066629633"){
-  
- }else{
+  if(message.author.id !== "383166600066629633"){
   if(initFG === 1 && piafchan === message.channel.id){
       var trouv = findUser(message.content)
       if(trouv === -1){
@@ -188,9 +186,7 @@ bot.on('message', message => { //Nom1
 }}}})
 
 bot.on('message', message => { //Nom2
- if(message.author.id === "383166600066629633"){
-  
- }else{
+ if(message.author.id !== "383166600066629633"){
   if(initFG === 2 && piafchan === message.channel.id){
       var trouv = findUser(message.content)
       if(trouv === -1){
@@ -205,9 +201,7 @@ bot.on('message', message => { //Nom2
 }}}})
 
 bot.on('message', message => { //Nom3
- if(message.author.id === "383166600066629633"){
-  
- }else{
+ if(message.author.id !== "383166600066629633"){
   if(initFG === 3 && piafchan === message.channel.id){
       var trouv = findUser(message.content)
       if(trouv === -1){
@@ -222,9 +216,7 @@ bot.on('message', message => { //Nom3
 }}}})
 
 bot.on('message', message => { //Nom4
- if(message.author.id === "383166600066629633"){
-  
- }else{
+ if(message.author.id !== "383166600066629633"){
   if(initFG === 4 && piafchan === message.channel.id){
       var trouv = findUser(message.content)
       if(trouv === -1){
@@ -239,9 +231,7 @@ bot.on('message', message => { //Nom4
 }}}})
 
 bot.on('message', message => { //Nom5
- if(message.author.id === "383166600066629633"){
-  
- }else{
+ if(message.author.id !== "383166600066629633"){
   if(initFG === 5 && piafchan === message.channel.id){
       var trouv = findUser(message.content)
       if(trouv === -1){
@@ -256,9 +246,7 @@ bot.on('message', message => { //Nom5
 }}}})
 
 bot.on('message', message => { //Nom6
- if(message.author.id === "383166600066629633"){
-  
- }else{
+ if(message.author.id !== "383166600066629633"){
   if(initFG === 6 && piafchan === message.channel.id){
       var trouv = findUser(message.content)
       if(trouv === -1){
@@ -273,9 +261,7 @@ bot.on('message', message => { //Nom6
 }}}})
 
 bot.on('message', message => { //Nom7
- if(message.author.id === "383166600066629633"){
-  
- }else{
+ if(message.author.id !== "383166600066629633"){
   if(initFG === 7 && piafchan === message.channel.id){
       var trouv = findUser(message.content)
       if(trouv === -1){
@@ -290,9 +276,7 @@ bot.on('message', message => { //Nom7
 }}}})
 
 bot.on('message', message => { //Nom8
- if(message.author.id === "383166600066629633"){
-  
- }else{
+ if(message.author.id !== "383166600066629633"){
   if(initFG === 8 && piafchan === message.channel.id){
       var trouv = findUser(message.content)
       if(trouv === -1){
