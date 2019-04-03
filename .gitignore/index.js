@@ -7,7 +7,7 @@ var piafchan = ""
 
 //Declaration Variables~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-var channelStockId = "562731733880012801";  //Max, met ici l'id du channel !
+var channelStockId = "562901708217253888";  //Max, met ici l'id du channel !
  
 var dataBank = []; //Contient des tableaux : C'est la base de données quand le bot est actif !
 
@@ -167,10 +167,11 @@ bot.on('message', message => { //Création d'un Fluffer Gam
       message.channel.send("OwO\nQui seront les participants aux Fluffer Gam ? >:3\n\n*Utilisez un nom à la fois, pour finnallement en avoir 8*")
       initFG = 1
     }else{
-      message.channel.send("ÈwÉ\nUn Fluffer Gam est déjà en cours !")
+      message.channel.get(piafchan).send("ÈwÉ\nUn Fluffer Gam est déjà en cours !")
 }}})
 
 bot.on('message', message => { //Nom1
+ if(message.author.id === "383166600066629633"){
   if(initFG === 1 && piafchan === message.channel.id){
       var trouv = findUser(message.content)
       if(trouv === -1){
@@ -182,9 +183,10 @@ bot.on('message', message => { //Nom1
       nomai.Un.Nom = message.content
       message.channel.send("Oh ? Qui d'autres ?\n*7 Restants*")
       initFG = 2
-}}})
+}}}})
 
 bot.on('message', message => { //Nom2
+ if(message.author.id === "383166600066629633"){
   if(initFG === 2 && piafchan === message.channel.id){
       var trouv = findUser(message.content)
       if(trouv === -1){
@@ -196,9 +198,10 @@ bot.on('message', message => { //Nom2
       nomai.Deux.Nom = message.content
       message.channel.send("Oh ? Qui d'autres ?\n*6 Restants*")
       initFG = 3
-}}})
+}}}})
 
 bot.on('message', message => { //Nom3
+ if(message.author.id === "383166600066629633"){
   if(initFG === 3 && piafchan === message.channel.id){
       var trouv = findUser(message.content)
       if(trouv === -1){
@@ -210,9 +213,10 @@ bot.on('message', message => { //Nom3
       nomai.Trois.Nom = message.content
       message.channel.send("Oh ? Qui d'autres ?\n*5 Restants*")
       initFG = 4
-}}})
+}}}})
 
 bot.on('message', message => { //Nom4
+ if(message.author.id === "383166600066629633"){
   if(initFG === 4 && piafchan === message.channel.id){
       var trouv = findUser(message.content)
       if(trouv === -1){
@@ -224,9 +228,10 @@ bot.on('message', message => { //Nom4
       nomai.Quatre.Nom = message.content
       message.channel.send("Oh ? Qui d'autres ?\n*4 Restants*")
       initFG = 5
-}}})
+}}}})
 
 bot.on('message', message => { //Nom5
+ if(message.author.id === "383166600066629633"){
   if(initFG === 5 && piafchan === message.channel.id){
       var trouv = findUser(message.content)
       if(trouv === -1){
@@ -238,9 +243,10 @@ bot.on('message', message => { //Nom5
       nomai.Cinq.Nom = message.content
       message.channel.send("Oh ? Qui d'autres ?\n*3 Restants*")
       initFG = 6
-}}})
+}}}})
 
 bot.on('message', message => { //Nom6
+ if(message.author.id === "383166600066629633"){
   if(initFG === 6 && piafchan === message.channel.id){
       var trouv = findUser(message.content)
       if(trouv === -1){
@@ -252,9 +258,10 @@ bot.on('message', message => { //Nom6
       nomai.Six.Nom = message.content
       message.channel.send("Oh ? Qui d'autres ?\n*2 Restants*")
       initFG = 7
-}}})
+}}}})
 
 bot.on('message', message => { //Nom7
+ if(message.author.id === "383166600066629633"){
   if(initFG === 7 && piafchan === message.channel.id){
       var trouv = findUser(message.content)
       if(trouv === -1){
@@ -266,9 +273,10 @@ bot.on('message', message => { //Nom7
       nomai.Sept.Nom = message.content
       message.channel.send("Oh ? Qui sera le dernier ?\n*1 Restant*")
       initFG = 8
-}}})
+}}}})
 
 bot.on('message', message => { //Nom8
+ if(message.author.id === "383166600066629633"){
   if(initFG === 8 && piafchan === message.channel.id){
       var trouv = findUser(message.content)
       if(trouv === -1){
@@ -280,7 +288,7 @@ bot.on('message', message => { //Nom8
       nomai.Huit.Nom = message.content
       message.channel.send("Bien ! Et bien que le Fluffer Gam commence ! >:3")
       initFG = 9
-}}})
+}}}})
 
 bot.on('message', message => { //Action
   if(initFG === 9 && piafchan === message.channel.id && message.content === "&n"){
