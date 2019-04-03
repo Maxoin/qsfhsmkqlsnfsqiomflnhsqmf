@@ -164,10 +164,10 @@ bot.on('message', message => { //Création d'un Fluffer Gam
   if(message.content === "&fg"){
     if(initFG === 0){
       piafchan = message.channel.id
-      message.channel.send("OwO\nQui seront les participants aux Fluffer Gam ? >:3\n\n*Utilisez un nom à la fois, pour finnallement en avoir 8*")
+      bot.channels.send("OwO\nQui seront les participants aux Fluffer Gam ? >:3\n\n*Utilisez un nom à la fois, pour finnallement en avoir 8*")
       initFG = 1
     }else{
-      message.channel.get(piafchan).send("ÈwÉ\nUn Fluffer Gam est déjà en cours !")
+      bot.channels.get(piafchan).send("ÈwÉ\nUn Fluffer Gam est déjà en cours !")
 }}})
 
 bot.on('message', message => { //Nom1
