@@ -134,7 +134,7 @@ bot.on('ready',() => {
     console.log('Bot Ready')
 })
 
-bot.login (process.env.token);
+bot.login ("process.env.token");
 
 bot.on('message', message => { //Log
   read()
@@ -173,21 +173,21 @@ bot.on('message', message => { //Création d'un Fluffer Gam
 bot.on('message', message => { //Nom1
   if(initFG === 1 && piafchan === message.channel.id){
       var trouv = findUser(message.content)
-      if(trouv === -1)
+      if(trouv === -1){
         postReserve(message.content)
         nomai[1].Nom = message.content
         message.channel.send("Oh ? Qui d'autres ?\n*7 Restants*")
         initFG = 2
-  }else{
+    }else{
       nomai[1].Nom = message.content
       message.channel.send("Oh ? Qui d'autres ?\n*7 Restants*")
       initFG = 2
-}})
+}}})
 
 bot.on('message', message => { //Nom2
   if(initFG === 2 && piafchan === message.channel.id){
       var trouv = findUser(message.content)
-      if(trouv === -1)
+      if(trouv === -1){
         postReserve(message.content)
         nomai[2].Nom = message.content
         message.channel.send("Oh ? Qui d'autres ?\n*6 Restants*")
@@ -196,12 +196,12 @@ bot.on('message', message => { //Nom2
       nomai[2].Nom = message.content
       message.channel.send("Oh ? Qui d'autres ?\n*6 Restants*")
       initFG = 3
-}})
+}}})
 
 bot.on('message', message => { //Nom3
   if(initFG === 3 && piafchan === message.channel.id){
       var trouv = findUser(message.content)
-      if(trouv === -1)
+      if(trouv === -1){
         postReserve(message.content)
         nomai[3].Nom = message.content
         message.channel.send("Oh ? Qui d'autres ?\n*5 Restants*")
@@ -210,12 +210,12 @@ bot.on('message', message => { //Nom3
       nomai[3].Nom = message.content
       message.channel.send("Oh ? Qui d'autres ?\n*5 Restants*")
       initFG = 4
-}})
+}}})
 
 bot.on('message', message => { //Nom4
   if(initFG === 4 && piafchan === message.channel.id){
       var trouv = findUser(message.content)
-      if(trouv === -1)
+      if(trouv === -1){
         postReserve(message.content)
         nomai[4].Nom = message.content
         message.channel.send("Oh ? Qui d'autres ?\n*4 Restants*")
@@ -224,12 +224,12 @@ bot.on('message', message => { //Nom4
       nomai[4].Nom = message.content
       message.channel.send("Oh ? Qui d'autres ?\n*4 Restants*")
       initFG = 5
-}})
+}}})
 
 bot.on('message', message => { //Nom5
   if(initFG === 5 && piafchan === message.channel.id){
       var trouv = findUser(message.content)
-      if(trouv === -1)
+      if(trouv === -1){
         postReserve(message.content)
         nomai[5].Nom = message.content
         message.channel.send("Oh ? Qui d'autres ?\n*3 Restants*")
@@ -238,12 +238,12 @@ bot.on('message', message => { //Nom5
       nomai[5].Nom = message.content
       message.channel.send("Oh ? Qui d'autres ?\n*3 Restants*")
       initFG = 6
-}})
+}}})
 
 bot.on('message', message => { //Nom6
   if(initFG === 6 && piafchan === message.channel.id){
       var trouv = findUser(message.content)
-      if(trouv === -1)
+      if(trouv === -1){
         postReserve(message.content)
         nomai[6].Nom = message.content
         message.channel.send("Oh ? Qui d'autres ?\n*2 Restants*")
@@ -252,12 +252,12 @@ bot.on('message', message => { //Nom6
       nomai[6].Nom = message.content
       message.channel.send("Oh ? Qui d'autres ?\n*2 Restants*")
       initFG = 7
-}})
+}}})
 
 bot.on('message', message => { //Nom7
   if(initFG === 7 && piafchan === message.channel.id){
       var trouv = findUser(message.content)
-      if(trouv === -1)
+      if(trouv === -1){
         postReserve(message.content)
         nomai[7].Nom = message.content
         message.channel.send("Oh ? Qui sera le dernier ?\n*1 Restant*")
@@ -266,12 +266,12 @@ bot.on('message', message => { //Nom7
       nomai[7].Nom = message.content
       message.channel.send("Oh ? Qui sera le dernier ?\n*1 Restant*")
       initFG = 8
-}})
+}}})
 
 bot.on('message', message => { //Nom8
   if(initFG === 8 && piafchan === message.channel.id){
       var trouv = findUser(message.content)
-      if(trouv === -1)
+      if(trouv === -1){
         postReserve(message.content)
         nomai[8].Nom = message.content
         message.channel.send("Bien ! Et bien que le Fluffer Gam commence ! >:3")
@@ -280,7 +280,7 @@ bot.on('message', message => { //Nom8
       nomai[8].Nom = message.content
       message.channel.send("Bien ! Et bien que le Fluffer Gam commence ! >:3")
       initFG = 9
-}})
+}}})
 
 bot.on('message', message => { //Nom8
   if(initFG === 9 && piafchan === message.channel.id && message.content === "&n"){
