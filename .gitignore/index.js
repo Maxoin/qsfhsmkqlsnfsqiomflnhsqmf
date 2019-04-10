@@ -120,14 +120,6 @@ var nomai = { //stoque (temporaiement) toutes les infos sur les duels
       Nom: (""),
       PV: (100)
     },
-    Sept: {
-      Nom: (""),
-      PV: (100)
-    },
-    Huit: {
-      Nom: (""),
-      PV: (100)
-    },
   }
 
 bot.on('ready',() => {
@@ -145,10 +137,11 @@ bot.on('message', message => { //help
     if(message.content === "&help"){
       var embedhelp = new Discord.RichEmbed()
         .setTitle("Infos sur le bot")
-        .setDescription("Ce bot vous donnes la possibilitée de participer au Fluffer Gam ! Un combat sans merci ou s'affrontes plusieurs participants pour se disputer le titre de Fluff Ultime !")
+        .setDescription("Ce bot vous fais entrer dans une simulation de Trial de Danganronpa ! Je sais que cela parait farfelu, mais attendez la fin de mes explications ! >:3")
         .addField("Prefix :", "&", true)
         .addBlankField() 
         .addField("&help", "Affiche les commandes du bot.")
+        .addField("&mtrial", "Réalisable uniquement par un <@>, elle permet de lancer un Trial dans le lieu séléctionné")
         .setColor("#68f17d")
         .setFooter("Amusez vous bien ! - Maxoin | Baz")
         message.channel.send(embedhelp);
@@ -160,141 +153,3 @@ bot.on('message', message => { //Log
     console.log("Wesh les relous, ce soir on fout le zbeul")
   })
 
-bot.on('message', message => { //Création d'un Fluffer Gam
-  if(message.content === "&fg"){
-    if(initFG === 0){
-      piafchan = message.channel.id
-      bot.channels.send("OwO\nQui seront les participants aux Fluffer Gam ? >:3\n\n*Utilisez un nom à la fois, pour finnallement en avoir 8*")
-      initFG = 1
-    }else{
-      bot.channels.get(piafchan).send("ÈwÉ\nUn Fluffer Gam est déjà en cours !")
-}}})
-
-bot.on('message', message => { //Nom1
-  if(message.author.id !== "383166600066629633"){
-  if(initFG === 1 && piafchan === message.channel.id){
-      var trouv = findUser(message.content)
-      if(trouv === -1){
-        postReserve(message.content)
-        nomai.Un.Nom = message.content
-        message.channel.send("Oh ? Qui d'autres ?\n*7 Restants*")
-        initFG = 2
-    }else{
-      nomai.Un.Nom = message.content
-      message.channel.send("Oh ? Qui d'autres ?\n*7 Restants*")
-      initFG = 2
-}}}})
-
-bot.on('message', message => { //Nom2
- if(message.author.id !== "383166600066629633"){
-  if(initFG === 2 && piafchan === message.channel.id){
-      var trouv = findUser(message.content)
-      if(trouv === -1){
-        postReserve(message.content)
-        nomai.Deux.Nom = message.content
-        message.channel.send("Oh ? Qui d'autres ?\n*6 Restants*")
-        initFG = 3
-  }else{
-      nomai.Deux.Nom = message.content
-      message.channel.send("Oh ? Qui d'autres ?\n*6 Restants*")
-      initFG = 3
-}}}})
-
-bot.on('message', message => { //Nom3
- if(message.author.id !== "383166600066629633"){
-  if(initFG === 3 && piafchan === message.channel.id){
-      var trouv = findUser(message.content)
-      if(trouv === -1){
-        postReserve(message.content)
-        nomai.Trois.Nom = message.content
-        message.channel.send("Oh ? Qui d'autres ?\n*5 Restants*")
-        initFG = 4
-  }else{
-      nomai.Trois.Nom = message.content
-      message.channel.send("Oh ? Qui d'autres ?\n*5 Restants*")
-      initFG = 4
-}}}})
-
-bot.on('message', message => { //Nom4
- if(message.author.id !== "383166600066629633"){
-  if(initFG === 4 && piafchan === message.channel.id){
-      var trouv = findUser(message.content)
-      if(trouv === -1){
-        postReserve(message.content)
-        nomai.Quatre.Nom = message.content
-        message.channel.send("Oh ? Qui d'autres ?\n*4 Restants*")
-        initFG = 5
-  }else{
-      nomai.Quatre.Nom = message.content
-      message.channel.send("Oh ? Qui d'autres ?\n*4 Restants*")
-      initFG = 5
-}}}})
-
-bot.on('message', message => { //Nom5
- if(message.author.id !== "383166600066629633"){
-  if(initFG === 5 && piafchan === message.channel.id){
-      var trouv = findUser(message.content)
-      if(trouv === -1){
-        postReserve(message.content)
-        nomai.Cinq.Nom = message.content
-        message.channel.send("Oh ? Qui d'autres ?\n*3 Restants*")
-        initFG = 6
-  }else{
-      nomai.Cinq.Nom = message.content
-      message.channel.send("Oh ? Qui d'autres ?\n*3 Restants*")
-      initFG = 6
-}}}})
-
-bot.on('message', message => { //Nom6
- if(message.author.id !== "383166600066629633"){
-  if(initFG === 6 && piafchan === message.channel.id){
-      var trouv = findUser(message.content)
-      if(trouv === -1){
-        postReserve(message.content)
-        nomai.Six.Nom = message.content
-        message.channel.send("Oh ? Qui d'autres ?\n*2 Restants*")
-        initFG = 7
-  }else{
-      nomai.Six.Nom = message.content
-      message.channel.send("Oh ? Qui d'autres ?\n*2 Restants*")
-      initFG = 7
-}}}})
-
-bot.on('message', message => { //Nom7
- if(message.author.id !== "383166600066629633"){
-  if(initFG === 7 && piafchan === message.channel.id){
-      var trouv = findUser(message.content)
-      if(trouv === -1){
-        postReserve(message.content)
-        nomai.Sept.Nom = message.content
-        message.channel.send("Oh ? Qui sera le dernier ?\n*1 Restant*")
-        initFG = 8
-  }else{
-      nomai.Sept.Nom = message.content
-      message.channel.send("Oh ? Qui sera le dernier ?\n*1 Restant*")
-      initFG = 8
-}}}})
-
-bot.on('message', message => { //Nom8
- if(message.author.id !== "383166600066629633"){
-  if(initFG === 8 && piafchan === message.channel.id){
-      var trouv = findUser(message.content)
-      if(trouv === -1){
-        postReserve(message.content)
-        nomai.Huit.Nom = message.content
-        message.channel.send("Bien ! Et bien que le Fluffer Gam commence ! >:3")
-        initFG = 9
-  }else{
-      nomai.Huit.Nom = message.content
-      message.channel.send("Bien ! Et bien que le Fluffer Gam commence ! >:3")
-      initFG = 9
-}}}})
-
-bot.on('message', message => { //Action
-  if(initFG === 9 && piafchan === message.channel.id && message.content === "&n"){
-    var saipourki = Math.floor(Math.random() * Math.floor(8))  
-    var ispaskwa = 1
-    if(ispaskwa === 1){
-      message.channel.send(nomai[saipourki] + " se perd dans la forêt pendant une heure. '^'")
-    }
-}})
