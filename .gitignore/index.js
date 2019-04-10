@@ -95,9 +95,33 @@ function Jojcalc(pv){ //transforme les point de vie en var de texte (la jauge)
     return JoJ
 }
 
-var repereInteraction = {
-    noms : ["Axel", "Max", "Yoan", "Emilia", "Naomi", "Oliver", "Tiana", "Zélia", "Anabelle", "Lilyanna", "Oscar"]
-}
+var nomai = { //stoque (temporaiement) toutes les infos sur les duels
+    Un: {
+      Nom: (""),
+      PV: (100)
+    },
+    Deux: {
+      Nom: (""),
+      PV: (100)
+    },
+    Trois: {
+      Nom: (""),
+      PV: (100)
+    },
+    Quatre: {
+      Nom: (""),
+      PV: (100)
+    },
+    Cinq: {
+      Nom: (""),
+      PV: (100)
+    },
+    Six: {
+      Nom: (""),
+      PV: (100)
+    },
+  }
+
 bot.on('ready',() => {
     console.log('Bot Ready')
 })
@@ -130,7 +154,73 @@ bot.on('message', message => { //Log
   })
 
 bot.on('message', message => {
-    if(msg.content.split(': ')[0] === repereInteraction.foreach(noms)){
-        message.channel.send("ça marche '^'")
+    if(message.content.includes("Emilia :") && message.author.id === "366263554711486468"){
+        message.channel.send("C'est ton perso, même si tu le sais déjà '^'")
+    }
+})
+
+bot.on('message', message => {
+    if(message.content.includes("Max :") && message.author.id === "258571960987025408"){
+        message.channel.send("C'est ton perso, même si tu le sais déjà '^'")
+    }
+})
+
+bot.on('message', message => {
+    if(message.content.includes("Anabelle :") && message.author.id === "366263554711486468"){
+        message.channel.send("C'est ton perso, même si tu le sais déjà '^'")
+    }
+})
+
+bot.on('message', message => {
+    if(message.content.includes("Lily :") && message.author.id === "394217638701694986"){
+        message.channel.send("C'est ton perso, même si tu le sais déjà '^'")
+    }
+})
+
+bot.on('message', message => {
+    if(message.content.includes("Oscar :") && message.author.id === "394217638701694986"){
+        message.channel.send("C'est ton perso, même si tu le sais déjà '^'")
+    }
+})
+
+bot.on('message', message => {
+    if(message.content.includes("Zélia :") && message.author.id === "394217638701694986"){
+        message.channel.send("C'est ton perso, même si tu le sais déjà '^'")
+    }
+})
+
+bot.on('message', message => {
+    if(message.content.includes("Tiana :") && message.author.id === "339848621908426752"){
+        message.channel.send("C'est ton perso, même si tu le sais déjà '^'")
+    }
+})
+
+bot.on('message', message => {
+    if(message.content.includes("Oliver :") && message.author.id === "339848621908426752"){
+        message.channel.send("C'est ton perso, même si tu le sais déjà '^'")
+    }
+})
+
+bot.on('message', message => {
+    if(message.content.includes("Naomi :") && message.author.id === "339848621908426752"){
+        message.channel.send("C'est ton perso, même si tu le sais déjà '^'")
+    }
+})
+
+bot.on('message', message => {
+    if(message.content.includes("Yoan :") && message.author.id === "258571960987025408"){
+        message.channel.send("C'est ton perso, même si tu le sais déjà '^'")
+    }
+})
+
+bot.on('message', message => {
+    if(message.content.includes("Axel :") && message.author.id === "258571960987025408"){
+        message.channel.send("C'est ton perso, même si tu le sais déjà '^'")
+    }
+})
+
+bot.on('message', message => {
+    if(message.content.includes("NomPersoLily :") && message.author.id === "366263554711486468"){
+        message.channel.send("C'est ton perso, même si tu le sais déjà '^'")
     }
 })
