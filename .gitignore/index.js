@@ -7,7 +7,7 @@ var piafchan = ""
 
 //Declaration Variables~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-var channelStockId = "562906465455702017";  //Max, met ici l'id du channel !
+var channelStockId = "565462540264669184";  //Max, met ici l'id du channel !
  
 var dataBank = []; //Contient des tableaux : C'est la base de données quand le bot est actif !
 
@@ -95,33 +95,9 @@ function Jojcalc(pv){ //transforme les point de vie en var de texte (la jauge)
     return JoJ
 }
 
-var nomai = { //stoque (temporaiement) toutes les infos sur les duels
-    Un: {
-      Nom: (""),
-      PV: (100)
-    },
-    Deux: {
-      Nom: (""),
-      PV: (100)
-    },
-    Trois: {
-      Nom: (""),
-      PV: (100)
-    },
-    Quatre: {
-      Nom: (""),
-      PV: (100)
-    },
-    Cinq: {
-      Nom: (""),
-      PV: (100)
-    },
-    Six: {
-      Nom: (""),
-      PV: (100)
-    },
-  }
-
+var repereInteraction = {
+    noms : ["Axel", "Max", "Yoan", "Emilia", "Naomi", "Oliver", "Tiana", "Zélia", "Anabelle", "Lilyanna", "Oscar"]
+}
 bot.on('ready',() => {
     console.log('Bot Ready')
 })
@@ -153,3 +129,8 @@ bot.on('message', message => { //Log
     console.log("Wesh les relous, ce soir on fout le zbeul")
   })
 
+bot.on('message', message => {
+    if(msg.content.split(': ')[0] === repereInteraction.noms){
+        message.channel.send("ça marche '^'")
+    }
+})
