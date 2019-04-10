@@ -141,7 +141,7 @@ bot.on('message', message => { //help
         .addField("Prefix :", "&", true)
         .addBlankField() 
         .addField("&help", "Affiche les commandes du bot.")
-        .addField("&mtrial", "Réalisable uniquement par un <@>, elle permet de lancer un Trial dans le lieu séléctionné")
+        .addField("&mtrial", "Réalisable uniquement par un <@&565461390731509770>, elle permet de lancer un Trial dans le lieu séléctionné")
         .setColor("#68f17d")
         .setFooter("Amusez vous bien ! - Maxoin | Baz")
         message.channel.send(embedhelp);
