@@ -157,164 +157,164 @@ bot.on('message', message => {
     if(message.content.includes("Emilia :") && message.author.id === "366263554711486468"){
         if(message.channel.id === "565544998943064064"){ //Classe 1-1
             if(message.content.includes("&go >Couloir")){
-                message.author.addRole("565540921018417152")
-                message.author.removeRole("565546770562809876")
+                message.member.addRole("565540921018417152")
+                message.member.removeRole("565546770562809876")
             }
         }
         if(message.channel.id === "565545063283949578"){ //Classe 1-2
             if(message.content.includes("&go >Couloir")){
-                message.author.addRole("565540921018417152")
-                message.author.removeRole("565546768935419905")
+                message.member.addRole("565540921018417152")
+                message.member.removeRole("565546768935419905")
             }
         }
         if(message.channel.id === "565544957465722891"){ //Couloir
             if(message.content.includes("&go >Classe 1-1")){
-                message.author.addRole("565546770562809876")
-                message.author.removeRole("565540921018417152")
+                message.member.addRole("565546770562809876")
+                message.member.removeRole("565540921018417152")
             }
             if(message.content.includes("&go >Classe 1-2")){
-                message.author.addRole("565546768935419905")
-                message.author.removeRole("565540921018417152")
+                message.member.addRole("565546768935419905")
+                message.member.removeRole("565540921018417152")
             }
             if(message.content.includes("&go >Cuisine")){
-                message.author.addRole("565540259866214427")
-                message.author.removeRole("565540921018417152")
+                message.member.addRole("565540259866214427")
+                message.member.removeRole("565540921018417152")
             }
             if(message.content.includes("&go >Couloir Dortoirs")){
-                message.author.addRole("565540259018833920")
-                message.author.removeRole("565540921018417152")
+                message.member.addRole("565540259018833920")
+                message.member.removeRole("565540921018417152")
             }
         }
         if(message.channel.id === "565545374379409428"){ //Cuisine
             if(message.content.includes("&go >Couloir")){
-                message.author.addRole("565540921018417152")
-                message.author.removeRole("565546768935419905")
+                message.member.addRole("565540921018417152")
+                message.member.removeRole("565546768935419905")
             }
             if(message.content.includes("&go >Couloir Dortoirs")){
-                message.author.addRole("565540259018833920")
-                message.author.removeRole("565546768935419905")
+                message.member.addRole("565540259018833920")
+                message.member.removeRole("565546768935419905")
             }
         }
         if(message.channel.id === "565545233509777409"){ //Couloir-Dortoir
             if(message.content.includes("&go >Chambre Max")){
-                message.author.addRole("565540250173177867")
-                message.author.removeRole("565540259018833920")
+                message.member.addRole("565540250173177867")
+                message.member.removeRole("565540259018833920")
             }
             if(message.content.includes("&go <#565545540725506059>")){
-                message.author.addRole("565543504659611688")
-                message.author.removeRole("565540259018833920")
+                message.member.addRole("565543504659611688")
+                message.member.removeRole("565540259018833920")
             }
             if(message.content.includes("&go <#565545555502301184>")){
-                message.author.addRole("565543501903691793")
-                message.author.removeRole("565540259018833920")
+                message.member.addRole("565543501903691793")
+                message.member.removeRole("565540259018833920")
             }
             if(message.content.includes("&go <#565545661521461248>")){
-                message.author.addRole("565542840948752410")
-                message.author.removeRole("565540259018833920")
+                message.member.addRole("565542840948752410")
+                message.member.removeRole("565540259018833920")
             }
             if(message.content.includes("&go <#565545718375251998>")){
-                message.author.addRole("565542842659766272")
-                message.author.removeRole("565540259018833920")
+                message.member.addRole("565542842659766272")
+                message.member.removeRole("565540259018833920")
             }
             if(message.content.includes("&go <#565545752051318784>")){
-                message.author.addRole("565540922532823077")
-                message.author.removeRole("565540259018833920")
+                message.member.addRole("565540922532823077")
+                message.member.removeRole("565540259018833920")
             }
             if(message.content.includes("&go <#565545784679071754>")){
-                message.author.addRole("565540924202024960")
-                message.author.removeRole("565540259018833920")
+                message.member.addRole("565540924202024960")
+                message.member.removeRole("565540259018833920")
             }
             if(message.content.includes("&go <#565546271763333125>")){
-                message.author.addRole("565540923627536384")
-                message.author.removeRole("565540259018833920")
+                message.member.addRole("565540923627536384")
+                message.member.removeRole("565540259018833920")
             }
             if(message.content.includes("&go <#565545823413469205>")){
-                message.author.addRole("565542839002595368")
-                message.author.removeRole("565540259018833920")
+                message.member.addRole("565542839002595368")
+                message.member.removeRole("565540259018833920")
             }
             if(message.content.includes("&go <#565545852521938964>")){
-                message.author.addRole("565542839446929428")
-                message.author.removeRole("565540259018833920")
+                message.member.addRole("565542839446929428")
+                message.member.removeRole("565540259018833920")
             }
             if(message.content.includes("&go <#565545868103647233>")){
-                message.author.addRole("565542840940101662")
-                message.author.removeRole("565540259018833920")
+                message.member.addRole("565542840940101662")
+                message.member.removeRole("565540259018833920")
             }
             if(message.content.includes("&go <#565598599602241536>")){
-                message.author.addRole("565543228049326092")
-                message.author.removeRole("565540259018833920")
+                message.member.addRole("565543228049326092")
+                message.member.removeRole("565540259018833920")
             }
         }
         if(message.channel.id === "565545510128320535"){ //Chambre Max
             if(message.content.includes("&go >Couloir Dortoir")){
-                message.author.addRole("565540259018833920")
-                message.author.removeRole("565540250173177867")
+                message.member.addRole("565540259018833920")
+                message.member.removeRole("565540250173177867")
             }
         }
         if(message.channel.id === "565545540725506059"){ //Chambre Yoan
             if(message.content.includes("&go >Couloir Dortoir")){
-                message.author.addRole("565540259018833920")
-                message.author.removeRole("565543504659611688")
+                message.member.addRole("565540259018833920")
+                message.member.removeRole("565543504659611688")
             }
         }
         if(message.channel.id === "565545555502301184"){ //Chambre Axel
             if(message.content.includes("&go >Couloir Dortoir")){
-                message.author.addRole("565540259018833920")
-                message.author.removeRole("565543501903691793")
+                message.member.addRole("565540259018833920")
+                message.member.removeRole("565543501903691793")
             }
         }
         if(message.channel.id === "565545661521461248"){ //Chambre Emilia
             if(message.content.includes("&go >Couloir Dortoir")){
-                message.author.addRole("565540259018833920")
-                message.author.removeRole("565542840948752410")
+                message.member.addRole("565540259018833920")
+                message.member.removeRole("565542840948752410")
             }
         }
         if(message.channel.id === "565545718375251998"){ //Chambre Anabelle
             if(message.content.includes("&go >Couloir Dortoir")){
-                message.author.addRole("565540259018833920")
-                message.author.removeRole("565542842659766272")
+                message.member.addRole("565540259018833920")
+                message.member.removeRole("565542842659766272")
             }
         }
         if(message.channel.id === "565545752051318784"){ //Chambre Lily
             if(message.content.includes("&go >Couloir Dortoir")){
-                message.author.addRole("565540259018833920")
-                message.author.removeRole("565540922532823077")
+                message.member.addRole("565540259018833920")
+                message.member.removeRole("565540922532823077")
             }
         }
         if(message.channel.id === "565545784679071754"){ //Chambre Oscar
             if(message.content.includes("&go >Couloir Dortoir")){
-                message.author.addRole("565540259018833920")
-                message.author.removeRole("565540924202024960")
+                message.member.addRole("565540259018833920")
+                message.member.removeRole("565540924202024960")
             }
         }
         if(message.channel.id === "565546271763333125"){ //Chambre Zélia
             if(message.content.includes("&go >Couloir Dortoir")){
-                message.author.addRole("565540259018833920")
-                message.author.removeRole("565540923627536384")
+                message.member.addRole("565540259018833920")
+                message.member.removeRole("565540923627536384")
             }
         }
         if(message.channel.id === "565545823413469205"){ //Chambre Tiana
             if(message.content.includes("&go >Couloir Dortoir")){
-                message.author.addRole("565540259018833920")
-                message.author.removeRole("565542839002595368")
+                message.member.addRole("565540259018833920")
+                message.member.removeRole("565542839002595368")
             }
         }
         if(message.channel.id === "565545852521938964"){ //Chambre Olivier
             if(message.content.includes("&go >Couloir Dortoir")){
-                message.author.addRole("565540259018833920")
-                message.author.removeRole("565542839446929428")
+                message.member.addRole("565540259018833920")
+                message.member.removeRole("565542839446929428")
             }
         }
         if(message.channel.id === "565545868103647233"){ //Chambre Naomi
             if(message.content.includes("&go >Couloir Dortoir")){
-                message.author.addRole("565540259018833920")
-                message.author.removeRole("565542840940101662")
+                message.member.addRole("565540259018833920")
+                message.member.removeRole("565542840940101662")
             }
         }
         if(message.channel.id === "565598599602241536"){ //Chambre Elli
             if(message.content.includes("&go >Couloir Dortoir")){
-                message.author.addRole("565540259018833920")
-                message.author.removeRole("565543228049326092")
+                message.member.addRole("565540259018833920")
+                message.member.removeRole("565543228049326092")
             }
         }
     }
@@ -324,164 +324,164 @@ bot.on('message', message => {
     if(message.content.includes("Max :") && message.author.id === "258571960987025408"){
         if(message.channel.id === "565544998943064064"){ //Classe 1-1
             if(message.content.includes("&go >Couloir")){
-                message.author.addRole("565540921018417152")
-                message.author.removeRole("565546770562809876")
+                message.member.addRole("565540921018417152")
+                message.member.removeRole("565546770562809876")
             }
         }
         if(message.channel.id === "565545063283949578"){ //Classe 1-2
             if(message.content.includes("&go >Couloir")){
-                message.author.addRole("565540921018417152")
-                message.author.removeRole("565546768935419905")
+                message.member.addRole("565540921018417152")
+                message.member.removeRole("565546768935419905")
             }
         }
         if(message.channel.id === "565544957465722891"){ //Couloir
             if(message.content.includes("&go >Classe 1-1")){
-                message.author.addRole("565546770562809876")
-                message.author.removeRole("565540921018417152")
+                message.member.addRole("565546770562809876")
+                message.member.removeRole("565540921018417152")
             }
             if(message.content.includes("&go >Classe 1-2")){
-                message.author.addRole("565546768935419905")
-                message.author.removeRole("565540921018417152")
+                message.member.addRole("565546768935419905")
+                message.member.removeRole("565540921018417152")
             }
             if(message.content.includes("&go >Cuisine")){
-                message.author.addRole("565540259866214427")
-                message.author.removeRole("565540921018417152")
+                message.member.addRole("565540259866214427")
+                message.member.removeRole("565540921018417152")
             }
             if(message.content.includes("&go >Couloir Dortoirs")){
-                message.author.addRole("565540259018833920")
-                message.author.removeRole("565540921018417152")
+                message.member.addRole("565540259018833920")
+                message.member.removeRole("565540921018417152")
             }
         }
         if(message.channel.id === "565545374379409428"){ //Cuisine
             if(message.content.includes("&go >Couloir")){
-                message.author.addRole("565540921018417152")
-                message.author.removeRole("565546768935419905")
+                message.member.addRole("565540921018417152")
+                message.member.removeRole("565546768935419905")
             }
             if(message.content.includes("&go >Couloir Dortoirs")){
-                message.author.addRole("565540259018833920")
-                message.author.removeRole("565546768935419905")
+                message.member.addRole("565540259018833920")
+                message.member.removeRole("565546768935419905")
             }
         }
         if(message.channel.id === "565545233509777409"){ //Couloir-Dortoir
             if(message.content.includes("&go >Chambre Max")){
-                message.author.addRole("565540250173177867")
-                message.author.removeRole("565540259018833920")
+                message.member.addRole("565540250173177867")
+                message.member.removeRole("565540259018833920")
             }
             if(message.content.includes("&go <#565545540725506059>")){
-                message.author.addRole("565543504659611688")
-                message.author.removeRole("565540259018833920")
+                message.member.addRole("565543504659611688")
+                message.member.removeRole("565540259018833920")
             }
             if(message.content.includes("&go <#565545555502301184>")){
-                message.author.addRole("565543501903691793")
-                message.author.removeRole("565540259018833920")
+                message.member.addRole("565543501903691793")
+                message.member.removeRole("565540259018833920")
             }
             if(message.content.includes("&go <#565545661521461248>")){
-                message.author.addRole("565542840948752410")
-                message.author.removeRole("565540259018833920")
+                message.member.addRole("565542840948752410")
+                message.member.removeRole("565540259018833920")
             }
             if(message.content.includes("&go <#565545718375251998>")){
-                message.author.addRole("565542842659766272")
-                message.author.removeRole("565540259018833920")
+                message.member.addRole("565542842659766272")
+                message.member.removeRole("565540259018833920")
             }
             if(message.content.includes("&go <#565545752051318784>")){
-                message.author.addRole("565540922532823077")
-                message.author.removeRole("565540259018833920")
+                message.member.addRole("565540922532823077")
+                message.member.removeRole("565540259018833920")
             }
             if(message.content.includes("&go <#565545784679071754>")){
-                message.author.addRole("565540924202024960")
-                message.author.removeRole("565540259018833920")
+                message.member.addRole("565540924202024960")
+                message.member.removeRole("565540259018833920")
             }
             if(message.content.includes("&go <#565546271763333125>")){
-                message.author.addRole("565540923627536384")
-                message.author.removeRole("565540259018833920")
+                message.member.addRole("565540923627536384")
+                message.member.removeRole("565540259018833920")
             }
             if(message.content.includes("&go <#565545823413469205>")){
-                message.author.addRole("565542839002595368")
-                message.author.removeRole("565540259018833920")
+                message.member.addRole("565542839002595368")
+                message.member.removeRole("565540259018833920")
             }
             if(message.content.includes("&go <#565545852521938964>")){
-                message.author.addRole("565542839446929428")
-                message.author.removeRole("565540259018833920")
+                message.member.addRole("565542839446929428")
+                message.member.removeRole("565540259018833920")
             }
             if(message.content.includes("&go <#565545868103647233>")){
-                message.author.addRole("565542840940101662")
-                message.author.removeRole("565540259018833920")
+                message.member.addRole("565542840940101662")
+                message.member.removeRole("565540259018833920")
             }
             if(message.content.includes("&go <#565598599602241536>")){
-                message.author.addRole("565543228049326092")
-                message.author.removeRole("565540259018833920")
+                message.member.addRole("565543228049326092")
+                message.member.removeRole("565540259018833920")
             }
         }
         if(message.channel.id === "565545510128320535"){ //Chambre Max
             if(message.content.includes("&go >Couloir Dortoir")){
-                message.author.addRole("565540259018833920")
-                message.author.removeRole("565540250173177867")
+                message.member.addRole("565540259018833920")
+                message.member.removeRole("565540250173177867")
             }
         }
         if(message.channel.id === "565545540725506059"){ //Chambre Yoan
             if(message.content.includes("&go >Couloir Dortoir")){
-                message.author.addRole("565540259018833920")
-                message.author.removeRole("565543504659611688")
+                message.member.addRole("565540259018833920")
+                message.member.removeRole("565543504659611688")
             }
         }
         if(message.channel.id === "565545555502301184"){ //Chambre Axel
             if(message.content.includes("&go >Couloir Dortoir")){
-                message.author.addRole("565540259018833920")
-                message.author.removeRole("565543501903691793")
+                message.member.addRole("565540259018833920")
+                message.member.removeRole("565543501903691793")
             }
         }
         if(message.channel.id === "565545661521461248"){ //Chambre Emilia
             if(message.content.includes("&go >Couloir Dortoir")){
-                message.author.addRole("565540259018833920")
-                message.author.removeRole("565542840948752410")
+                message.member.addRole("565540259018833920")
+                message.member.removeRole("565542840948752410")
             }
         }
         if(message.channel.id === "565545718375251998"){ //Chambre Anabelle
             if(message.content.includes("&go >Couloir Dortoir")){
-                message.author.addRole("565540259018833920")
-                message.author.removeRole("565542842659766272")
+                message.member.addRole("565540259018833920")
+                message.member.removeRole("565542842659766272")
             }
         }
         if(message.channel.id === "565545752051318784"){ //Chambre Lily
             if(message.content.includes("&go >Couloir Dortoir")){
-                message.author.addRole("565540259018833920")
-                message.author.removeRole("565540922532823077")
+                message.member.addRole("565540259018833920")
+                message.member.removeRole("565540922532823077")
             }
         }
         if(message.channel.id === "565545784679071754"){ //Chambre Oscar
             if(message.content.includes("&go >Couloir Dortoir")){
-                message.author.addRole("565540259018833920")
-                message.author.removeRole("565540924202024960")
+                message.member.addRole("565540259018833920")
+                message.member.removeRole("565540924202024960")
             }
         }
         if(message.channel.id === "565546271763333125"){ //Chambre Zélia
             if(message.content.includes("&go >Couloir Dortoir")){
-                message.author.addRole("565540259018833920")
-                message.author.removeRole("565540923627536384")
+                message.member.addRole("565540259018833920")
+                message.member.removeRole("565540923627536384")
             }
         }
         if(message.channel.id === "565545823413469205"){ //Chambre Tiana
             if(message.content.includes("&go >Couloir Dortoir")){
-                message.author.addRole("565540259018833920")
-                message.author.removeRole("565542839002595368")
+                message.member.addRole("565540259018833920")
+                message.member.removeRole("565542839002595368")
             }
         }
         if(message.channel.id === "565545852521938964"){ //Chambre Olivier
             if(message.content.includes("&go >Couloir Dortoir")){
-                message.author.addRole("565540259018833920")
-                message.author.removeRole("565542839446929428")
+                message.member.addRole("565540259018833920")
+                message.member.removeRole("565542839446929428")
             }
         }
         if(message.channel.id === "565545868103647233"){ //Chambre Naomi
             if(message.content.includes("&go >Couloir Dortoir")){
-                message.author.addRole("565540259018833920")
-                message.author.removeRole("565542840940101662")
+                message.member.addRole("565540259018833920")
+                message.member.removeRole("565542840940101662")
             }
         }
         if(message.channel.id === "565598599602241536"){ //Chambre Elli
             if(message.content.includes("&go >Couloir Dortoir")){
-                message.author.addRole("565540259018833920")
-                message.author.removeRole("565543228049326092")
+                message.member.addRole("565540259018833920")
+                message.member.removeRole("565543228049326092")
             }
         }
         
@@ -492,164 +492,164 @@ bot.on('message', message => {
     if(message.content.includes("Anabelle :") && message.author.id === "366263554711486468"){
         if(message.channel.id === "565544998943064064"){ //Classe 1-1
             if(message.content.includes("&go >Couloir")){
-                message.author.addRole("565540921018417152")
-                message.author.removeRole("565546770562809876")
+                message.member.addRole("565540921018417152")
+                message.member.removeRole("565546770562809876")
             }
         }
         if(message.channel.id === "565545063283949578"){ //Classe 1-2
             if(message.content.includes("&go >Couloir")){
-                message.author.addRole("565540921018417152")
-                message.author.removeRole("565546768935419905")
+                message.member.addRole("565540921018417152")
+                message.member.removeRole("565546768935419905")
             }
         }
         if(message.channel.id === "565544957465722891"){ //Couloir
             if(message.content.includes("&go >Classe 1-1")){
-                message.author.addRole("565546770562809876")
-                message.author.removeRole("565540921018417152")
+                message.member.addRole("565546770562809876")
+                message.member.removeRole("565540921018417152")
             }
             if(message.content.includes("&go >Classe 1-2")){
-                message.author.addRole("565546768935419905")
-                message.author.removeRole("565540921018417152")
+                message.member.addRole("565546768935419905")
+                message.member.removeRole("565540921018417152")
             }
             if(message.content.includes("&go >Cuisine")){
-                message.author.addRole("565540259866214427")
-                message.author.removeRole("565540921018417152")
+                message.member.addRole("565540259866214427")
+                message.member.removeRole("565540921018417152")
             }
             if(message.content.includes("&go >Couloir Dortoirs")){
-                message.author.addRole("565540259018833920")
-                message.author.removeRole("565540921018417152")
+                message.member.addRole("565540259018833920")
+                message.member.removeRole("565540921018417152")
             }
         }
         if(message.channel.id === "565545374379409428"){ //Cuisine
             if(message.content.includes("&go >Couloir")){
-                message.author.addRole("565540921018417152")
-                message.author.removeRole("565546768935419905")
+                message.member.addRole("565540921018417152")
+                message.member.removeRole("565546768935419905")
             }
             if(message.content.includes("&go >Couloir Dortoirs")){
-                message.author.addRole("565540259018833920")
-                message.author.removeRole("565546768935419905")
+                message.member.addRole("565540259018833920")
+                message.member.removeRole("565546768935419905")
             }
         }
         if(message.channel.id === "565545233509777409"){ //Couloir-Dortoir
             if(message.content.includes("&go >Chambre Max")){
-                message.author.addRole("565540250173177867")
-                message.author.removeRole("565540259018833920")
+                message.member.addRole("565540250173177867")
+                message.member.removeRole("565540259018833920")
             }
             if(message.content.includes("&go <#565545540725506059>")){
-                message.author.addRole("565543504659611688")
-                message.author.removeRole("565540259018833920")
+                message.member.addRole("565543504659611688")
+                message.member.removeRole("565540259018833920")
             }
             if(message.content.includes("&go <#565545555502301184>")){
-                message.author.addRole("565543501903691793")
-                message.author.removeRole("565540259018833920")
+                message.member.addRole("565543501903691793")
+                message.member.removeRole("565540259018833920")
             }
             if(message.content.includes("&go <#565545661521461248>")){
-                message.author.addRole("565542840948752410")
-                message.author.removeRole("565540259018833920")
+                message.member.addRole("565542840948752410")
+                message.member.removeRole("565540259018833920")
             }
             if(message.content.includes("&go <#565545718375251998>")){
-                message.author.addRole("565542842659766272")
-                message.author.removeRole("565540259018833920")
+                message.member.addRole("565542842659766272")
+                message.member.removeRole("565540259018833920")
             }
             if(message.content.includes("&go <#565545752051318784>")){
-                message.author.addRole("565540922532823077")
-                message.author.removeRole("565540259018833920")
+                message.member.addRole("565540922532823077")
+                message.member.removeRole("565540259018833920")
             }
             if(message.content.includes("&go <#565545784679071754>")){
-                message.author.addRole("565540924202024960")
-                message.author.removeRole("565540259018833920")
+                message.member.addRole("565540924202024960")
+                message.member.removeRole("565540259018833920")
             }
             if(message.content.includes("&go <#565546271763333125>")){
-                message.author.addRole("565540923627536384")
-                message.author.removeRole("565540259018833920")
+                message.member.addRole("565540923627536384")
+                message.member.removeRole("565540259018833920")
             }
             if(message.content.includes("&go <#565545823413469205>")){
-                message.author.addRole("565542839002595368")
-                message.author.removeRole("565540259018833920")
+                message.member.addRole("565542839002595368")
+                message.member.removeRole("565540259018833920")
             }
             if(message.content.includes("&go <#565545852521938964>")){
-                message.author.addRole("565542839446929428")
-                message.author.removeRole("565540259018833920")
+                message.member.addRole("565542839446929428")
+                message.member.removeRole("565540259018833920")
             }
             if(message.content.includes("&go <#565545868103647233>")){
-                message.author.addRole("565542840940101662")
-                message.author.removeRole("565540259018833920")
+                message.member.addRole("565542840940101662")
+                message.member.removeRole("565540259018833920")
             }
             if(message.content.includes("&go <#565598599602241536>")){
-                message.author.addRole("565543228049326092")
-                message.author.removeRole("565540259018833920")
+                message.member.addRole("565543228049326092")
+                message.member.removeRole("565540259018833920")
             }
         }
         if(message.channel.id === "565545510128320535"){ //Chambre Max
             if(message.content.includes("&go >Couloir Dortoir")){
-                message.author.addRole("565540259018833920")
-                message.author.removeRole("565540250173177867")
+                message.member.addRole("565540259018833920")
+                message.member.removeRole("565540250173177867")
             }
         }
         if(message.channel.id === "565545540725506059"){ //Chambre Yoan
             if(message.content.includes("&go >Couloir Dortoir")){
-                message.author.addRole("565540259018833920")
-                message.author.removeRole("565543504659611688")
+                message.member.addRole("565540259018833920")
+                message.member.removeRole("565543504659611688")
             }
         }
         if(message.channel.id === "565545555502301184"){ //Chambre Axel
             if(message.content.includes("&go >Couloir Dortoir")){
-                message.author.addRole("565540259018833920")
-                message.author.removeRole("565543501903691793")
+                message.member.addRole("565540259018833920")
+                message.member.removeRole("565543501903691793")
             }
         }
         if(message.channel.id === "565545661521461248"){ //Chambre Emilia
             if(message.content.includes("&go >Couloir Dortoir")){
-                message.author.addRole("565540259018833920")
-                message.author.removeRole("565542840948752410")
+                message.member.addRole("565540259018833920")
+                message.member.removeRole("565542840948752410")
             }
         }
         if(message.channel.id === "565545718375251998"){ //Chambre Anabelle
             if(message.content.includes("&go >Couloir Dortoir")){
-                message.author.addRole("565540259018833920")
-                message.author.removeRole("565542842659766272")
+                message.member.addRole("565540259018833920")
+                message.member.removeRole("565542842659766272")
             }
         }
         if(message.channel.id === "565545752051318784"){ //Chambre Lily
             if(message.content.includes("&go >Couloir Dortoir")){
-                message.author.addRole("565540259018833920")
-                message.author.removeRole("565540922532823077")
+                message.member.addRole("565540259018833920")
+                message.member.removeRole("565540922532823077")
             }
         }
         if(message.channel.id === "565545784679071754"){ //Chambre Oscar
             if(message.content.includes("&go >Couloir Dortoir")){
-                message.author.addRole("565540259018833920")
-                message.author.removeRole("565540924202024960")
+                message.member.addRole("565540259018833920")
+                message.member.removeRole("565540924202024960")
             }
         }
         if(message.channel.id === "565546271763333125"){ //Chambre Zélia
             if(message.content.includes("&go >Couloir Dortoir")){
-                message.author.addRole("565540259018833920")
-                message.author.removeRole("565540923627536384")
+                message.member.addRole("565540259018833920")
+                message.member.removeRole("565540923627536384")
             }
         }
         if(message.channel.id === "565545823413469205"){ //Chambre Tiana
             if(message.content.includes("&go >Couloir Dortoir")){
-                message.author.addRole("565540259018833920")
-                message.author.removeRole("565542839002595368")
+                message.member.addRole("565540259018833920")
+                message.member.removeRole("565542839002595368")
             }
         }
         if(message.channel.id === "565545852521938964"){ //Chambre Olivier
             if(message.content.includes("&go >Couloir Dortoir")){
-                message.author.addRole("565540259018833920")
-                message.author.removeRole("565542839446929428")
+                message.member.addRole("565540259018833920")
+                message.member.removeRole("565542839446929428")
             }
         }
         if(message.channel.id === "565545868103647233"){ //Chambre Naomi
             if(message.content.includes("&go >Couloir Dortoir")){
-                message.author.addRole("565540259018833920")
-                message.author.removeRole("565542840940101662")
+                message.member.addRole("565540259018833920")
+                message.member.removeRole("565542840940101662")
             }
         }
         if(message.channel.id === "565598599602241536"){ //Chambre Elli
             if(message.content.includes("&go >Couloir Dortoir")){
-                message.author.addRole("565540259018833920")
-                message.author.removeRole("565543228049326092")
+                message.member.addRole("565540259018833920")
+                message.member.removeRole("565543228049326092")
             }
         }
     }
@@ -659,164 +659,164 @@ bot.on('message', message => {
     if(message.content.includes("Lily :") && message.author.id === "394217638701694986"){
         if(message.channel.id === "565544998943064064"){ //Classe 1-1
             if(message.content.includes("&go >Couloir")){
-                message.author.addRole("565540921018417152")
-                message.author.removeRole("565546770562809876")
+                message.member.addRole("565540921018417152")
+                message.member.removeRole("565546770562809876")
             }
         }
         if(message.channel.id === "565545063283949578"){ //Classe 1-2
             if(message.content.includes("&go >Couloir")){
-                message.author.addRole("565540921018417152")
-                message.author.removeRole("565546768935419905")
+                message.member.addRole("565540921018417152")
+                message.member.removeRole("565546768935419905")
             }
         }
         if(message.channel.id === "565544957465722891"){ //Couloir
             if(message.content.includes("&go >Classe 1-1")){
-                message.author.addRole("565546770562809876")
-                message.author.removeRole("565540921018417152")
+                message.member.addRole("565546770562809876")
+                message.member.removeRole("565540921018417152")
             }
             if(message.content.includes("&go >Classe 1-2")){
-                message.author.addRole("565546768935419905")
-                message.author.removeRole("565540921018417152")
+                message.member.addRole("565546768935419905")
+                message.member.removeRole("565540921018417152")
             }
             if(message.content.includes("&go >Cuisine")){
-                message.author.addRole("565540259866214427")
-                message.author.removeRole("565540921018417152")
+                message.member.addRole("565540259866214427")
+                message.member.removeRole("565540921018417152")
             }
             if(message.content.includes("&go >Couloir Dortoirs")){
-                message.author.addRole("565540259018833920")
-                message.author.removeRole("565540921018417152")
+                message.member.addRole("565540259018833920")
+                message.member.removeRole("565540921018417152")
             }
         }
         if(message.channel.id === "565545374379409428"){ //Cuisine
             if(message.content.includes("&go >Couloir")){
-                message.author.addRole("565540921018417152")
-                message.author.removeRole("565546768935419905")
+                message.member.addRole("565540921018417152")
+                message.member.removeRole("565546768935419905")
             }
             if(message.content.includes("&go >Couloir Dortoirs")){
-                message.author.addRole("565540259018833920")
-                message.author.removeRole("565546768935419905")
+                message.member.addRole("565540259018833920")
+                message.member.removeRole("565546768935419905")
             }
         }
         if(message.channel.id === "565545233509777409"){ //Couloir-Dortoir
             if(message.content.includes("&go >Chambre Max")){
-                message.author.addRole("565540250173177867")
-                message.author.removeRole("565540259018833920")
+                message.member.addRole("565540250173177867")
+                message.member.removeRole("565540259018833920")
             }
             if(message.content.includes("&go <#565545540725506059>")){
-                message.author.addRole("565543504659611688")
-                message.author.removeRole("565540259018833920")
+                message.member.addRole("565543504659611688")
+                message.member.removeRole("565540259018833920")
             }
             if(message.content.includes("&go <#565545555502301184>")){
-                message.author.addRole("565543501903691793")
-                message.author.removeRole("565540259018833920")
+                message.member.addRole("565543501903691793")
+                message.member.removeRole("565540259018833920")
             }
             if(message.content.includes("&go <#565545661521461248>")){
-                message.author.addRole("565542840948752410")
-                message.author.removeRole("565540259018833920")
+                message.member.addRole("565542840948752410")
+                message.member.removeRole("565540259018833920")
             }
             if(message.content.includes("&go <#565545718375251998>")){
-                message.author.addRole("565542842659766272")
-                message.author.removeRole("565540259018833920")
+                message.member.addRole("565542842659766272")
+                message.member.removeRole("565540259018833920")
             }
             if(message.content.includes("&go <#565545752051318784>")){
-                message.author.addRole("565540922532823077")
-                message.author.removeRole("565540259018833920")
+                message.member.addRole("565540922532823077")
+                message.member.removeRole("565540259018833920")
             }
             if(message.content.includes("&go <#565545784679071754>")){
-                message.author.addRole("565540924202024960")
-                message.author.removeRole("565540259018833920")
+                message.member.addRole("565540924202024960")
+                message.member.removeRole("565540259018833920")
             }
             if(message.content.includes("&go <#565546271763333125>")){
-                message.author.addRole("565540923627536384")
-                message.author.removeRole("565540259018833920")
+                message.member.addRole("565540923627536384")
+                message.member.removeRole("565540259018833920")
             }
             if(message.content.includes("&go <#565545823413469205>")){
-                message.author.addRole("565542839002595368")
-                message.author.removeRole("565540259018833920")
+                message.member.addRole("565542839002595368")
+                message.member.removeRole("565540259018833920")
             }
             if(message.content.includes("&go <#565545852521938964>")){
-                message.author.addRole("565542839446929428")
-                message.author.removeRole("565540259018833920")
+                message.member.addRole("565542839446929428")
+                message.member.removeRole("565540259018833920")
             }
             if(message.content.includes("&go <#565545868103647233>")){
-                message.author.addRole("565542840940101662")
-                message.author.removeRole("565540259018833920")
+                message.member.addRole("565542840940101662")
+                message.member.removeRole("565540259018833920")
             }
             if(message.content.includes("&go <#565598599602241536>")){
-                message.author.addRole("565543228049326092")
-                message.author.removeRole("565540259018833920")
+                message.member.addRole("565543228049326092")
+                message.member.removeRole("565540259018833920")
             }
         }
         if(message.channel.id === "565545510128320535"){ //Chambre Max
             if(message.content.includes("&go >Couloir Dortoir")){
-                message.author.addRole("565540259018833920")
-                message.author.removeRole("565540250173177867")
+                message.member.addRole("565540259018833920")
+                message.member.removeRole("565540250173177867")
             }
         }
         if(message.channel.id === "565545540725506059"){ //Chambre Yoan
             if(message.content.includes("&go >Couloir Dortoir")){
-                message.author.addRole("565540259018833920")
-                message.author.removeRole("565543504659611688")
+                message.member.addRole("565540259018833920")
+                message.member.removeRole("565543504659611688")
             }
         }
         if(message.channel.id === "565545555502301184"){ //Chambre Axel
             if(message.content.includes("&go >Couloir Dortoir")){
-                message.author.addRole("565540259018833920")
-                message.author.removeRole("565543501903691793")
+                message.member.addRole("565540259018833920")
+                message.member.removeRole("565543501903691793")
             }
         }
         if(message.channel.id === "565545661521461248"){ //Chambre Emilia
             if(message.content.includes("&go >Couloir Dortoir")){
-                message.author.addRole("565540259018833920")
-                message.author.removeRole("565542840948752410")
+                message.member.addRole("565540259018833920")
+                message.member.removeRole("565542840948752410")
             }
         }
         if(message.channel.id === "565545718375251998"){ //Chambre Anabelle
             if(message.content.includes("&go >Couloir Dortoir")){
-                message.author.addRole("565540259018833920")
-                message.author.removeRole("565542842659766272")
+                message.member.addRole("565540259018833920")
+                message.member.removeRole("565542842659766272")
             }
         }
         if(message.channel.id === "565545752051318784"){ //Chambre Lily
             if(message.content.includes("&go >Couloir Dortoir")){
-                message.author.addRole("565540259018833920")
-                message.author.removeRole("565540922532823077")
+                message.member.addRole("565540259018833920")
+                message.member.removeRole("565540922532823077")
             }
         }
         if(message.channel.id === "565545784679071754"){ //Chambre Oscar
             if(message.content.includes("&go >Couloir Dortoir")){
-                message.author.addRole("565540259018833920")
-                message.author.removeRole("565540924202024960")
+                message.member.addRole("565540259018833920")
+                message.member.removeRole("565540924202024960")
             }
         }
         if(message.channel.id === "565546271763333125"){ //Chambre Zélia
             if(message.content.includes("&go >Couloir Dortoir")){
-                message.author.addRole("565540259018833920")
-                message.author.removeRole("565540923627536384")
+                message.member.addRole("565540259018833920")
+                message.member.removeRole("565540923627536384")
             }
         }
         if(message.channel.id === "565545823413469205"){ //Chambre Tiana
             if(message.content.includes("&go >Couloir Dortoir")){
-                message.author.addRole("565540259018833920")
-                message.author.removeRole("565542839002595368")
+                message.member.addRole("565540259018833920")
+                message.member.removeRole("565542839002595368")
             }
         }
         if(message.channel.id === "565545852521938964"){ //Chambre Olivier
             if(message.content.includes("&go >Couloir Dortoir")){
-                message.author.addRole("565540259018833920")
-                message.author.removeRole("565542839446929428")
+                message.member.addRole("565540259018833920")
+                message.member.removeRole("565542839446929428")
             }
         }
         if(message.channel.id === "565545868103647233"){ //Chambre Naomi
             if(message.content.includes("&go >Couloir Dortoir")){
-                message.author.addRole("565540259018833920")
-                message.author.removeRole("565542840940101662")
+                message.member.addRole("565540259018833920")
+                message.member.removeRole("565542840940101662")
             }
         }
         if(message.channel.id === "565598599602241536"){ //Chambre Elli
             if(message.content.includes("&go >Couloir Dortoir")){
-                message.author.addRole("565540259018833920")
-                message.author.removeRole("565543228049326092")
+                message.member.addRole("565540259018833920")
+                message.member.removeRole("565543228049326092")
             }
         }
     }
@@ -826,164 +826,164 @@ bot.on('message', message => {
     if(message.content.includes("Oscar :") && message.author.id === "394217638701694986"){
         if(message.channel.id === "565544998943064064"){ //Classe 1-1
             if(message.content.includes("&go >Couloir")){
-                message.author.addRole("565540921018417152")
-                message.author.removeRole("565546770562809876")
+                message.member.addRole("565540921018417152")
+                message.member.removeRole("565546770562809876")
             }
         }
         if(message.channel.id === "565545063283949578"){ //Classe 1-2
             if(message.content.includes("&go >Couloir")){
-                message.author.addRole("565540921018417152")
-                message.author.removeRole("565546768935419905")
+                message.member.addRole("565540921018417152")
+                message.member.removeRole("565546768935419905")
             }
         }
         if(message.channel.id === "565544957465722891"){ //Couloir
             if(message.content.includes("&go >Classe 1-1")){
-                message.author.addRole("565546770562809876")
-                message.author.removeRole("565540921018417152")
+                message.member.addRole("565546770562809876")
+                message.member.removeRole("565540921018417152")
             }
             if(message.content.includes("&go >Classe 1-2")){
-                message.author.addRole("565546768935419905")
-                message.author.removeRole("565540921018417152")
+                message.member.addRole("565546768935419905")
+                message.member.removeRole("565540921018417152")
             }
             if(message.content.includes("&go >Cuisine")){
-                message.author.addRole("565540259866214427")
-                message.author.removeRole("565540921018417152")
+                message.member.addRole("565540259866214427")
+                message.member.removeRole("565540921018417152")
             }
             if(message.content.includes("&go >Couloir Dortoirs")){
-                message.author.addRole("565540259018833920")
-                message.author.removeRole("565540921018417152")
+                message.member.addRole("565540259018833920")
+                message.member.removeRole("565540921018417152")
             }
         }
         if(message.channel.id === "565545374379409428"){ //Cuisine
             if(message.content.includes("&go >Couloir")){
-                message.author.addRole("565540921018417152")
-                message.author.removeRole("565546768935419905")
+                message.member.addRole("565540921018417152")
+                message.member.removeRole("565546768935419905")
             }
             if(message.content.includes("&go >Couloir Dortoirs")){
-                message.author.addRole("565540259018833920")
-                message.author.removeRole("565546768935419905")
+                message.member.addRole("565540259018833920")
+                message.member.removeRole("565546768935419905")
             }
         }
         if(message.channel.id === "565545233509777409"){ //Couloir-Dortoir
             if(message.content.includes("&go >Chambre Max")){
-                message.author.addRole("565540250173177867")
-                message.author.removeRole("565540259018833920")
+                message.member.addRole("565540250173177867")
+                message.member.removeRole("565540259018833920")
             }
             if(message.content.includes("&go <#565545540725506059>")){
-                message.author.addRole("565543504659611688")
-                message.author.removeRole("565540259018833920")
+                message.member.addRole("565543504659611688")
+                message.member.removeRole("565540259018833920")
             }
             if(message.content.includes("&go <#565545555502301184>")){
-                message.author.addRole("565543501903691793")
-                message.author.removeRole("565540259018833920")
+                message.member.addRole("565543501903691793")
+                message.member.removeRole("565540259018833920")
             }
             if(message.content.includes("&go <#565545661521461248>")){
-                message.author.addRole("565542840948752410")
-                message.author.removeRole("565540259018833920")
+                message.member.addRole("565542840948752410")
+                message.member.removeRole("565540259018833920")
             }
             if(message.content.includes("&go <#565545718375251998>")){
-                message.author.addRole("565542842659766272")
-                message.author.removeRole("565540259018833920")
+                message.member.addRole("565542842659766272")
+                message.member.removeRole("565540259018833920")
             }
             if(message.content.includes("&go <#565545752051318784>")){
-                message.author.addRole("565540922532823077")
-                message.author.removeRole("565540259018833920")
+                message.member.addRole("565540922532823077")
+                message.member.removeRole("565540259018833920")
             }
             if(message.content.includes("&go <#565545784679071754>")){
-                message.author.addRole("565540924202024960")
-                message.author.removeRole("565540259018833920")
+                message.member.addRole("565540924202024960")
+                message.member.removeRole("565540259018833920")
             }
             if(message.content.includes("&go <#565546271763333125>")){
-                message.author.addRole("565540923627536384")
-                message.author.removeRole("565540259018833920")
+                message.member.addRole("565540923627536384")
+                message.member.removeRole("565540259018833920")
             }
             if(message.content.includes("&go <#565545823413469205>")){
-                message.author.addRole("565542839002595368")
-                message.author.removeRole("565540259018833920")
+                message.member.addRole("565542839002595368")
+                message.member.removeRole("565540259018833920")
             }
             if(message.content.includes("&go <#565545852521938964>")){
-                message.author.addRole("565542839446929428")
-                message.author.removeRole("565540259018833920")
+                message.member.addRole("565542839446929428")
+                message.member.removeRole("565540259018833920")
             }
             if(message.content.includes("&go <#565545868103647233>")){
-                message.author.addRole("565542840940101662")
-                message.author.removeRole("565540259018833920")
+                message.member.addRole("565542840940101662")
+                message.member.removeRole("565540259018833920")
             }
             if(message.content.includes("&go <#565598599602241536>")){
-                message.author.addRole("565543228049326092")
-                message.author.removeRole("565540259018833920")
+                message.member.addRole("565543228049326092")
+                message.member.removeRole("565540259018833920")
             }
         }
         if(message.channel.id === "565545510128320535"){ //Chambre Max
             if(message.content.includes("&go >Couloir Dortoir")){
-                message.author.addRole("565540259018833920")
-                message.author.removeRole("565540250173177867")
+                message.member.addRole("565540259018833920")
+                message.member.removeRole("565540250173177867")
             }
         }
         if(message.channel.id === "565545540725506059"){ //Chambre Yoan
             if(message.content.includes("&go >Couloir Dortoir")){
-                message.author.addRole("565540259018833920")
-                message.author.removeRole("565543504659611688")
+                message.member.addRole("565540259018833920")
+                message.member.removeRole("565543504659611688")
             }
         }
         if(message.channel.id === "565545555502301184"){ //Chambre Axel
             if(message.content.includes("&go >Couloir Dortoir")){
-                message.author.addRole("565540259018833920")
-                message.author.removeRole("565543501903691793")
+                message.member.addRole("565540259018833920")
+                message.member.removeRole("565543501903691793")
             }
         }
         if(message.channel.id === "565545661521461248"){ //Chambre Emilia
             if(message.content.includes("&go >Couloir Dortoir")){
-                message.author.addRole("565540259018833920")
-                message.author.removeRole("565542840948752410")
+                message.member.addRole("565540259018833920")
+                message.member.removeRole("565542840948752410")
             }
         }
         if(message.channel.id === "565545718375251998"){ //Chambre Anabelle
             if(message.content.includes("&go >Couloir Dortoir")){
-                message.author.addRole("565540259018833920")
-                message.author.removeRole("565542842659766272")
+                message.member.addRole("565540259018833920")
+                message.member.removeRole("565542842659766272")
             }
         }
         if(message.channel.id === "565545752051318784"){ //Chambre Lily
             if(message.content.includes("&go >Couloir Dortoir")){
-                message.author.addRole("565540259018833920")
-                message.author.removeRole("565540922532823077")
+                message.member.addRole("565540259018833920")
+                message.member.removeRole("565540922532823077")
             }
         }
         if(message.channel.id === "565545784679071754"){ //Chambre Oscar
             if(message.content.includes("&go >Couloir Dortoir")){
-                message.author.addRole("565540259018833920")
-                message.author.removeRole("565540924202024960")
+                message.member.addRole("565540259018833920")
+                message.member.removeRole("565540924202024960")
             }
         }
         if(message.channel.id === "565546271763333125"){ //Chambre Zélia
             if(message.content.includes("&go >Couloir Dortoir")){
-                message.author.addRole("565540259018833920")
-                message.author.removeRole("565540923627536384")
+                message.member.addRole("565540259018833920")
+                message.member.removeRole("565540923627536384")
             }
         }
         if(message.channel.id === "565545823413469205"){ //Chambre Tiana
             if(message.content.includes("&go >Couloir Dortoir")){
-                message.author.addRole("565540259018833920")
-                message.author.removeRole("565542839002595368")
+                message.member.addRole("565540259018833920")
+                message.member.removeRole("565542839002595368")
             }
         }
         if(message.channel.id === "565545852521938964"){ //Chambre Olivier
             if(message.content.includes("&go >Couloir Dortoir")){
-                message.author.addRole("565540259018833920")
-                message.author.removeRole("565542839446929428")
+                message.member.addRole("565540259018833920")
+                message.member.removeRole("565542839446929428")
             }
         }
         if(message.channel.id === "565545868103647233"){ //Chambre Naomi
             if(message.content.includes("&go >Couloir Dortoir")){
-                message.author.addRole("565540259018833920")
-                message.author.removeRole("565542840940101662")
+                message.member.addRole("565540259018833920")
+                message.member.removeRole("565542840940101662")
             }
         }
         if(message.channel.id === "565598599602241536"){ //Chambre Elli
             if(message.content.includes("&go >Couloir Dortoir")){
-                message.author.addRole("565540259018833920")
-                message.author.removeRole("565543228049326092")
+                message.member.addRole("565540259018833920")
+                message.member.removeRole("565543228049326092")
             }
         }
     }
@@ -993,164 +993,164 @@ bot.on('message', message => {
     if(message.content.includes("Zélia :") && message.author.id === "394217638701694986"){
         if(message.channel.id === "565544998943064064"){ //Classe 1-1
             if(message.content.includes("&go >Couloir")){
-                message.author.addRole("565540921018417152")
-                message.author.removeRole("565546770562809876")
+                message.member.addRole("565540921018417152")
+                message.member.removeRole("565546770562809876")
             }
         }
         if(message.channel.id === "565545063283949578"){ //Classe 1-2
             if(message.content.includes("&go >Couloir")){
-                message.author.addRole("565540921018417152")
-                message.author.removeRole("565546768935419905")
+                message.member.addRole("565540921018417152")
+                message.member.removeRole("565546768935419905")
             }
         }
         if(message.channel.id === "565544957465722891"){ //Couloir
             if(message.content.includes("&go >Classe 1-1")){
-                message.author.addRole("565546770562809876")
-                message.author.removeRole("565540921018417152")
+                message.member.addRole("565546770562809876")
+                message.member.removeRole("565540921018417152")
             }
             if(message.content.includes("&go >Classe 1-2")){
-                message.author.addRole("565546768935419905")
-                message.author.removeRole("565540921018417152")
+                message.member.addRole("565546768935419905")
+                message.member.removeRole("565540921018417152")
             }
             if(message.content.includes("&go >Cuisine")){
-                message.author.addRole("565540259866214427")
-                message.author.removeRole("565540921018417152")
+                message.member.addRole("565540259866214427")
+                message.member.removeRole("565540921018417152")
             }
             if(message.content.includes("&go >Couloir Dortoirs")){
-                message.author.addRole("565540259018833920")
-                message.author.removeRole("565540921018417152")
+                message.member.addRole("565540259018833920")
+                message.member.removeRole("565540921018417152")
             }
         }
         if(message.channel.id === "565545374379409428"){ //Cuisine
             if(message.content.includes("&go >Couloir")){
-                message.author.addRole("565540921018417152")
-                message.author.removeRole("565546768935419905")
+                message.member.addRole("565540921018417152")
+                message.member.removeRole("565546768935419905")
             }
             if(message.content.includes("&go >Couloir Dortoirs")){
-                message.author.addRole("565540259018833920")
-                message.author.removeRole("565546768935419905")
+                message.member.addRole("565540259018833920")
+                message.member.removeRole("565546768935419905")
             }
         }
         if(message.channel.id === "565545233509777409"){ //Couloir-Dortoir
             if(message.content.includes("&go >Chambre Max")){
-                message.author.addRole("565540250173177867")
-                message.author.removeRole("565540259018833920")
+                message.member.addRole("565540250173177867")
+                message.member.removeRole("565540259018833920")
             }
             if(message.content.includes("&go <#565545540725506059>")){
-                message.author.addRole("565543504659611688")
-                message.author.removeRole("565540259018833920")
+                message.member.addRole("565543504659611688")
+                message.member.removeRole("565540259018833920")
             }
             if(message.content.includes("&go <#565545555502301184>")){
-                message.author.addRole("565543501903691793")
-                message.author.removeRole("565540259018833920")
+                message.member.addRole("565543501903691793")
+                message.member.removeRole("565540259018833920")
             }
             if(message.content.includes("&go <#565545661521461248>")){
-                message.author.addRole("565542840948752410")
-                message.author.removeRole("565540259018833920")
+                message.member.addRole("565542840948752410")
+                message.member.removeRole("565540259018833920")
             }
             if(message.content.includes("&go <#565545718375251998>")){
-                message.author.addRole("565542842659766272")
-                message.author.removeRole("565540259018833920")
+                message.member.addRole("565542842659766272")
+                message.member.removeRole("565540259018833920")
             }
             if(message.content.includes("&go <#565545752051318784>")){
-                message.author.addRole("565540922532823077")
-                message.author.removeRole("565540259018833920")
+                message.member.addRole("565540922532823077")
+                message.member.removeRole("565540259018833920")
             }
             if(message.content.includes("&go <#565545784679071754>")){
-                message.author.addRole("565540924202024960")
-                message.author.removeRole("565540259018833920")
+                message.member.addRole("565540924202024960")
+                message.member.removeRole("565540259018833920")
             }
             if(message.content.includes("&go <#565546271763333125>")){
-                message.author.addRole("565540923627536384")
-                message.author.removeRole("565540259018833920")
+                message.member.addRole("565540923627536384")
+                message.member.removeRole("565540259018833920")
             }
             if(message.content.includes("&go <#565545823413469205>")){
-                message.author.addRole("565542839002595368")
-                message.author.removeRole("565540259018833920")
+                message.member.addRole("565542839002595368")
+                message.member.removeRole("565540259018833920")
             }
             if(message.content.includes("&go <#565545852521938964>")){
-                message.author.addRole("565542839446929428")
-                message.author.removeRole("565540259018833920")
+                message.member.addRole("565542839446929428")
+                message.member.removeRole("565540259018833920")
             }
             if(message.content.includes("&go <#565545868103647233>")){
-                message.author.addRole("565542840940101662")
-                message.author.removeRole("565540259018833920")
+                message.member.addRole("565542840940101662")
+                message.member.removeRole("565540259018833920")
             }
             if(message.content.includes("&go <#565598599602241536>")){
-                message.author.addRole("565543228049326092")
-                message.author.removeRole("565540259018833920")
+                message.member.addRole("565543228049326092")
+                message.member.removeRole("565540259018833920")
             }
         }
         if(message.channel.id === "565545510128320535"){ //Chambre Max
             if(message.content.includes("&go >Couloir Dortoir")){
-                message.author.addRole("565540259018833920")
-                message.author.removeRole("565540250173177867")
+                message.member.addRole("565540259018833920")
+                message.member.removeRole("565540250173177867")
             }
         }
         if(message.channel.id === "565545540725506059"){ //Chambre Yoan
             if(message.content.includes("&go >Couloir Dortoir")){
-                message.author.addRole("565540259018833920")
-                message.author.removeRole("565543504659611688")
+                message.member.addRole("565540259018833920")
+                message.member.removeRole("565543504659611688")
             }
         }
         if(message.channel.id === "565545555502301184"){ //Chambre Axel
             if(message.content.includes("&go >Couloir Dortoir")){
-                message.author.addRole("565540259018833920")
-                message.author.removeRole("565543501903691793")
+                message.member.addRole("565540259018833920")
+                message.member.removeRole("565543501903691793")
             }
         }
         if(message.channel.id === "565545661521461248"){ //Chambre Emilia
             if(message.content.includes("&go >Couloir Dortoir")){
-                message.author.addRole("565540259018833920")
-                message.author.removeRole("565542840948752410")
+                message.member.addRole("565540259018833920")
+                message.member.removeRole("565542840948752410")
             }
         }
         if(message.channel.id === "565545718375251998"){ //Chambre Anabelle
             if(message.content.includes("&go >Couloir Dortoir")){
-                message.author.addRole("565540259018833920")
-                message.author.removeRole("565542842659766272")
+                message.member.addRole("565540259018833920")
+                message.member.removeRole("565542842659766272")
             }
         }
         if(message.channel.id === "565545752051318784"){ //Chambre Lily
             if(message.content.includes("&go >Couloir Dortoir")){
-                message.author.addRole("565540259018833920")
-                message.author.removeRole("565540922532823077")
+                message.member.addRole("565540259018833920")
+                message.member.removeRole("565540922532823077")
             }
         }
         if(message.channel.id === "565545784679071754"){ //Chambre Oscar
             if(message.content.includes("&go >Couloir Dortoir")){
-                message.author.addRole("565540259018833920")
-                message.author.removeRole("565540924202024960")
+                message.member.addRole("565540259018833920")
+                message.member.removeRole("565540924202024960")
             }
         }
         if(message.channel.id === "565546271763333125"){ //Chambre Zélia
             if(message.content.includes("&go >Couloir Dortoir")){
-                message.author.addRole("565540259018833920")
-                message.author.removeRole("565540923627536384")
+                message.member.addRole("565540259018833920")
+                message.member.removeRole("565540923627536384")
             }
         }
         if(message.channel.id === "565545823413469205"){ //Chambre Tiana
             if(message.content.includes("&go >Couloir Dortoir")){
-                message.author.addRole("565540259018833920")
-                message.author.removeRole("565542839002595368")
+                message.member.addRole("565540259018833920")
+                message.member.removeRole("565542839002595368")
             }
         }
         if(message.channel.id === "565545852521938964"){ //Chambre Olivier
             if(message.content.includes("&go >Couloir Dortoir")){
-                message.author.addRole("565540259018833920")
-                message.author.removeRole("565542839446929428")
+                message.member.addRole("565540259018833920")
+                message.member.removeRole("565542839446929428")
             }
         }
         if(message.channel.id === "565545868103647233"){ //Chambre Naomi
             if(message.content.includes("&go >Couloir Dortoir")){
-                message.author.addRole("565540259018833920")
-                message.author.removeRole("565542840940101662")
+                message.member.addRole("565540259018833920")
+                message.member.removeRole("565542840940101662")
             }
         }
         if(message.channel.id === "565598599602241536"){ //Chambre Elli
             if(message.content.includes("&go >Couloir Dortoir")){
-                message.author.addRole("565540259018833920")
-                message.author.removeRole("565543228049326092")
+                message.member.addRole("565540259018833920")
+                message.member.removeRole("565543228049326092")
             }
         }
     }
@@ -1160,164 +1160,164 @@ bot.on('message', message => {
     if(message.content.includes("Tiana :") && message.author.id === "339848621908426752"){
         if(message.channel.id === "565544998943064064"){ //Classe 1-1
             if(message.content.includes("&go >Couloir")){
-                message.author.addRole("565540921018417152")
-                message.author.removeRole("565546770562809876")
+                message.member.addRole("565540921018417152")
+                message.member.removeRole("565546770562809876")
             }
         }
         if(message.channel.id === "565545063283949578"){ //Classe 1-2
             if(message.content.includes("&go >Couloir")){
-                message.author.addRole("565540921018417152")
-                message.author.removeRole("565546768935419905")
+                message.member.addRole("565540921018417152")
+                message.member.removeRole("565546768935419905")
             }
         }
         if(message.channel.id === "565544957465722891"){ //Couloir
             if(message.content.includes("&go >Classe 1-1")){
-                message.author.addRole("565546770562809876")
-                message.author.removeRole("565540921018417152")
+                message.member.addRole("565546770562809876")
+                message.member.removeRole("565540921018417152")
             }
             if(message.content.includes("&go >Classe 1-2")){
-                message.author.addRole("565546768935419905")
-                message.author.removeRole("565540921018417152")
+                message.member.addRole("565546768935419905")
+                message.member.removeRole("565540921018417152")
             }
             if(message.content.includes("&go >Cuisine")){
-                message.author.addRole("565540259866214427")
-                message.author.removeRole("565540921018417152")
+                message.member.addRole("565540259866214427")
+                message.member.removeRole("565540921018417152")
             }
             if(message.content.includes("&go >Couloir Dortoirs")){
-                message.author.addRole("565540259018833920")
-                message.author.removeRole("565540921018417152")
+                message.member.addRole("565540259018833920")
+                message.member.removeRole("565540921018417152")
             }
         }
         if(message.channel.id === "565545374379409428"){ //Cuisine
             if(message.content.includes("&go >Couloir")){
-                message.author.addRole("565540921018417152")
-                message.author.removeRole("565546768935419905")
+                message.member.addRole("565540921018417152")
+                message.member.removeRole("565546768935419905")
             }
             if(message.content.includes("&go >Couloir Dortoirs")){
-                message.author.addRole("565540259018833920")
-                message.author.removeRole("565546768935419905")
+                message.member.addRole("565540259018833920")
+                message.member.removeRole("565546768935419905")
             }
         }
         if(message.channel.id === "565545233509777409"){ //Couloir-Dortoir
             if(message.content.includes("&go >Chambre Max")){
-                message.author.addRole("565540250173177867")
-                message.author.removeRole("565540259018833920")
+                message.member.addRole("565540250173177867")
+                message.member.removeRole("565540259018833920")
             }
             if(message.content.includes("&go <#565545540725506059>")){
-                message.author.addRole("565543504659611688")
-                message.author.removeRole("565540259018833920")
+                message.member.addRole("565543504659611688")
+                message.member.removeRole("565540259018833920")
             }
             if(message.content.includes("&go <#565545555502301184>")){
-                message.author.addRole("565543501903691793")
-                message.author.removeRole("565540259018833920")
+                message.member.addRole("565543501903691793")
+                message.member.removeRole("565540259018833920")
             }
             if(message.content.includes("&go <#565545661521461248>")){
-                message.author.addRole("565542840948752410")
-                message.author.removeRole("565540259018833920")
+                message.member.addRole("565542840948752410")
+                message.member.removeRole("565540259018833920")
             }
             if(message.content.includes("&go <#565545718375251998>")){
-                message.author.addRole("565542842659766272")
-                message.author.removeRole("565540259018833920")
+                message.member.addRole("565542842659766272")
+                message.member.removeRole("565540259018833920")
             }
             if(message.content.includes("&go <#565545752051318784>")){
-                message.author.addRole("565540922532823077")
-                message.author.removeRole("565540259018833920")
+                message.member.addRole("565540922532823077")
+                message.member.removeRole("565540259018833920")
             }
             if(message.content.includes("&go <#565545784679071754>")){
-                message.author.addRole("565540924202024960")
-                message.author.removeRole("565540259018833920")
+                message.member.addRole("565540924202024960")
+                message.member.removeRole("565540259018833920")
             }
             if(message.content.includes("&go <#565546271763333125>")){
-                message.author.addRole("565540923627536384")
-                message.author.removeRole("565540259018833920")
+                message.member.addRole("565540923627536384")
+                message.member.removeRole("565540259018833920")
             }
             if(message.content.includes("&go <#565545823413469205>")){
-                message.author.addRole("565542839002595368")
-                message.author.removeRole("565540259018833920")
+                message.member.addRole("565542839002595368")
+                message.member.removeRole("565540259018833920")
             }
             if(message.content.includes("&go <#565545852521938964>")){
-                message.author.addRole("565542839446929428")
-                message.author.removeRole("565540259018833920")
+                message.member.addRole("565542839446929428")
+                message.member.removeRole("565540259018833920")
             }
             if(message.content.includes("&go <#565545868103647233>")){
-                message.author.addRole("565542840940101662")
-                message.author.removeRole("565540259018833920")
+                message.member.addRole("565542840940101662")
+                message.member.removeRole("565540259018833920")
             }
             if(message.content.includes("&go <#565598599602241536>")){
-                message.author.addRole("565543228049326092")
-                message.author.removeRole("565540259018833920")
+                message.member.addRole("565543228049326092")
+                message.member.removeRole("565540259018833920")
             }
         }
         if(message.channel.id === "565545510128320535"){ //Chambre Max
             if(message.content.includes("&go >Couloir Dortoir")){
-                message.author.addRole("565540259018833920")
-                message.author.removeRole("565540250173177867")
+                message.member.addRole("565540259018833920")
+                message.member.removeRole("565540250173177867")
             }
         }
         if(message.channel.id === "565545540725506059"){ //Chambre Yoan
             if(message.content.includes("&go >Couloir Dortoir")){
-                message.author.addRole("565540259018833920")
-                message.author.removeRole("565543504659611688")
+                message.member.addRole("565540259018833920")
+                message.member.removeRole("565543504659611688")
             }
         }
         if(message.channel.id === "565545555502301184"){ //Chambre Axel
             if(message.content.includes("&go >Couloir Dortoir")){
-                message.author.addRole("565540259018833920")
-                message.author.removeRole("565543501903691793")
+                message.member.addRole("565540259018833920")
+                message.member.removeRole("565543501903691793")
             }
         }
         if(message.channel.id === "565545661521461248"){ //Chambre Emilia
             if(message.content.includes("&go >Couloir Dortoir")){
-                message.author.addRole("565540259018833920")
-                message.author.removeRole("565542840948752410")
+                message.member.addRole("565540259018833920")
+                message.member.removeRole("565542840948752410")
             }
         }
         if(message.channel.id === "565545718375251998"){ //Chambre Anabelle
             if(message.content.includes("&go >Couloir Dortoir")){
-                message.author.addRole("565540259018833920")
-                message.author.removeRole("565542842659766272")
+                message.member.addRole("565540259018833920")
+                message.member.removeRole("565542842659766272")
             }
         }
         if(message.channel.id === "565545752051318784"){ //Chambre Lily
             if(message.content.includes("&go >Couloir Dortoir")){
-                message.author.addRole("565540259018833920")
-                message.author.removeRole("565540922532823077")
+                message.member.addRole("565540259018833920")
+                message.member.removeRole("565540922532823077")
             }
         }
         if(message.channel.id === "565545784679071754"){ //Chambre Oscar
             if(message.content.includes("&go >Couloir Dortoir")){
-                message.author.addRole("565540259018833920")
-                message.author.removeRole("565540924202024960")
+                message.member.addRole("565540259018833920")
+                message.member.removeRole("565540924202024960")
             }
         }
         if(message.channel.id === "565546271763333125"){ //Chambre Zélia
             if(message.content.includes("&go >Couloir Dortoir")){
-                message.author.addRole("565540259018833920")
-                message.author.removeRole("565540923627536384")
+                message.member.addRole("565540259018833920")
+                message.member.removeRole("565540923627536384")
             }
         }
         if(message.channel.id === "565545823413469205"){ //Chambre Tiana
             if(message.content.includes("&go >Couloir Dortoir")){
-                message.author.addRole("565540259018833920")
-                message.author.removeRole("565542839002595368")
+                message.member.addRole("565540259018833920")
+                message.member.removeRole("565542839002595368")
             }
         }
         if(message.channel.id === "565545852521938964"){ //Chambre Olivier
             if(message.content.includes("&go >Couloir Dortoir")){
-                message.author.addRole("565540259018833920")
-                message.author.removeRole("565542839446929428")
+                message.member.addRole("565540259018833920")
+                message.member.removeRole("565542839446929428")
             }
         }
         if(message.channel.id === "565545868103647233"){ //Chambre Naomi
             if(message.content.includes("&go >Couloir Dortoir")){
-                message.author.addRole("565540259018833920")
-                message.author.removeRole("565542840940101662")
+                message.member.addRole("565540259018833920")
+                message.member.removeRole("565542840940101662")
             }
         }
         if(message.channel.id === "565598599602241536"){ //Chambre Elli
             if(message.content.includes("&go >Couloir Dortoir")){
-                message.author.addRole("565540259018833920")
-                message.author.removeRole("565543228049326092")
+                message.member.addRole("565540259018833920")
+                message.member.removeRole("565543228049326092")
             }
         }
     }
@@ -1327,164 +1327,164 @@ bot.on('message', message => {
     if(message.content.includes("Oliver :") && message.author.id === "339848621908426752"){
         if(message.channel.id === "565544998943064064"){ //Classe 1-1
             if(message.content.includes("&go >Couloir")){
-                message.author.addRole("565540921018417152")
-                message.author.removeRole("565546770562809876")
+                message.member.addRole("565540921018417152")
+                message.member.removeRole("565546770562809876")
             }
         }
         if(message.channel.id === "565545063283949578"){ //Classe 1-2
             if(message.content.includes("&go >Couloir")){
-                message.author.addRole("565540921018417152")
-                message.author.removeRole("565546768935419905")
+                message.member.addRole("565540921018417152")
+                message.member.removeRole("565546768935419905")
             }
         }
         if(message.channel.id === "565544957465722891"){ //Couloir
             if(message.content.includes("&go >Classe 1-1")){
-                message.author.addRole("565546770562809876")
-                message.author.removeRole("565540921018417152")
+                message.member.addRole("565546770562809876")
+                message.member.removeRole("565540921018417152")
             }
             if(message.content.includes("&go >Classe 1-2")){
-                message.author.addRole("565546768935419905")
-                message.author.removeRole("565540921018417152")
+                message.member.addRole("565546768935419905")
+                message.member.removeRole("565540921018417152")
             }
             if(message.content.includes("&go >Cuisine")){
-                message.author.addRole("565540259866214427")
-                message.author.removeRole("565540921018417152")
+                message.member.addRole("565540259866214427")
+                message.member.removeRole("565540921018417152")
             }
             if(message.content.includes("&go >Couloir Dortoirs")){
-                message.author.addRole("565540259018833920")
-                message.author.removeRole("565540921018417152")
+                message.member.addRole("565540259018833920")
+                message.member.removeRole("565540921018417152")
             }
         }
         if(message.channel.id === "565545374379409428"){ //Cuisine
             if(message.content.includes("&go >Couloir")){
-                message.author.addRole("565540921018417152")
-                message.author.removeRole("565546768935419905")
+                message.member.addRole("565540921018417152")
+                message.member.removeRole("565546768935419905")
             }
             if(message.content.includes("&go >Couloir Dortoirs")){
-                message.author.addRole("565540259018833920")
-                message.author.removeRole("565546768935419905")
+                message.member.addRole("565540259018833920")
+                message.member.removeRole("565546768935419905")
             }
         }
         if(message.channel.id === "565545233509777409"){ //Couloir-Dortoir
             if(message.content.includes("&go >Chambre Max")){
-                message.author.addRole("565540250173177867")
-                message.author.removeRole("565540259018833920")
+                message.member.addRole("565540250173177867")
+                message.member.removeRole("565540259018833920")
             }
             if(message.content.includes("&go <#565545540725506059>")){
-                message.author.addRole("565543504659611688")
-                message.author.removeRole("565540259018833920")
+                message.member.addRole("565543504659611688")
+                message.member.removeRole("565540259018833920")
             }
             if(message.content.includes("&go <#565545555502301184>")){
-                message.author.addRole("565543501903691793")
-                message.author.removeRole("565540259018833920")
+                message.member.addRole("565543501903691793")
+                message.member.removeRole("565540259018833920")
             }
             if(message.content.includes("&go <#565545661521461248>")){
-                message.author.addRole("565542840948752410")
-                message.author.removeRole("565540259018833920")
+                message.member.addRole("565542840948752410")
+                message.member.removeRole("565540259018833920")
             }
             if(message.content.includes("&go <#565545718375251998>")){
-                message.author.addRole("565542842659766272")
-                message.author.removeRole("565540259018833920")
+                message.member.addRole("565542842659766272")
+                message.member.removeRole("565540259018833920")
             }
             if(message.content.includes("&go <#565545752051318784>")){
-                message.author.addRole("565540922532823077")
-                message.author.removeRole("565540259018833920")
+                message.member.addRole("565540922532823077")
+                message.member.removeRole("565540259018833920")
             }
             if(message.content.includes("&go <#565545784679071754>")){
-                message.author.addRole("565540924202024960")
-                message.author.removeRole("565540259018833920")
+                message.member.addRole("565540924202024960")
+                message.member.removeRole("565540259018833920")
             }
             if(message.content.includes("&go <#565546271763333125>")){
-                message.author.addRole("565540923627536384")
-                message.author.removeRole("565540259018833920")
+                message.member.addRole("565540923627536384")
+                message.member.removeRole("565540259018833920")
             }
             if(message.content.includes("&go <#565545823413469205>")){
-                message.author.addRole("565542839002595368")
-                message.author.removeRole("565540259018833920")
+                message.member.addRole("565542839002595368")
+                message.member.removeRole("565540259018833920")
             }
             if(message.content.includes("&go <#565545852521938964>")){
-                message.author.addRole("565542839446929428")
-                message.author.removeRole("565540259018833920")
+                message.member.addRole("565542839446929428")
+                message.member.removeRole("565540259018833920")
             }
             if(message.content.includes("&go <#565545868103647233>")){
-                message.author.addRole("565542840940101662")
-                message.author.removeRole("565540259018833920")
+                message.member.addRole("565542840940101662")
+                message.member.removeRole("565540259018833920")
             }
             if(message.content.includes("&go <#565598599602241536>")){
-                message.author.addRole("565543228049326092")
-                message.author.removeRole("565540259018833920")
+                message.member.addRole("565543228049326092")
+                message.member.removeRole("565540259018833920")
             }
         }
         if(message.channel.id === "565545510128320535"){ //Chambre Max
             if(message.content.includes("&go >Couloir Dortoir")){
-                message.author.addRole("565540259018833920")
-                message.author.removeRole("565540250173177867")
+                message.member.addRole("565540259018833920")
+                message.member.removeRole("565540250173177867")
             }
         }
         if(message.channel.id === "565545540725506059"){ //Chambre Yoan
             if(message.content.includes("&go >Couloir Dortoir")){
-                message.author.addRole("565540259018833920")
-                message.author.removeRole("565543504659611688")
+                message.member.addRole("565540259018833920")
+                message.member.removeRole("565543504659611688")
             }
         }
         if(message.channel.id === "565545555502301184"){ //Chambre Axel
             if(message.content.includes("&go >Couloir Dortoir")){
-                message.author.addRole("565540259018833920")
-                message.author.removeRole("565543501903691793")
+                message.member.addRole("565540259018833920")
+                message.member.removeRole("565543501903691793")
             }
         }
         if(message.channel.id === "565545661521461248"){ //Chambre Emilia
             if(message.content.includes("&go >Couloir Dortoir")){
-                message.author.addRole("565540259018833920")
-                message.author.removeRole("565542840948752410")
+                message.member.addRole("565540259018833920")
+                message.member.removeRole("565542840948752410")
             }
         }
         if(message.channel.id === "565545718375251998"){ //Chambre Anabelle
             if(message.content.includes("&go >Couloir Dortoir")){
-                message.author.addRole("565540259018833920")
-                message.author.removeRole("565542842659766272")
+                message.member.addRole("565540259018833920")
+                message.member.removeRole("565542842659766272")
             }
         }
         if(message.channel.id === "565545752051318784"){ //Chambre Lily
             if(message.content.includes("&go >Couloir Dortoir")){
-                message.author.addRole("565540259018833920")
-                message.author.removeRole("565540922532823077")
+                message.member.addRole("565540259018833920")
+                message.member.removeRole("565540922532823077")
             }
         }
         if(message.channel.id === "565545784679071754"){ //Chambre Oscar
             if(message.content.includes("&go >Couloir Dortoir")){
-                message.author.addRole("565540259018833920")
-                message.author.removeRole("565540924202024960")
+                message.member.addRole("565540259018833920")
+                message.member.removeRole("565540924202024960")
             }
         }
         if(message.channel.id === "565546271763333125"){ //Chambre Zélia
             if(message.content.includes("&go >Couloir Dortoir")){
-                message.author.addRole("565540259018833920")
-                message.author.removeRole("565540923627536384")
+                message.member.addRole("565540259018833920")
+                message.member.removeRole("565540923627536384")
             }
         }
         if(message.channel.id === "565545823413469205"){ //Chambre Tiana
             if(message.content.includes("&go >Couloir Dortoir")){
-                message.author.addRole("565540259018833920")
-                message.author.removeRole("565542839002595368")
+                message.member.addRole("565540259018833920")
+                message.member.removeRole("565542839002595368")
             }
         }
         if(message.channel.id === "565545852521938964"){ //Chambre Olivier
             if(message.content.includes("&go >Couloir Dortoir")){
-                message.author.addRole("565540259018833920")
-                message.author.removeRole("565542839446929428")
+                message.member.addRole("565540259018833920")
+                message.member.removeRole("565542839446929428")
             }
         }
         if(message.channel.id === "565545868103647233"){ //Chambre Naomi
             if(message.content.includes("&go >Couloir Dortoir")){
-                message.author.addRole("565540259018833920")
-                message.author.removeRole("565542840940101662")
+                message.member.addRole("565540259018833920")
+                message.member.removeRole("565542840940101662")
             }
         }
         if(message.channel.id === "565598599602241536"){ //Chambre Elli
             if(message.content.includes("&go >Couloir Dortoir")){
-                message.author.addRole("565540259018833920")
-                message.author.removeRole("565543228049326092")
+                message.member.addRole("565540259018833920")
+                message.member.removeRole("565543228049326092")
             }
         }
     }
@@ -1494,164 +1494,164 @@ bot.on('message', message => {
     if(message.content.includes("Naomi :") && message.author.id === "339848621908426752"){
         if(message.channel.id === "565544998943064064"){ //Classe 1-1
             if(message.content.includes("&go >Couloir")){
-                message.author.addRole("565540921018417152")
-                message.author.removeRole("565546770562809876")
+                message.member.addRole("565540921018417152")
+                message.member.removeRole("565546770562809876")
             }
         }
         if(message.channel.id === "565545063283949578"){ //Classe 1-2
             if(message.content.includes("&go >Couloir")){
-                message.author.addRole("565540921018417152")
-                message.author.removeRole("565546768935419905")
+                message.member.addRole("565540921018417152")
+                message.member.removeRole("565546768935419905")
             }
         }
         if(message.channel.id === "565544957465722891"){ //Couloir
             if(message.content.includes("&go >Classe 1-1")){
-                message.author.addRole("565546770562809876")
-                message.author.removeRole("565540921018417152")
+                message.member.addRole("565546770562809876")
+                message.member.removeRole("565540921018417152")
             }
             if(message.content.includes("&go >Classe 1-2")){
-                message.author.addRole("565546768935419905")
-                message.author.removeRole("565540921018417152")
+                message.member.addRole("565546768935419905")
+                message.member.removeRole("565540921018417152")
             }
             if(message.content.includes("&go >Cuisine")){
-                message.author.addRole("565540259866214427")
-                message.author.removeRole("565540921018417152")
+                message.member.addRole("565540259866214427")
+                message.member.removeRole("565540921018417152")
             }
             if(message.content.includes("&go >Couloir Dortoirs")){
-                message.author.addRole("565540259018833920")
-                message.author.removeRole("565540921018417152")
+                message.member.addRole("565540259018833920")
+                message.member.removeRole("565540921018417152")
             }
         }
         if(message.channel.id === "565545374379409428"){ //Cuisine
             if(message.content.includes("&go >Couloir")){
-                message.author.addRole("565540921018417152")
-                message.author.removeRole("565546768935419905")
+                message.member.addRole("565540921018417152")
+                message.member.removeRole("565546768935419905")
             }
             if(message.content.includes("&go >Couloir Dortoirs")){
-                message.author.addRole("565540259018833920")
-                message.author.removeRole("565546768935419905")
+                message.member.addRole("565540259018833920")
+                message.member.removeRole("565546768935419905")
             }
         }
         if(message.channel.id === "565545233509777409"){ //Couloir-Dortoir
             if(message.content.includes("&go >Chambre Max")){
-                message.author.addRole("565540250173177867")
-                message.author.removeRole("565540259018833920")
+                message.member.addRole("565540250173177867")
+                message.member.removeRole("565540259018833920")
             }
             if(message.content.includes("&go <#565545540725506059>")){
-                message.author.addRole("565543504659611688")
-                message.author.removeRole("565540259018833920")
+                message.member.addRole("565543504659611688")
+                message.member.removeRole("565540259018833920")
             }
             if(message.content.includes("&go <#565545555502301184>")){
-                message.author.addRole("565543501903691793")
-                message.author.removeRole("565540259018833920")
+                message.member.addRole("565543501903691793")
+                message.member.removeRole("565540259018833920")
             }
             if(message.content.includes("&go <#565545661521461248>")){
-                message.author.addRole("565542840948752410")
-                message.author.removeRole("565540259018833920")
+                message.member.addRole("565542840948752410")
+                message.member.removeRole("565540259018833920")
             }
             if(message.content.includes("&go <#565545718375251998>")){
-                message.author.addRole("565542842659766272")
-                message.author.removeRole("565540259018833920")
+                message.member.addRole("565542842659766272")
+                message.member.removeRole("565540259018833920")
             }
             if(message.content.includes("&go <#565545752051318784>")){
-                message.author.addRole("565540922532823077")
-                message.author.removeRole("565540259018833920")
+                message.member.addRole("565540922532823077")
+                message.member.removeRole("565540259018833920")
             }
             if(message.content.includes("&go <#565545784679071754>")){
-                message.author.addRole("565540924202024960")
-                message.author.removeRole("565540259018833920")
+                message.member.addRole("565540924202024960")
+                message.member.removeRole("565540259018833920")
             }
             if(message.content.includes("&go <#565546271763333125>")){
-                message.author.addRole("565540923627536384")
-                message.author.removeRole("565540259018833920")
+                message.member.addRole("565540923627536384")
+                message.member.removeRole("565540259018833920")
             }
             if(message.content.includes("&go <#565545823413469205>")){
-                message.author.addRole("565542839002595368")
-                message.author.removeRole("565540259018833920")
+                message.member.addRole("565542839002595368")
+                message.member.removeRole("565540259018833920")
             }
             if(message.content.includes("&go <#565545852521938964>")){
-                message.author.addRole("565542839446929428")
-                message.author.removeRole("565540259018833920")
+                message.member.addRole("565542839446929428")
+                message.member.removeRole("565540259018833920")
             }
             if(message.content.includes("&go <#565545868103647233>")){
-                message.author.addRole("565542840940101662")
-                message.author.removeRole("565540259018833920")
+                message.member.addRole("565542840940101662")
+                message.member.removeRole("565540259018833920")
             }
             if(message.content.includes("&go <#565598599602241536>")){
-                message.author.addRole("565543228049326092")
-                message.author.removeRole("565540259018833920")
+                message.member.addRole("565543228049326092")
+                message.member.removeRole("565540259018833920")
             }
         }
         if(message.channel.id === "565545510128320535"){ //Chambre Max
             if(message.content.includes("&go >Couloir Dortoir")){
-                message.author.addRole("565540259018833920")
-                message.author.removeRole("565540250173177867")
+                message.member.addRole("565540259018833920")
+                message.member.removeRole("565540250173177867")
             }
         }
         if(message.channel.id === "565545540725506059"){ //Chambre Yoan
             if(message.content.includes("&go >Couloir Dortoir")){
-                message.author.addRole("565540259018833920")
-                message.author.removeRole("565543504659611688")
+                message.member.addRole("565540259018833920")
+                message.member.removeRole("565543504659611688")
             }
         }
         if(message.channel.id === "565545555502301184"){ //Chambre Axel
             if(message.content.includes("&go >Couloir Dortoir")){
-                message.author.addRole("565540259018833920")
-                message.author.removeRole("565543501903691793")
+                message.member.addRole("565540259018833920")
+                message.member.removeRole("565543501903691793")
             }
         }
         if(message.channel.id === "565545661521461248"){ //Chambre Emilia
             if(message.content.includes("&go >Couloir Dortoir")){
-                message.author.addRole("565540259018833920")
-                message.author.removeRole("565542840948752410")
+                message.member.addRole("565540259018833920")
+                message.member.removeRole("565542840948752410")
             }
         }
         if(message.channel.id === "565545718375251998"){ //Chambre Anabelle
             if(message.content.includes("&go >Couloir Dortoir")){
-                message.author.addRole("565540259018833920")
-                message.author.removeRole("565542842659766272")
+                message.member.addRole("565540259018833920")
+                message.member.removeRole("565542842659766272")
             }
         }
         if(message.channel.id === "565545752051318784"){ //Chambre Lily
             if(message.content.includes("&go >Couloir Dortoir")){
-                message.author.addRole("565540259018833920")
-                message.author.removeRole("565540922532823077")
+                message.member.addRole("565540259018833920")
+                message.member.removeRole("565540922532823077")
             }
         }
         if(message.channel.id === "565545784679071754"){ //Chambre Oscar
             if(message.content.includes("&go >Couloir Dortoir")){
-                message.author.addRole("565540259018833920")
-                message.author.removeRole("565540924202024960")
+                message.member.addRole("565540259018833920")
+                message.member.removeRole("565540924202024960")
             }
         }
         if(message.channel.id === "565546271763333125"){ //Chambre Zélia
             if(message.content.includes("&go >Couloir Dortoir")){
-                message.author.addRole("565540259018833920")
-                message.author.removeRole("565540923627536384")
+                message.member.addRole("565540259018833920")
+                message.member.removeRole("565540923627536384")
             }
         }
         if(message.channel.id === "565545823413469205"){ //Chambre Tiana
             if(message.content.includes("&go >Couloir Dortoir")){
-                message.author.addRole("565540259018833920")
-                message.author.removeRole("565542839002595368")
+                message.member.addRole("565540259018833920")
+                message.member.removeRole("565542839002595368")
             }
         }
         if(message.channel.id === "565545852521938964"){ //Chambre Olivier
             if(message.content.includes("&go >Couloir Dortoir")){
-                message.author.addRole("565540259018833920")
-                message.author.removeRole("565542839446929428")
+                message.member.addRole("565540259018833920")
+                message.member.removeRole("565542839446929428")
             }
         }
         if(message.channel.id === "565545868103647233"){ //Chambre Naomi
             if(message.content.includes("&go >Couloir Dortoir")){
-                message.author.addRole("565540259018833920")
-                message.author.removeRole("565542840940101662")
+                message.member.addRole("565540259018833920")
+                message.member.removeRole("565542840940101662")
             }
         }
         if(message.channel.id === "565598599602241536"){ //Chambre Elli
             if(message.content.includes("&go >Couloir Dortoir")){
-                message.author.addRole("565540259018833920")
-                message.author.removeRole("565543228049326092")
+                message.member.addRole("565540259018833920")
+                message.member.removeRole("565543228049326092")
             }
         }
     }
@@ -1661,164 +1661,164 @@ bot.on('message', message => {
     if(message.content.includes("Yoan :") && message.author.id === "258571960987025408"){
         if(message.channel.id === "565544998943064064"){ //Classe 1-1
             if(message.content.includes("&go >Couloir")){
-                message.author.addRole("565540921018417152")
-                message.author.removeRole("565546770562809876")
+                message.member.addRole("565540921018417152")
+                message.member.removeRole("565546770562809876")
             }
         }
         if(message.channel.id === "565545063283949578"){ //Classe 1-2
             if(message.content.includes("&go >Couloir")){
-                message.author.addRole("565540921018417152")
-                message.author.removeRole("565546768935419905")
+                message.member.addRole("565540921018417152")
+                message.member.removeRole("565546768935419905")
             }
         }
         if(message.channel.id === "565544957465722891"){ //Couloir
             if(message.content.includes("&go >Classe 1-1")){
-                message.author.addRole("565546770562809876")
-                message.author.removeRole("565540921018417152")
+                message.member.addRole("565546770562809876")
+                message.member.removeRole("565540921018417152")
             }
             if(message.content.includes("&go >Classe 1-2")){
-                message.author.addRole("565546768935419905")
-                message.author.removeRole("565540921018417152")
+                message.member.addRole("565546768935419905")
+                message.member.removeRole("565540921018417152")
             }
             if(message.content.includes("&go >Cuisine")){
-                message.author.addRole("565540259866214427")
-                message.author.removeRole("565540921018417152")
+                message.member.addRole("565540259866214427")
+                message.member.removeRole("565540921018417152")
             }
             if(message.content.includes("&go >Couloir Dortoirs")){
-                message.author.addRole("565540259018833920")
-                message.author.removeRole("565540921018417152")
+                message.member.addRole("565540259018833920")
+                message.member.removeRole("565540921018417152")
             }
         }
         if(message.channel.id === "565545374379409428"){ //Cuisine
             if(message.content.includes("&go >Couloir")){
-                message.author.addRole("565540921018417152")
-                message.author.removeRole("565546768935419905")
+                message.member.addRole("565540921018417152")
+                message.member.removeRole("565546768935419905")
             }
             if(message.content.includes("&go >Couloir Dortoirs")){
-                message.author.addRole("565540259018833920")
-                message.author.removeRole("565546768935419905")
+                message.member.addRole("565540259018833920")
+                message.member.removeRole("565546768935419905")
             }
         }
         if(message.channel.id === "565545233509777409"){ //Couloir-Dortoir
             if(message.content.includes("&go >Chambre Max")){
-                message.author.addRole("565540250173177867")
-                message.author.removeRole("565540259018833920")
+                message.member.addRole("565540250173177867")
+                message.member.removeRole("565540259018833920")
             }
             if(message.content.includes("&go <#565545540725506059>")){
-                message.author.addRole("565543504659611688")
-                message.author.removeRole("565540259018833920")
+                message.member.addRole("565543504659611688")
+                message.member.removeRole("565540259018833920")
             }
             if(message.content.includes("&go <#565545555502301184>")){
-                message.author.addRole("565543501903691793")
-                message.author.removeRole("565540259018833920")
+                message.member.addRole("565543501903691793")
+                message.member.removeRole("565540259018833920")
             }
             if(message.content.includes("&go <#565545661521461248>")){
-                message.author.addRole("565542840948752410")
-                message.author.removeRole("565540259018833920")
+                message.member.addRole("565542840948752410")
+                message.member.removeRole("565540259018833920")
             }
             if(message.content.includes("&go <#565545718375251998>")){
-                message.author.addRole("565542842659766272")
-                message.author.removeRole("565540259018833920")
+                message.member.addRole("565542842659766272")
+                message.member.removeRole("565540259018833920")
             }
             if(message.content.includes("&go <#565545752051318784>")){
-                message.author.addRole("565540922532823077")
-                message.author.removeRole("565540259018833920")
+                message.member.addRole("565540922532823077")
+                message.member.removeRole("565540259018833920")
             }
             if(message.content.includes("&go <#565545784679071754>")){
-                message.author.addRole("565540924202024960")
-                message.author.removeRole("565540259018833920")
+                message.member.addRole("565540924202024960")
+                message.member.removeRole("565540259018833920")
             }
             if(message.content.includes("&go <#565546271763333125>")){
-                message.author.addRole("565540923627536384")
-                message.author.removeRole("565540259018833920")
+                message.member.addRole("565540923627536384")
+                message.member.removeRole("565540259018833920")
             }
             if(message.content.includes("&go <#565545823413469205>")){
-                message.author.addRole("565542839002595368")
-                message.author.removeRole("565540259018833920")
+                message.member.addRole("565542839002595368")
+                message.member.removeRole("565540259018833920")
             }
             if(message.content.includes("&go <#565545852521938964>")){
-                message.author.addRole("565542839446929428")
-                message.author.removeRole("565540259018833920")
+                message.member.addRole("565542839446929428")
+                message.member.removeRole("565540259018833920")
             }
             if(message.content.includes("&go <#565545868103647233>")){
-                message.author.addRole("565542840940101662")
-                message.author.removeRole("565540259018833920")
+                message.member.addRole("565542840940101662")
+                message.member.removeRole("565540259018833920")
             }
             if(message.content.includes("&go <#565598599602241536>")){
-                message.author.addRole("565543228049326092")
-                message.author.removeRole("565540259018833920")
+                message.member.addRole("565543228049326092")
+                message.member.removeRole("565540259018833920")
             }
         }
         if(message.channel.id === "565545510128320535"){ //Chambre Max
             if(message.content.includes("&go >Couloir Dortoir")){
-                message.author.addRole("565540259018833920")
-                message.author.removeRole("565540250173177867")
+                message.member.addRole("565540259018833920")
+                message.member.removeRole("565540250173177867")
             }
         }
         if(message.channel.id === "565545540725506059"){ //Chambre Yoan
             if(message.content.includes("&go >Couloir Dortoir")){
-                message.author.addRole("565540259018833920")
-                message.author.removeRole("565543504659611688")
+                message.member.addRole("565540259018833920")
+                message.member.removeRole("565543504659611688")
             }
         }
         if(message.channel.id === "565545555502301184"){ //Chambre Axel
             if(message.content.includes("&go >Couloir Dortoir")){
-                message.author.addRole("565540259018833920")
-                message.author.removeRole("565543501903691793")
+                message.member.addRole("565540259018833920")
+                message.member.removeRole("565543501903691793")
             }
         }
         if(message.channel.id === "565545661521461248"){ //Chambre Emilia
             if(message.content.includes("&go >Couloir Dortoir")){
-                message.author.addRole("565540259018833920")
-                message.author.removeRole("565542840948752410")
+                message.member.addRole("565540259018833920")
+                message.member.removeRole("565542840948752410")
             }
         }
         if(message.channel.id === "565545718375251998"){ //Chambre Anabelle
             if(message.content.includes("&go >Couloir Dortoir")){
-                message.author.addRole("565540259018833920")
-                message.author.removeRole("565542842659766272")
+                message.member.addRole("565540259018833920")
+                message.member.removeRole("565542842659766272")
             }
         }
         if(message.channel.id === "565545752051318784"){ //Chambre Lily
             if(message.content.includes("&go >Couloir Dortoir")){
-                message.author.addRole("565540259018833920")
-                message.author.removeRole("565540922532823077")
+                message.member.addRole("565540259018833920")
+                message.member.removeRole("565540922532823077")
             }
         }
         if(message.channel.id === "565545784679071754"){ //Chambre Oscar
             if(message.content.includes("&go >Couloir Dortoir")){
-                message.author.addRole("565540259018833920")
-                message.author.removeRole("565540924202024960")
+                message.member.addRole("565540259018833920")
+                message.member.removeRole("565540924202024960")
             }
         }
         if(message.channel.id === "565546271763333125"){ //Chambre Zélia
             if(message.content.includes("&go >Couloir Dortoir")){
-                message.author.addRole("565540259018833920")
-                message.author.removeRole("565540923627536384")
+                message.member.addRole("565540259018833920")
+                message.member.removeRole("565540923627536384")
             }
         }
         if(message.channel.id === "565545823413469205"){ //Chambre Tiana
             if(message.content.includes("&go >Couloir Dortoir")){
-                message.author.addRole("565540259018833920")
-                message.author.removeRole("565542839002595368")
+                message.member.addRole("565540259018833920")
+                message.member.removeRole("565542839002595368")
             }
         }
         if(message.channel.id === "565545852521938964"){ //Chambre Olivier
             if(message.content.includes("&go >Couloir Dortoir")){
-                message.author.addRole("565540259018833920")
-                message.author.removeRole("565542839446929428")
+                message.member.addRole("565540259018833920")
+                message.member.removeRole("565542839446929428")
             }
         }
         if(message.channel.id === "565545868103647233"){ //Chambre Naomi
             if(message.content.includes("&go >Couloir Dortoir")){
-                message.author.addRole("565540259018833920")
-                message.author.removeRole("565542840940101662")
+                message.member.addRole("565540259018833920")
+                message.member.removeRole("565542840940101662")
             }
         }
         if(message.channel.id === "565598599602241536"){ //Chambre Elli
             if(message.content.includes("&go >Couloir Dortoir")){
-                message.author.addRole("565540259018833920")
-                message.author.removeRole("565543228049326092")
+                message.member.addRole("565540259018833920")
+                message.member.removeRole("565543228049326092")
             }
         }
     }
@@ -1828,164 +1828,164 @@ bot.on('message', message => {
     if(message.content.includes("Axel :") && message.author.id === "258571960987025408"){
         if(message.channel.id === "565544998943064064"){ //Classe 1-1
             if(message.content.includes("&go >Couloir")){
-                message.author.addRole("565540921018417152")
-                message.author.removeRole("565546770562809876")
+                message.member.addRole("565540921018417152")
+                message.member.removeRole("565546770562809876")
             }
         }
         if(message.channel.id === "565545063283949578"){ //Classe 1-2
             if(message.content.includes("&go >Couloir")){
-                message.author.addRole("565540921018417152")
-                message.author.removeRole("565546768935419905")
+                message.member.addRole("565540921018417152")
+                message.member.removeRole("565546768935419905")
             }
         }
         if(message.channel.id === "565544957465722891"){ //Couloir
             if(message.content.includes("&go >Classe 1-1")){
-                message.author.addRole("565546770562809876")
-                message.author.removeRole("565540921018417152")
+                message.member.addRole("565546770562809876")
+                message.member.removeRole("565540921018417152")
             }
             if(message.content.includes("&go >Classe 1-2")){
-                message.author.addRole("565546768935419905")
-                message.author.removeRole("565540921018417152")
+                message.member.addRole("565546768935419905")
+                message.member.removeRole("565540921018417152")
             }
             if(message.content.includes("&go >Cuisine")){
-                message.author.addRole("565540259866214427")
-                message.author.removeRole("565540921018417152")
+                message.member.addRole("565540259866214427")
+                message.member.removeRole("565540921018417152")
             }
             if(message.content.includes("&go >Couloir Dortoirs")){
-                message.author.addRole("565540259018833920")
-                message.author.removeRole("565540921018417152")
+                message.member.addRole("565540259018833920")
+                message.member.removeRole("565540921018417152")
             }
         }
         if(message.channel.id === "565545374379409428"){ //Cuisine
             if(message.content.includes("&go >Couloir")){
-                message.author.addRole("565540921018417152")
-                message.author.removeRole("565546768935419905")
+                message.member.addRole("565540921018417152")
+                message.member.removeRole("565546768935419905")
             }
             if(message.content.includes("&go >Couloir Dortoirs")){
-                message.author.addRole("565540259018833920")
-                message.author.removeRole("565546768935419905")
+                message.member.addRole("565540259018833920")
+                message.member.removeRole("565546768935419905")
             }
         }
         if(message.channel.id === "565545233509777409"){ //Couloir-Dortoir
             if(message.content.includes("&go >Chambre Max")){
-                message.author.addRole("565540250173177867")
-                message.author.removeRole("565540259018833920")
+                message.member.addRole("565540250173177867")
+                message.member.removeRole("565540259018833920")
             }
             if(message.content.includes("&go <#565545540725506059>")){
-                message.author.addRole("565543504659611688")
-                message.author.removeRole("565540259018833920")
+                message.member.addRole("565543504659611688")
+                message.member.removeRole("565540259018833920")
             }
             if(message.content.includes("&go <#565545555502301184>")){
-                message.author.addRole("565543501903691793")
-                message.author.removeRole("565540259018833920")
+                message.member.addRole("565543501903691793")
+                message.member.removeRole("565540259018833920")
             }
             if(message.content.includes("&go <#565545661521461248>")){
-                message.author.addRole("565542840948752410")
-                message.author.removeRole("565540259018833920")
+                message.member.addRole("565542840948752410")
+                message.member.removeRole("565540259018833920")
             }
             if(message.content.includes("&go <#565545718375251998>")){
-                message.author.addRole("565542842659766272")
-                message.author.removeRole("565540259018833920")
+                message.member.addRole("565542842659766272")
+                message.member.removeRole("565540259018833920")
             }
             if(message.content.includes("&go <#565545752051318784>")){
-                message.author.addRole("565540922532823077")
-                message.author.removeRole("565540259018833920")
+                message.member.addRole("565540922532823077")
+                message.member.removeRole("565540259018833920")
             }
             if(message.content.includes("&go <#565545784679071754>")){
-                message.author.addRole("565540924202024960")
-                message.author.removeRole("565540259018833920")
+                message.member.addRole("565540924202024960")
+                message.member.removeRole("565540259018833920")
             }
             if(message.content.includes("&go <#565546271763333125>")){
-                message.author.addRole("565540923627536384")
-                message.author.removeRole("565540259018833920")
+                message.member.addRole("565540923627536384")
+                message.member.removeRole("565540259018833920")
             }
             if(message.content.includes("&go <#565545823413469205>")){
-                message.author.addRole("565542839002595368")
-                message.author.removeRole("565540259018833920")
+                message.member.addRole("565542839002595368")
+                message.member.removeRole("565540259018833920")
             }
             if(message.content.includes("&go <#565545852521938964>")){
-                message.author.addRole("565542839446929428")
-                message.author.removeRole("565540259018833920")
+                message.member.addRole("565542839446929428")
+                message.member.removeRole("565540259018833920")
             }
             if(message.content.includes("&go <#565545868103647233>")){
-                message.author.addRole("565542840940101662")
-                message.author.removeRole("565540259018833920")
+                message.member.addRole("565542840940101662")
+                message.member.removeRole("565540259018833920")
             }
             if(message.content.includes("&go <#565598599602241536>")){
-                message.author.addRole("565543228049326092")
-                message.author.removeRole("565540259018833920")
+                message.member.addRole("565543228049326092")
+                message.member.removeRole("565540259018833920")
             }
         }
         if(message.channel.id === "565545510128320535"){ //Chambre Max
             if(message.content.includes("&go >Couloir Dortoir")){
-                message.author.addRole("565540259018833920")
-                message.author.removeRole("565540250173177867")
+                message.member.addRole("565540259018833920")
+                message.member.removeRole("565540250173177867")
             }
         }
         if(message.channel.id === "565545540725506059"){ //Chambre Yoan
             if(message.content.includes("&go >Couloir Dortoir")){
-                message.author.addRole("565540259018833920")
-                message.author.removeRole("565543504659611688")
+                message.member.addRole("565540259018833920")
+                message.member.removeRole("565543504659611688")
             }
         }
         if(message.channel.id === "565545555502301184"){ //Chambre Axel
             if(message.content.includes("&go >Couloir Dortoir")){
-                message.author.addRole("565540259018833920")
-                message.author.removeRole("565543501903691793")
+                message.member.addRole("565540259018833920")
+                message.member.removeRole("565543501903691793")
             }
         }
         if(message.channel.id === "565545661521461248"){ //Chambre Emilia
             if(message.content.includes("&go >Couloir Dortoir")){
-                message.author.addRole("565540259018833920")
-                message.author.removeRole("565542840948752410")
+                message.member.addRole("565540259018833920")
+                message.member.removeRole("565542840948752410")
             }
         }
         if(message.channel.id === "565545718375251998"){ //Chambre Anabelle
             if(message.content.includes("&go >Couloir Dortoir")){
-                message.author.addRole("565540259018833920")
-                message.author.removeRole("565542842659766272")
+                message.member.addRole("565540259018833920")
+                message.member.removeRole("565542842659766272")
             }
         }
         if(message.channel.id === "565545752051318784"){ //Chambre Lily
             if(message.content.includes("&go >Couloir Dortoir")){
-                message.author.addRole("565540259018833920")
-                message.author.removeRole("565540922532823077")
+                message.member.addRole("565540259018833920")
+                message.member.removeRole("565540922532823077")
             }
         }
         if(message.channel.id === "565545784679071754"){ //Chambre Oscar
             if(message.content.includes("&go >Couloir Dortoir")){
-                message.author.addRole("565540259018833920")
-                message.author.removeRole("565540924202024960")
+                message.member.addRole("565540259018833920")
+                message.member.removeRole("565540924202024960")
             }
         }
         if(message.channel.id === "565546271763333125"){ //Chambre Zélia
             if(message.content.includes("&go >Couloir Dortoir")){
-                message.author.addRole("565540259018833920")
-                message.author.removeRole("565540923627536384")
+                message.member.addRole("565540259018833920")
+                message.member.removeRole("565540923627536384")
             }
         }
         if(message.channel.id === "565545823413469205"){ //Chambre Tiana
             if(message.content.includes("&go >Couloir Dortoir")){
-                message.author.addRole("565540259018833920")
-                message.author.removeRole("565542839002595368")
+                message.member.addRole("565540259018833920")
+                message.member.removeRole("565542839002595368")
             }
         }
         if(message.channel.id === "565545852521938964"){ //Chambre Olivier
             if(message.content.includes("&go >Couloir Dortoir")){
-                message.author.addRole("565540259018833920")
-                message.author.removeRole("565542839446929428")
+                message.member.addRole("565540259018833920")
+                message.member.removeRole("565542839446929428")
             }
         }
         if(message.channel.id === "565545868103647233"){ //Chambre Naomi
             if(message.content.includes("&go >Couloir Dortoir")){
-                message.author.addRole("565540259018833920")
-                message.author.removeRole("565542840940101662")
+                message.member.addRole("565540259018833920")
+                message.member.removeRole("565542840940101662")
             }
         }
         if(message.channel.id === "565598599602241536"){ //Chambre Elli
             if(message.content.includes("&go >Couloir Dortoir")){
-                message.author.addRole("565540259018833920")
-                message.author.removeRole("565543228049326092")
+                message.member.addRole("565540259018833920")
+                message.member.removeRole("565543228049326092")
             }
         }
     }
@@ -1995,164 +1995,164 @@ bot.on('message', message => {
     if(message.content.includes("Elli :") && message.author.id === "366263554711486468"){
         if(message.channel.id === "565544998943064064"){ //Classe 1-1
             if(message.content.includes("&go >Couloir")){
-                message.author.addRole("565540921018417152")
-                message.author.removeRole("565546770562809876")
+                message.member.addRole("565540921018417152")
+                message.member.removeRole("565546770562809876")
             }
         }
         if(message.channel.id === "565545063283949578"){ //Classe 1-2
             if(message.content.includes("&go >Couloir")){
-                message.author.addRole("565540921018417152")
-                message.author.removeRole("565546768935419905")
+                message.member.addRole("565540921018417152")
+                message.member.removeRole("565546768935419905")
             }
         }
         if(message.channel.id === "565544957465722891"){ //Couloir
             if(message.content.includes("&go >Classe 1-1")){
-                message.author.addRole("565546770562809876")
-                message.author.removeRole("565540921018417152")
+                message.member.addRole("565546770562809876")
+                message.member.removeRole("565540921018417152")
             }
             if(message.content.includes("&go >Classe 1-2")){
-                message.author.addRole("565546768935419905")
-                message.author.removeRole("565540921018417152")
+                message.member.addRole("565546768935419905")
+                message.member.removeRole("565540921018417152")
             }
             if(message.content.includes("&go >Cuisine")){
-                message.author.addRole("565540259866214427")
-                message.author.removeRole("565540921018417152")
+                message.member.addRole("565540259866214427")
+                message.member.removeRole("565540921018417152")
             }
             if(message.content.includes("&go >Couloir Dortoirs")){
-                message.author.addRole("565540259018833920")
-                message.author.removeRole("565540921018417152")
+                message.member.addRole("565540259018833920")
+                message.member.removeRole("565540921018417152")
             }
         }
         if(message.channel.id === "565545374379409428"){ //Cuisine
             if(message.content.includes("&go >Couloir")){
-                message.author.addRole("565540921018417152")
-                message.author.removeRole("565546768935419905")
+                message.member.addRole("565540921018417152")
+                message.member.removeRole("565546768935419905")
             }
             if(message.content.includes("&go >Couloir Dortoirs")){
-                message.author.addRole("565540259018833920")
-                message.author.removeRole("565546768935419905")
+                message.member.addRole("565540259018833920")
+                message.member.removeRole("565546768935419905")
             }
         }
         if(message.channel.id === "565545233509777409"){ //Couloir-Dortoir
             if(message.content.includes("&go >Chambre Max")){
-                message.author.addRole("565540250173177867")
-                message.author.removeRole("565540259018833920")
+                message.member.addRole("565540250173177867")
+                message.member.removeRole("565540259018833920")
             }
             if(message.content.includes("&go <#565545540725506059>")){
-                message.author.addRole("565543504659611688")
-                message.author.removeRole("565540259018833920")
+                message.member.addRole("565543504659611688")
+                message.member.removeRole("565540259018833920")
             }
             if(message.content.includes("&go <#565545555502301184>")){
-                message.author.addRole("565543501903691793")
-                message.author.removeRole("565540259018833920")
+                message.member.addRole("565543501903691793")
+                message.member.removeRole("565540259018833920")
             }
             if(message.content.includes("&go <#565545661521461248>")){
-                message.author.addRole("565542840948752410")
-                message.author.removeRole("565540259018833920")
+                message.member.addRole("565542840948752410")
+                message.member.removeRole("565540259018833920")
             }
             if(message.content.includes("&go <#565545718375251998>")){
-                message.author.addRole("565542842659766272")
-                message.author.removeRole("565540259018833920")
+                message.member.addRole("565542842659766272")
+                message.member.removeRole("565540259018833920")
             }
             if(message.content.includes("&go <#565545752051318784>")){
-                message.author.addRole("565540922532823077")
-                message.author.removeRole("565540259018833920")
+                message.member.addRole("565540922532823077")
+                message.member.removeRole("565540259018833920")
             }
             if(message.content.includes("&go <#565545784679071754>")){
-                message.author.addRole("565540924202024960")
-                message.author.removeRole("565540259018833920")
+                message.member.addRole("565540924202024960")
+                message.member.removeRole("565540259018833920")
             }
             if(message.content.includes("&go <#565546271763333125>")){
-                message.author.addRole("565540923627536384")
-                message.author.removeRole("565540259018833920")
+                message.member.addRole("565540923627536384")
+                message.member.removeRole("565540259018833920")
             }
             if(message.content.includes("&go <#565545823413469205>")){
-                message.author.addRole("565542839002595368")
-                message.author.removeRole("565540259018833920")
+                message.member.addRole("565542839002595368")
+                message.member.removeRole("565540259018833920")
             }
             if(message.content.includes("&go <#565545852521938964>")){
-                message.author.addRole("565542839446929428")
-                message.author.removeRole("565540259018833920")
+                message.member.addRole("565542839446929428")
+                message.member.removeRole("565540259018833920")
             }
             if(message.content.includes("&go <#565545868103647233>")){
-                message.author.addRole("565542840940101662")
-                message.author.removeRole("565540259018833920")
+                message.member.addRole("565542840940101662")
+                message.member.removeRole("565540259018833920")
             }
             if(message.content.includes("&go <#565598599602241536>")){
-                message.author.addRole("565543228049326092")
-                message.author.removeRole("565540259018833920")
+                message.member.addRole("565543228049326092")
+                message.member.removeRole("565540259018833920")
             }
         }
         if(message.channel.id === "565545510128320535"){ //Chambre Max
             if(message.content.includes("&go >Couloir Dortoir")){
-                message.author.addRole("565540259018833920")
-                message.author.removeRole("565540250173177867")
+                message.member.addRole("565540259018833920")
+                message.member.removeRole("565540250173177867")
             }
         }
         if(message.channel.id === "565545540725506059"){ //Chambre Yoan
             if(message.content.includes("&go >Couloir Dortoir")){
-                message.author.addRole("565540259018833920")
-                message.author.removeRole("565543504659611688")
+                message.member.addRole("565540259018833920")
+                message.member.removeRole("565543504659611688")
             }
         }
         if(message.channel.id === "565545555502301184"){ //Chambre Axel
             if(message.content.includes("&go >Couloir Dortoir")){
-                message.author.addRole("565540259018833920")
-                message.author.removeRole("565543501903691793")
+                message.member.addRole("565540259018833920")
+                message.member.removeRole("565543501903691793")
             }
         }
         if(message.channel.id === "565545661521461248"){ //Chambre Emilia
             if(message.content.includes("&go >Couloir Dortoir")){
-                message.author.addRole("565540259018833920")
-                message.author.removeRole("565542840948752410")
+                message.member.addRole("565540259018833920")
+                message.member.removeRole("565542840948752410")
             }
         }
         if(message.channel.id === "565545718375251998"){ //Chambre Anabelle
             if(message.content.includes("&go >Couloir Dortoir")){
-                message.author.addRole("565540259018833920")
-                message.author.removeRole("565542842659766272")
+                message.member.addRole("565540259018833920")
+                message.member.removeRole("565542842659766272")
             }
         }
         if(message.channel.id === "565545752051318784"){ //Chambre Lily
             if(message.content.includes("&go >Couloir Dortoir")){
-                message.author.addRole("565540259018833920")
-                message.author.removeRole("565540922532823077")
+                message.member.addRole("565540259018833920")
+                message.member.removeRole("565540922532823077")
             }
         }
         if(message.channel.id === "565545784679071754"){ //Chambre Oscar
             if(message.content.includes("&go >Couloir Dortoir")){
-                message.author.addRole("565540259018833920")
-                message.author.removeRole("565540924202024960")
+                message.member.addRole("565540259018833920")
+                message.member.removeRole("565540924202024960")
             }
         }
         if(message.channel.id === "565546271763333125"){ //Chambre Zélia
             if(message.content.includes("&go >Couloir Dortoir")){
-                message.author.addRole("565540259018833920")
-                message.author.removeRole("565540923627536384")
+                message.member.addRole("565540259018833920")
+                message.member.removeRole("565540923627536384")
             }
         }
         if(message.channel.id === "565545823413469205"){ //Chambre Tiana
             if(message.content.includes("&go >Couloir Dortoir")){
-                message.author.addRole("565540259018833920")
-                message.author.removeRole("565542839002595368")
+                message.member.addRole("565540259018833920")
+                message.member.removeRole("565542839002595368")
             }
         }
         if(message.channel.id === "565545852521938964"){ //Chambre Olivier
             if(message.content.includes("&go >Couloir Dortoir")){
-                message.author.addRole("565540259018833920")
-                message.author.removeRole("565542839446929428")
+                message.member.addRole("565540259018833920")
+                message.member.removeRole("565542839446929428")
             }
         }
         if(message.channel.id === "565545868103647233"){ //Chambre Naomi
             if(message.content.includes("&go >Couloir Dortoir")){
-                message.author.addRole("565540259018833920")
-                message.author.removeRole("565542840940101662")
+                message.member.addRole("565540259018833920")
+                message.member.removeRole("565542840940101662")
             }
         }
         if(message.channel.id === "565598599602241536"){ //Chambre Elli
             if(message.content.includes("&go >Couloir Dortoir")){
-                message.author.addRole("565540259018833920")
-                message.author.removeRole("565543228049326092")
+                message.member.addRole("565540259018833920")
+                message.member.removeRole("565543228049326092")
             }
         }
     }
