@@ -130,7 +130,7 @@ bot.on('message', message => { //Log
   })
 
 bot.on('message', message => {
-    if(message.content.split(': ')[0] === repereInteraction.noms){
+    if(msg.content.split(': ')[0] === repereInteraction.foreach(noms)){
         message.channel.send("ça marche '^'")
     }
 })
