@@ -136,14 +136,8 @@ bot.on('message', message => { //Log
 bot.on('message', message => { //help
     if(message.content === "&help"){
       var embedhelp = new Discord.RichEmbed()
-        .setTitle("Infos sur le bot")
-        .setDescription("Ce bot vous fais entrer dans une simulation de Trial de Danganronpa ! Je sais que cela parait farfelu, mais attendez la fin de mes explications ! >:3")
-        .addField("Prefix :", "&", true)
-        .addBlankField() 
-        .addField("&help", "Affiche les commandes du bot.")
-        .addField("&mtrial", "Réalisable uniquement par un <@&565461390731509770>, elle permet de lancer un Trial dans le lieu séléctionné")
-        .setColor("#68f17d")
-        .setFooter("Amusez vous bien ! - Maxoin | Baz")
+        .setTitle("Commande Indisponible.")
+        .setDescription("Va savoir pourquoi. C'est très le mystere. '^'")
         message.channel.send(embedhelp);
     }
 })
