@@ -166,9 +166,9 @@ bot.on('message', message => { // &OwOLog ! faisable plusieurs fois !
 bot.on('message', message => {
  if(message.content === "0642"){
   var embedmsg = new Discord.RichEmbed()
-   .setTitle("~GROS TOURNOIS SES GRANDS MORTS, OLALA~")
-   .setDescription("Dans quelques jours aura lieu un tournoi de duels magiques !\nEt j'aurais besoin de vos participations dans la boite grace à un petit\n''Je participe''")
+   .setTitle("~**GROS TOURNOIS SES GRANDS MORTS, OLALA**~")
+   .setDescription("Dans quelques jours aura lieu un tournoi de duels magiques !\nEt j'aurais besoin de vos participations dans la boite grace à un petit\n*''Je participe''*")
    .setThumbnail("https://media.discordapp.net/attachments/517283327099797504/555105881600032784/gif1.gif?width=473&height=473")
-   bot.channels.get("557114023896678400").send(embedmsg)
+   bot.channels.get("568193436365094912").send(embedmsg)
  }
 })
